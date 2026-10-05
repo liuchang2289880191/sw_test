@@ -1,6 +1,6 @@
 # 神威 DMA / RMA benchmark（含 SW26010Pro 2×2 小簇实验）
 
-本工程依据目录中的《SACA编程指南-v0.62.pdf》编写 Athread 接口代码，使用 **单个 8×8 从核阵列（64 个从核）**。该手册以 SW39000 为背景；新增的 2×2 小簇实验以 SW26010Pro 为研究目标。提供源代码、构建命令、测量定义和结果分析脚本；用户已在神威平台完成 DMA 基线扫描并通过校验，其 CSV 已完成分析和绘图。新增 DMA 边界/映射实验已通过本地模拟校验，尚待神威编译运行；RMA 尚待运行验证。目标机器的运行库/编译器版本若与手册不同，应先核对 `slave.h` 中的接口声明。
+本工程依据目录中的《SACA编程指南-v0.62.pdf》编写 Athread 接口代码，使用 **单个 8×8 从核阵列（64 个从核）**。该手册以 SW39000 为背景；新增的 2×2 小簇实验以 SW26010Pro 为研究目标。提供源代码、构建命令、测量定义和结果分析脚本；用户已在神威平台完成 DMA 基线扫描及 128 KiB 扩展实验，两批 CSV 均完成分析和绘图。扩展作业 8420952 的 9856 项正式测量和 8 项正确性检查通过，RMA 尚待运行验证。目标机器的运行库/编译器版本若与手册不同，应先核对 `slave.h` 中的接口声明。
 
 针对 SW26010Pro **2×2 小簇边界**的 ping-pong、流水化带宽和争用对照，见 [RMA_CLUSTER.md](RMA_CLUSTER.md)。该部分以实测判断小簇是否进入性能模型；不会预设簇内通信必然更快。
 
@@ -25,6 +25,7 @@
 |---|---|
 | `dma_host.c`, `dma_slave.c` | DMA get、put、iget、iput；支持 1–64 活跃从核 |
 | `run_dma_boundary.sh`, `DMA_BOUNDARY.md` | 大小/偏移细扫、7 档核数、槽步长与映射对照；可选 128 KiB 消息 |
+| `analyze_dma_study.py` | 独立复核扩展实验的原始数据和地址；输出边界、负载、布局、跨阶段复测与逐核相关性比较 |
 | `rma_host.c`, `rma_slave.c` | RMA put/get 的 64×64 有向矩阵；跳过自通信 |
 | `bcast_host.c`, `bcast_slave.c` | RMA 行、列、全阵列集合广播 |
 | `analyze_topology.py` | 分类统计、曼哈顿距离统计、8×8 目的核图 |
@@ -134,6 +135,15 @@ DMA_MAX_BYTES=131072 bash run_dma_boundary.sh q_share
 ```
 
 默认 64 KiB 模式正式测量 7952 项，128 KiB 模式 9856 项，另有 8 项正确性检查。消息大小包含更多中间点；核数为 1、2、4、8、16、32、64；边界偏移为 0、4、64、124 B。输出 `plan.csv`、`slot_maps.csv`、逐核地址、`study_summary.csv` 和 `study_scaling.csv`。新入口仍直接提交单个 DMA 二进制；默认显式请求 `-cache_size 0`，共享 LDM 与资源独占情况需记录实际配置。原 `run_dma.sh` 默认继续测量旧基线。
+
+用户提供的 128 KiB 作业 8420952 结果位于 `dma_results_20261005_203552_32484/`。独立复核了 179076 条逐核记录和 8448 条扩展比，全部通过。分析文档与八张中文图表位于 `outputs/dma_study_report_20261005_203552_32484/`。在有 Python 和 NumPy 的本地环境，从项目根目录重新生成衍生分析表：
+
+```sh
+python bench/analyze_dma_study.py dma_results_20261005_203552_32484 \
+  --out outputs/dma_study_analysis_20261005_203552_32484
+```
+
+该命令只分析已有文件，不编译或运行硬件 benchmark。
 
 ### DMA 一键运行入口
 
