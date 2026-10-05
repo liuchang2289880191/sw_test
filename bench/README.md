@@ -154,6 +154,8 @@ bsub -I -q QUEUE -n 1 -cgsp 64 -mpecg 1 bash bench/run_sweep.sh results
 
 ### DMA
 
+只扫描 DMA 时，可使用 `run_dma_sweep.sh`。在 `bench` 目录按本站手册的提交方式执行 `bsub -I -q QUEUE -n 1 -cgsp 64 -mpecg 1 bash run_dma_sweep.sh dma_results`，其中 `QUEUE` 必须替换为实际可用队列（可用 `bqueues` 查询）。脚本可从任意目录调用，会查找其同目录下的 `dma_bench`；结果目录相对于提交时的工作目录。它扫描四种模式、1/64 个活跃从核、主存偏移 0/4 B 和 8 B–64 KiB 的 2 倍递增消息大小，默认生成 224 个 CSV。小于 1 KiB 时重复 10000 次，其他规模重复 1000 次。若编译了可选 32 KiB 容量，需将 `BENCH_MAX_BYTES=32768` 传入作业脚本，例如 `bsub -I -q QUEUE -n 1 -cgsp 64 -mpecg 1 env BENCH_MAX_BYTES=32768 bash run_dma_sweep.sh dma_results_32k`。该脚本尚未在目标平台执行。
+
 每个活跃从核使用独立的主存槽位和 LDM 缓冲，主存槽位起始地址 128 B 对齐。先执行 8 次预热，再计时 `reps` 次。`get/put` 为阻塞接口；`iget/iput` 每次发起后立刻等待本地 reply 达到 1，因此它们测量的是 **单请求非阻塞接口的完成开销**，不是多请求流水化峰值。计时不包含 `athread_spawn/join`、缓冲初始化或最终校验。
 
 CSV 逐核给出周期数，`aggregate` 行用 64 核中最大的周期数计算并发吞吐：
