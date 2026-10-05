@@ -101,12 +101,15 @@ if [[ ${1:-} == --help || ${1:-} == -h ]]; then
   printf 'Usage: bash run_dma.sh [QUEUE] [NEW_OUTPUT_DIRECTORY]\n'
   printf 'With no QUEUE, display available queues and prompt for a name.\n'
   printf 'Optional environment: DMA_QUEUE, SWCC, SW_MODULE, BENCH_MAX_BYTES (default 65536).\n'
+  printf 'DMA_DIAG_ONLY=1 submits one 8-byte case directly, without a compute-node shell.\n'
   exit 0
 fi
 [[ $# -le 2 ]] || die 'Usage: bash run_dma.sh [QUEUE] [NEW_OUTPUT_DIRECTORY]'
 queue=${1:-${DMA_QUEUE:-}}
 capacity=${BENCH_MAX_BYTES:-65536}
 check_capacity "$capacity"
+diag_only=${DMA_DIAG_ONLY:-0}
+[[ "$diag_only" == 0 || "$diag_only" == 1 ]] || die 'DMA_DIAG_ONLY must be 0 or 1'
 
 command -v bsub >/dev/null 2>&1 || die 'bsub not found; load the site job-submission environment first'
 if [[ -z "$queue" ]]; then
@@ -202,7 +205,8 @@ if [[ "$capacity" != 65536 ]]; then
 fi
 {
   printf 'queue=%s\ncapacity_bytes=%s\ncompiler=%s\ncompiler_target=%s\n' "$queue" "$capacity" "$(command -v "$swcc")" "$target"
-  printf 'host_flags=-mhost -O2\nslave_flags=-mslave -msimd -O2\nlink_flags=-mhybrid\n'
+  printf 'host_flags=-mhost -O2 -g\nslave_flags=-mslave -msimd -O2 -g\nlink_flags=-mhybrid -g\n'
+  printf 'diagnostic_only=%s\n' "$diag_only"
   printf 'small_reps=10000\nlarge_reps=1000\nlarge_threshold_bytes=1024\n'
   printf 'submit_time_utc='; date -u '+%Y-%m-%dT%H:%M:%SZ'
   "$swcc" -v 2>&1
@@ -214,10 +218,25 @@ compile_object() {
 }
 printf 'Building DMA with %s. Output: %s\n' "$swcc" "$out"
 {
-  compile_object -mhost -O2 -c "$out/source/dma_host.c" -o "$out/build/dma_host.o"
-  compile_object -mslave -msimd -O2 -c "$out/source/dma_slave.c" -o "$out/build/dma_slave.o"
-  "$swcc" -mhybrid "$out/build/dma_host.o" "$out/build/dma_slave.o" -o "$out/dma_bench"
+  compile_object -mhost -O2 -g -c "$out/source/dma_host.c" -o "$out/build/dma_host.o"
+  compile_object -mslave -msimd -O2 -g -c "$out/source/dma_slave.c" -o "$out/build/dma_slave.o"
+  "$swcc" -mhybrid -g "$out/build/dma_host.o" "$out/build/dma_slave.o" -o "$out/dma_bench"
 } 2>&1 | tee "$out/build.log"
+
+if [[ "$diag_only" == 1 ]]; then
+  printf 'Submitting a direct 8-byte DMA diagnostic (no compute-node shell).\n'
+  if bsub -I -q "$queue" -n 1 -cgsp 64 -mpecg 1 \
+    "$out/dma_bench" get 8 10 1 0 2>&1 | tee "$out/probe.log"; then
+    :
+  else
+    die "Direct DMA diagnostic failed; share $out/probe.log"
+  fi
+  # Scheduler messages and stderr stage logs stay in probe.log.
+  awk '/^benchmark,/ || /^dma,/' "$out/probe.log" > "$out/smoke/get_1pe.csv"
+  check_csv "$out/smoke/get_1pe.csv" get 8 10 1 0 || die "Invalid diagnostic CSV; share $out/probe.log"
+  printf 'Direct DMA diagnostic passed. Log: %s/probe.log\n' "$out"
+  exit 0
+fi
 
 printf 'Submitting queue=%s, MPE=1, CG=1, CPE=64.\n' "$queue"
 # Keep the scheduler log separate from CSV data. pipefail propagates failures.
@@ -225,6 +244,10 @@ if bsub -I -q "$queue" -n 1 -cgsp 64 -mpecg 1 \
   /bin/sh "$out/dma_worker.sh" "$out" "$capacity" 2>&1 | tee "$out/job.log"; then
   :
 else
+  if [[ -s "$out/errors.log" ]]; then
+    printf '\nDMA stderr and last recorded stages:\n' >&2
+    cat "$out/errors.log" >&2
+  fi
   die "Job failed; inspect $out/job.log and $out/errors.log"
 fi
 [[ -f "$out/RUN_COMPLETE" ]] || die "Job did not finish the sweep; inspect $out/job.log and errors.log"

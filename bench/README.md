@@ -139,6 +139,16 @@ bash run_dma.sh
 
 用户已在 `q_share` 成功提交作业 8419325，但旧入口在计算节点调用 `bash`，报告 `sh: bash: not found`，尚未启动 DMA。修复后的入口将节点解释器改为 `/bin/sh`；登录节点仍使用 `bash run_dma.sh q_share`。不能只把旧提交命令的 `bash` 换成 `sh`，因为旧 worker 使用了 Bash 专用语法；应替换整个新版 `run_dma.sh`。
 
+后续作业 8419400 已启动 POSIX 节点脚本，但第一个 `get 8 10 1 0` 程序以状态 139 退出，错误文件只有 `Segmentation fault (core dumped)`。这表示运行验证尚未通过，现有日志不足以定位崩溃。新版 `dma_host.c` 在标准错误中记录主核进入、内存分配及地址、athread 初始化、spawn、join、halt、输出和释放阶段，并分别报告运行库返回码；所有阶段日志均在 DMA 计时区外。入口编译加入 `-g`，并在普通作业失败时自动显示 `errors.log`。
+
+先更新服务器上的 `dma_host.c` 与 `run_dma.sh`，在 `bench` 目录只做一次直接诊断：
+
+```sh
+DMA_DIAG_ONLY=1 bash run_dma.sh q_share
+```
+
+此模式编译后以 `bsub ... /结果目录/dma_bench get 8 10 1 0` 直接启动程序，不经过计算节点 shell，也不执行全套扫描。完整终端信息及阶段日志存入 `probe.log`。最后一个 `DMA_STAGE` 可帮助划分主核内存分配、运行库初始化、从核启动/等待或后处理问题；未出现 `host.enter` 时还需检查程序入口之前的加载/运行环境。直接诊断通过而节点脚本内失败时，需要进一步检查子进程获取从核资源的条件，不能立即认定具体原因。诊断模式通过仅验证该单项，不生成完整扫描的 `COMPLETE` 标记。
+
 默认结果存入 `bench/dma_results_时间_进程号/`，每次使用新目录。第二个位置参数可指定一个尚不存在且父目录已存在的结果目录：`bash run_dma.sh 实际队列名 新结果目录`。目录包括：
 
 | 文件 | 内容 |
