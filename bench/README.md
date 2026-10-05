@@ -122,6 +122,36 @@ make -B SWCC=swgcc SLAVE_FLAGS="-mslave -msimd" CPPFLAGS="-DBENCH_MAX_BYTES=3276
 
 ## 4. 单项运行
 
+### DMA 一键运行入口
+
+将 `run_dma.sh` 放在服务器的 `bench` 目录，与 `dma_host.c`、`dma_slave.c` 和 `bench_common.h` 同目录。使用原始默认 64 KiB 容量时，该入口也兼容服务器之前已经编译成功的源文件，不依赖 `run_dma_sweep.sh` 或 Python。
+
+```sh
+cd ~/liuchang/sw_test/bench
+bash run_dma.sh
+```
+
+未指定队列时，脚本用 `bqueues -u` 列出当前用户队列，提示输入一个可用队列名；队列必须由用户选择。已知队列时可直接 `bash run_dma.sh 实际队列名`，也可预先设置 `DMA_QUEUE`。这是执行命令，**会编译并提交一个真实作业**；本地交付时未实际提交。
+
+入口自动检查 `swgcc`；命令不存在且 `module` 可用时加载 `swgcc/1473`，随后核对编译目标。它复制 DMA 源文件到新结果目录，按已经验证过的 `-mhost`、`-mslave -msimd`、`-mhybrid` 命令编译独立二进制，保存编译器版本及日志。然后以 `bsub -I -q 队列名 -n 1 -cgsp 64 -mpecg 1` 申请一个核组，在作业内先执行四模式 × 两种活跃核数的 8 个小规模正确性检查，再扫描四模式、1/64 核、主存偏移 0/4 B 和 8 B–64 KiB 的消息大小，共 224 项。小于 1 KiB 时重复 10000 次，其余规模重复 1000 次。每项都会验证返回码、CSV 结构、活跃核数量和所有 `errors`，失败则停止；仅完成全套扫描后写入 `COMPLETE` 标记。
+
+默认结果存入 `bench/dma_results_时间_进程号/`，每次使用新目录。第二个位置参数可指定一个尚不存在且父目录已存在的结果目录：`bash run_dma.sh 实际队列名 新结果目录`。目录包括：
+
+| 文件 | 内容 |
+|---|---|
+| `source/`, `dma_bench`, `run_dma.sh` | 本次源代码、二进制与入口快照 |
+| `build_info.txt`, `build.log` | 编译器版本、容量、选项和编译日志 |
+| `job.log`, `errors.log` | 调度器及扫描进度、程序错误输出 |
+| `compute.txt`, `cpuinfo.txt`（若可读） | 计算资源上的时间、主机及 CPU 信息 |
+| `smoke/`, `raw/` | 8 项正确性检查和正式扫描原始 CSV |
+| `summary.csv` | 各正式扫描的聚合吞吐和完成周期 |
+| `scaling.csv` | 相同模式、大小、对齐条件下的 64 核／单核带宽比 |
+| `REPORT.md`, `COMPLETE` | 测量说明及成功完成标记 |
+
+可选 32 KiB 容量用 `BENCH_MAX_BYTES=32768 bash run_dma.sh 实际队列名`，需使用支持宏覆盖的新 `bench_common.h`。该配置只编译本次作业的独立 DMA 镜像，正式扫描为 208 项。脚本保留 B/cycle，不假设从核频率；cache、共享 LDM、资源共享情况与实际频率需随实验记录。入口为交互作业，会一直等到完成，保持提交终端开启即可。
+
+### 手动提交单项
+
 将 `QUEUE` 替换为站点的真实队列名。下面用交互作业，一次只占用一个主核和一个完整核组：
 
 ```sh
