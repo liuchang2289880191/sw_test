@@ -10,6 +10,14 @@
 #error "BENCH_MAX_BYTES must be 256..65536 and a multiple of 128"
 #endif
 #define BENCH_SLOT_BYTES (BENCH_MAX_BYTES + 128)
+/* DMA can use one larger buffer without enlarging the two-buffer RMA kernels. */
+#ifndef DMA_MAX_BYTES
+#define DMA_MAX_BYTES BENCH_MAX_BYTES
+#endif
+#if DMA_MAX_BYTES < 256 || DMA_MAX_BYTES > 131072 || DMA_MAX_BYTES % 128
+#error "DMA_MAX_BYTES must be 256..131072 and a multiple of 128"
+#endif
+#define DMA_SLOT_BYTES (DMA_MAX_BYTES + 128)
 #define BENCH_MAX_FLOWS 12
 
 typedef struct {
@@ -22,6 +30,8 @@ typedef struct {
     int active;
     int mode;
     int offset;
+    int slot_stride; /* bytes between host slots; always a multiple of 128 */
+    int slot_of_pe[BENCH_PES]; /* permutation of all 64 slots */
 } dma_args_t;
 
 typedef struct {

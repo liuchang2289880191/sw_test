@@ -1,6 +1,6 @@
 # 神威 DMA / RMA benchmark（含 SW26010Pro 2×2 小簇实验）
 
-本工程依据目录中的《SACA编程指南-v0.62.pdf》编写 Athread 接口代码，使用 **单个 8×8 从核阵列（64 个从核）**。该手册以 SW39000 为背景；新增的 2×2 小簇实验以 SW26010Pro 为研究目标。提供源代码、构建命令、测量定义和结果分析脚本；用户已在神威平台完成 DMA 完整扫描并通过校验，正式性能曲线尚待汇总 CSV 分析，RMA 尚待运行验证。目标机器的运行库/编译器版本若与手册不同，应先核对 `slave.h` 中的接口声明。
+本工程依据目录中的《SACA编程指南-v0.62.pdf》编写 Athread 接口代码，使用 **单个 8×8 从核阵列（64 个从核）**。该手册以 SW39000 为背景；新增的 2×2 小簇实验以 SW26010Pro 为研究目标。提供源代码、构建命令、测量定义和结果分析脚本；用户已在神威平台完成 DMA 基线扫描并通过校验，其 CSV 已完成分析和绘图。新增 DMA 边界/映射实验已通过本地模拟校验，尚待神威编译运行；RMA 尚待运行验证。目标机器的运行库/编译器版本若与手册不同，应先核对 `slave.h` 中的接口声明。
 
 针对 SW26010Pro **2×2 小簇边界**的 ping-pong、流水化带宽和争用对照，见 [RMA_CLUSTER.md](RMA_CLUSTER.md)。该部分以实测判断小簇是否进入性能模型；不会预设簇内通信必然更快。
 
@@ -23,7 +23,8 @@
 
 | 文件 | 用途 |
 |---|---|
-| `dma_host.c`, `dma_slave.c` | DMA get、put、iget、iput；1 或 64 从核 |
+| `dma_host.c`, `dma_slave.c` | DMA get、put、iget、iput；支持 1–64 活跃从核 |
+| `run_dma_boundary.sh`, `DMA_BOUNDARY.md` | 大小/偏移细扫、7 档核数、槽步长与映射对照；可选 128 KiB 消息 |
 | `rma_host.c`, `rma_slave.c` | RMA put/get 的 64×64 有向矩阵；跳过自通信 |
 | `bcast_host.c`, `bcast_slave.c` | RMA 行、列、全阵列集合广播 |
 | `analyze_topology.py` | 分类统计、曼哈顿距离统计、8×8 目的核图 |
@@ -122,6 +123,18 @@ make -B SWCC=swgcc SLAVE_FLAGS="-mslave -msimd" CPPFLAGS="-DBENCH_MAX_BYTES=3276
 
 ## 4. 单项运行
 
+### DMA 扩展实验入口
+
+新版边界、核数和内存映射实验见 [DMA_BOUNDARY.md](DMA_BOUNDARY.md)。同步全部相关文件后，在服务器 `bench` 目录执行：
+
+```sh
+bash run_dma_boundary.sh q_share
+# 可选扩大到 128 KiB，要求实际私有 LDM 有足够余量
+DMA_MAX_BYTES=131072 bash run_dma_boundary.sh q_share
+```
+
+默认 64 KiB 模式正式测量 7952 项，128 KiB 模式 9856 项，另有 8 项正确性检查。消息大小包含更多中间点；核数为 1、2、4、8、16、32、64；边界偏移为 0、4、64、124 B。输出 `plan.csv`、`slot_maps.csv`、逐核地址、`study_summary.csv` 和 `study_scaling.csv`。新入口仍直接提交单个 DMA 二进制；默认显式请求 `-cache_size 0`，共享 LDM 与资源独占情况需记录实际配置。原 `run_dma.sh` 默认继续测量旧基线。
+
 ### DMA 一键运行入口
 
 将更新后的 `run_dma.sh` 与 `dma_host.c` 同步到服务器的 `bench` 目录，与 `dma_slave.c` 和 `bench_common.h` 放在一起。新版入口要求主核代码支持 `--sweep`，需同时更新这两个文件；不依赖 `run_dma_sweep.sh` 或 Python。
@@ -141,7 +154,7 @@ bash run_dma.sh
 
 新版 `dma_host.c` 在标准错误中记录主核进入、内存分配及地址、athread 初始化、spawn、join、halt、输出和释放阶段，并分别报告运行库返回码；所有阶段日志均在 DMA 计时区外，普通扫描的阶段和错误输出全部进入 `job.log`。新增的单进程完整扫描已在模拟 SACA 运行库下验证案例数、重复启动、校验失败停止与汇总流程。
 
-**神威平台完整运行验证（2026-10-05）：**用户执行 `bash run_dma.sh q_share`，作业 8419757 正常结束。四模式 × 1/64 核的 8 项正确性检查，以及四模式 × 两种核数 × 两种偏移 × 14 种消息大小的 224 项正式扫描均通过，所有 `errors=0`；最终 halt/free 及登录节点 CSV 复核也完成。结果目录为 `dma_results_20261005_183213_10036/`，已生成 `summary.csv` 和 `scaling.csv`。当前收到的终端日志仅展示进度和校验成功，尚未取得这两个汇总文件中的正式性能数据，因此暂不据此给出延迟、带宽或扩展性结论。
+**神威平台完整运行验证（2026-10-05）：**用户执行 `bash run_dma.sh q_share`，作业 8419757 正常结束。四模式 × 1/64 核的 8 项正确性检查，以及四模式 × 两种核数 × 两种偏移 × 14 种消息大小的 224 项正式扫描均通过，所有 `errors=0`；最终 halt/free 及登录节点 CSV 复核也完成。结果目录为 `dma_results_20261005_183213_10036/`，已生成 `summary.csv` 和 `scaling.csv`。这份基线 CSV 后续已完成分析和绘图，分析产物位于项目根目录的 `outputs/dma_analysis_20261005_183213_10036/` 与 `outputs/dma_report_20261005/`。
 
 如需重新检查最小单项，在 `bench` 目录只做一次直接诊断：
 
@@ -186,7 +199,7 @@ bsub -I -q QUEUE -n 1 -cgsp 64 -mpecg 1 ./bench/rma_bench put 4 1
 bsub -I -q QUEUE -n 1 -cgsp 64 -mpecg 1 ./bench/rma_bcast_bench array 4 10 0
 ```
 
-`bytes` 必须是 4 B 的整数倍，默认范围 4–65536 B；可选容量配置以上限 `BENCH_MAX_BYTES` 为准。`dma_bench` 的 `active_pes` 为 1 或 64；`offset` 为 0（128 B 对齐）或 4（仅 4 B 对齐），用于比较未按 128 B 对齐的 DMA 影响。RMA `put|get` 的 `initiator` 表示发起核，`peer` 表示远端核。广播的 `root` 对 `row` 是列号、对 `col` 是行号（0–7），对 `array` 是从核号（0–63）。
+`bytes` 必须是 4 B 的整数倍，DMA 默认范围 4–65536 B；DMA 上限由 `DMA_MAX_BYTES` 决定，未设置时继承 `BENCH_MAX_BYTES`，只扩大 DMA 不改变 RMA 缓冲。`dma_bench` 的 `active_pes` 为 1–64；`offset` 为 0–124 B 的 4 B 整数倍。原基线仍使用 1/64 核及 0/4 B 偏移；新实验见上面的扩展入口。RMA `put|get` 的 `initiator` 表示发起核，`peer` 表示远端核。广播的 `root` 对 `row` 是列号、对 `col` 是行号（0–7），对 `array` 是从核号（0–63）。
 
 以下历史全套扫描示例要求计算节点可调用 Bash。用户当前 `q_share` 已报告找不到 Bash；DMA 请使用上述直接提交二进制的一键入口。其他站点若支持 Bash，可在项目根目录提交一个作业，以免每项重新排队：
 

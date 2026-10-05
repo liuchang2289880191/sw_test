@@ -1,7 +1,7 @@
 #include <slave.h>
 #include "bench_common.h"
 
-static __thread_local unsigned char ldm_buf[BENCH_MAX_BYTES]
+static __thread_local unsigned char ldm_buf[DMA_MAX_BYTES]
     __attribute__((aligned(128)));
 static __thread_local dma_args_t ldm_args;
 static __thread_local athread_rply_t ldm_reply;
@@ -19,8 +19,8 @@ void dma_kernel(dma_args_t *host_arg)
 
     athread_dma_get(a, host_arg, sizeof(*a));
     ldm_elapsed = 0;
-    src = (unsigned char *)a->src + tid * BENCH_SLOT_BYTES + a->offset;
-    dst = (unsigned char *)a->dst + tid * BENCH_SLOT_BYTES + a->offset;
+    src = (unsigned char *)a->src + a->slot_of_pe[tid] * a->slot_stride + a->offset;
+    dst = (unsigned char *)a->dst + a->slot_of_pe[tid] * a->slot_stride + a->offset;
 
     if (a->mode == 1 || a->mode == 3) {
         for (j = 0; j < a->bytes; ++j)
