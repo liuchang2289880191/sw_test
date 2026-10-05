@@ -145,61 +145,7 @@ done
 # Preserve the entry point used for this run.
 cp "$script_dir/run_dma.sh" "$out/run_dma.sh"
 
-# Compute-node worker: POSIX shell builtins plus the Sunway executable only.
-# Do not submit this Bash entry point: this site has no bash on compute nodes.
-cat > "$out/dma_worker.sh" <<'DMA_WORKER'
-#!/bin/sh
-set -eu
-[ "$#" -eq 2 ] || { printf 'Invalid worker arguments\n' >&2; exit 2; }
-out=$1
-capacity=$2
-[ -x "$out/dma_bench" ] || { printf 'Missing DMA executable\n' >&2; exit 2; }
-{
-  printf 'hostname_environment=%s\n' "${HOSTNAME:-unknown}"
-  printf 'job_id_environment=%s\n' "${LSB_JOBID:-unknown}"
-  printf 'capacity_bytes=%s\n' "$capacity"
-} > "$out/compute.txt"
-if [ -r /proc/cpuinfo ]; then
-  while IFS= read -r cpu_line || [ -n "$cpu_line" ]; do
-    printf '%s\n' "$cpu_line"
-  done < /proc/cpuinfo > "$out/cpuinfo.txt"
-fi
-
-run_case() {
-  printf 'DMA %s bytes=%s reps=%s active=%s offset=%s\n' "$1" "$2" "$3" "$4" "$5"
-  if "$out/dma_bench" "$1" "$2" "$3" "$4" "$5" > "$6" 2>> "$out/errors.log"; then
-    :
-  else
-    status=$?
-    printf 'ERROR: DMA exited with status %s: %s (see errors.log)\n' "$status" "$6" >&2
-    exit "$status"
-  fi
-}
-
-for mode in get put iget iput; do
-  for active in 1 64; do
-    run_case "$mode" 8 10 "$active" 0 "$out/smoke/${mode}_${active}pe.csv"
-  done
-done
-printf 'All eight DMA programs returned success. Starting DMA sweep.\n'
-expected=0
-for mode in get put iget iput; do
-  for active in 1 64; do
-    for offset in 0 4; do
-      for bytes in 8 16 32 64 128 256 512 1024 2048 4096 8192 16384 32768 65536; do
-        if [ "$bytes" -gt "$capacity" ]; then continue; fi
-        reps=10000
-        if [ "$bytes" -ge 1024 ]; then reps=1000; fi
-        run_case "$mode" "$bytes" "$reps" "$active" "$offset" \
-          "$out/raw/dma_${mode}_${active}pe_${bytes}B_offset${offset}.csv"
-        expected=$((expected+1))
-      done
-    done
-  done
-done
-printf 'completed_cases=%s\n' "$expected" > "$out/RUN_COMPLETE"
-printf 'DMA worker finished. CSV validation and summaries run on the login node.\n'
-DMA_WORKER
+# The compiled host program performs the entire sweep in one scheduler task.
 if [[ "$capacity" != 65536 ]]; then
   grep -Eq '^[[:space:]]*#ifndef[[:space:]]+BENCH_MAX_BYTES' "$out/source/bench_common.h" || die 'Update bench_common.h before choosing a non-default capacity'
 fi
@@ -241,15 +187,11 @@ fi
 printf 'Submitting queue=%s, MPE=1, CG=1, CPE=64.\n' "$queue"
 # Keep the scheduler log separate from CSV data. pipefail propagates failures.
 if bsub -I -q "$queue" -n 1 -cgsp 64 -mpecg 1 \
-  /bin/sh "$out/dma_worker.sh" "$out" "$capacity" 2>&1 | tee "$out/job.log"; then
+  "$out/dma_bench" --sweep "$out" 2>&1 | tee "$out/job.log"; then
   :
 else
-  if [[ -s "$out/errors.log" ]]; then
-    printf '\nDMA stderr and last recorded stages:\n' >&2
-    cat "$out/errors.log" >&2
-  fi
-  die "Job failed; inspect $out/job.log and $out/errors.log"
+  die "Job failed; inspect $out/job.log (includes DMA stage logs)"
 fi
-[[ -f "$out/RUN_COMPLETE" ]] || die "Job did not finish the sweep; inspect $out/job.log and errors.log"
+[[ -f "$out/RUN_COMPLETE" ]] || die "Job did not finish the sweep; inspect $out/job.log"
 collect_results "$out" "$capacity"
 printf '\nDone. Results: %s\nSummary: %s/summary.csv\nScaling: %s/scaling.csv\n' "$out" "$out" "$out"

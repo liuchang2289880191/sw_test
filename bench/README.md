@@ -124,7 +124,7 @@ make -B SWCC=swgcc SLAVE_FLAGS="-mslave -msimd" CPPFLAGS="-DBENCH_MAX_BYTES=3276
 
 ### DMA 一键运行入口
 
-将 `run_dma.sh` 放在服务器的 `bench` 目录，与 `dma_host.c`、`dma_slave.c` 和 `bench_common.h` 同目录。使用原始默认 64 KiB 容量时，该入口也兼容服务器之前已经编译成功的源文件，不依赖 `run_dma_sweep.sh` 或 Python。
+将更新后的 `run_dma.sh` 与 `dma_host.c` 同步到服务器的 `bench` 目录，与 `dma_slave.c` 和 `bench_common.h` 放在一起。新版入口要求主核代码支持 `--sweep`，需同时更新这两个文件；不依赖 `run_dma_sweep.sh` 或 Python。
 
 ```sh
 cd ~/liuchang/sw_test/bench
@@ -133,15 +133,15 @@ bash run_dma.sh
 
 未指定队列时，脚本用 `bqueues -u` 列出当前用户队列，提示输入一个可用队列名；队列必须由用户选择。已知队列时可直接 `bash run_dma.sh 实际队列名`，也可预先设置 `DMA_QUEUE`。这是执行命令，**会编译并提交一个真实作业**；本地交付时未实际提交。
 
-入口自动检查 `swgcc`；命令不存在且 `module` 可用时加载 `swgcc/1473`，随后核对编译目标。它复制 DMA 源文件到新结果目录，按已经验证过的 `-mhost`、`-mslave -msimd`、`-mhybrid` 命令编译独立二进制，保存编译器版本及日志。然后以 `bsub -I -q 队列名 -n 1 -cgsp 64 -mpecg 1 /bin/sh ...` 申请一个核组，执行自动生成的 POSIX `dma_worker.sh`。计算节点只需 `/bin/sh` 与 DMA 二进制，扫描不依赖 Bash、awk、mkdir、cp 或 date；结果目录均预先在登录节点创建。
+入口自动检查 `swgcc`；命令不存在且 `module` 可用时加载 `swgcc/1473`，随后核对编译目标。它复制 DMA 源文件到新结果目录，按已经验证过的 `-mhost`、`-mslave -msimd`、`-mhybrid` 命令（加 `-O2 -g` 编译、`-g` 链接）生成独立二进制，保存编译器版本及日志。然后以 `bsub -I -q 队列名 -n 1 -cgsp 64 -mpecg 1 /结果目录/dma_bench --sweep /结果目录` 直接启动一个 DMA 进程。全部案例在该进程内循环运行，athread 初始化、缓冲分配和最终释放各执行一次，每项单独 spawn/join；无需计算节点 shell 或派生子进程。结果目录均预先在登录节点创建。
 
-作业内先执行四模式 × 两种活跃核数的 8 个小规模正确性检查，再扫描四模式、1/64 核、主存偏移 0/4 B 和 8 B–64 KiB 的消息大小，共 224 项。小于 1 KiB 时重复 10000 次，其余规模重复 1000 次。DMA 程序返回非零时，计算节点立即停止；正常结束写入 `RUN_COMPLETE`。作业结束后，登录节点用 awk 复核每项 CSV 结构、活跃核数量和所有 `errors`，生成汇总；仅完整通过复核后写入 `COMPLETE`。
+作业内先执行四模式 × 两种活跃核数的 8 个小规模正确性检查，再扫描四模式、1/64 核、主存偏移 0/4 B 和 8 B–64 KiB 的消息大小，共 224 项。小于 1 KiB 时重复 10000 次，其余规模重复 1000 次。每项重新清空目的缓冲和结果槽，避免之前的传输数据掩盖本次错误；数据校验失败时保留该项 CSV 并停止。正常释放资源后写入 `RUN_COMPLETE`。作业结束后，登录节点用 awk 复核每项 CSV 结构、活跃核数量和所有 `errors`，生成汇总；仅完整通过复核后写入 `COMPLETE`。
 
-用户已在 `q_share` 成功提交作业 8419325，但旧入口在计算节点调用 `bash`，报告 `sh: bash: not found`，尚未启动 DMA。修复后的入口将节点解释器改为 `/bin/sh`；登录节点仍使用 `bash run_dma.sh q_share`。不能只把旧提交命令的 `bash` 换成 `sh`，因为旧 worker 使用了 Bash 专用语法；应替换整个新版 `run_dma.sh`。
+用户在 `q_share` 的旧作业 8419325 因计算节点找不到 Bash，尚未启动 DMA；随后 POSIX 节点脚本作业 8419400 在第一个 `get 8 10 1 0` 程序上以状态 139 退出。最终直接启动诊断作业 8419534 已成功完成同一小规模检查，所有主核阶段均结束、`errors=0`。该单项测得总计 12580 cycles、平均 1258 cycles/op，但仅重复 10 次，不作为稳定延迟或峰值带宽结论。基于直接启动的成功验证，新版完整扫描也直接提交 DMA 二进制，原有段错误的具体底层原因尚未确定。
 
-后续作业 8419400 已启动 POSIX 节点脚本，但第一个 `get 8 10 1 0` 程序以状态 139 退出，错误文件只有 `Segmentation fault (core dumped)`。这表示运行验证尚未通过，现有日志不足以定位崩溃。新版 `dma_host.c` 在标准错误中记录主核进入、内存分配及地址、athread 初始化、spawn、join、halt、输出和释放阶段，并分别报告运行库返回码；所有阶段日志均在 DMA 计时区外。入口编译加入 `-g`，并在普通作业失败时自动显示 `errors.log`。
+新版 `dma_host.c` 在标准错误中记录主核进入、内存分配及地址、athread 初始化、spawn、join、halt、输出和释放阶段，并分别报告运行库返回码；所有阶段日志均在 DMA 计时区外，普通扫描的阶段和错误输出全部进入 `job.log`。新增的单进程完整扫描已在模拟 SACA 运行库下验证案例数、重复启动、校验失败停止与汇总流程；尚待神威平台验证完整扫描。
 
-先更新服务器上的 `dma_host.c` 与 `run_dma.sh`，在 `bench` 目录只做一次直接诊断：
+如需重新检查最小单项，在 `bench` 目录只做一次直接诊断：
 
 ```sh
 DMA_DIAG_ONLY=1 bash run_dma.sh q_share
@@ -153,9 +153,9 @@ DMA_DIAG_ONLY=1 bash run_dma.sh q_share
 
 | 文件 | 内容 |
 |---|---|
-| `source/`, `dma_bench`, `run_dma.sh`, `dma_worker.sh` | 本次源代码、二进制、入口快照及 POSIX 节点脚本 |
+| `source/`, `dma_bench`, `run_dma.sh` | 本次源代码、二进制及入口快照 |
 | `build_info.txt`, `build.log` | 编译器版本、容量、选项和编译日志 |
-| `job.log`, `errors.log` | 调度器及扫描进度、程序错误输出 |
+| `job.log` | 调度器、扫描进度、阶段日志及程序错误输出 |
 | `compute.txt`, `cpuinfo.txt`（若可读） | 节点环境变量、容量及 CPU 信息（环境变量可能不可用） |
 | `smoke/`, `raw/` | 8 项正确性检查和正式扫描原始 CSV |
 | `summary.csv` | 各正式扫描的聚合吞吐和完成周期 |
@@ -186,7 +186,7 @@ bsub -I -q QUEUE -n 1 -cgsp 64 -mpecg 1 ./bench/rma_bcast_bench array 4 10 0
 
 `bytes` 必须是 4 B 的整数倍，默认范围 4–65536 B；可选容量配置以上限 `BENCH_MAX_BYTES` 为准。`dma_bench` 的 `active_pes` 为 1 或 64；`offset` 为 0（128 B 对齐）或 4（仅 4 B 对齐），用于比较未按 128 B 对齐的 DMA 影响。RMA `put|get` 的 `initiator` 表示发起核，`peer` 表示远端核。广播的 `root` 对 `row` 是列号、对 `col` 是行号（0–7），对 `array` 是从核号（0–63）。
 
-以下历史全套扫描示例要求计算节点可调用 Bash。用户当前 `q_share` 已报告找不到 Bash；DMA 请使用上述 `/bin/sh` 节点脚本的一键入口。其他站点若支持 Bash，可在项目根目录提交一个作业，以免每项重新排队：
+以下历史全套扫描示例要求计算节点可调用 Bash。用户当前 `q_share` 已报告找不到 Bash；DMA 请使用上述直接提交二进制的一键入口。其他站点若支持 Bash，可在项目根目录提交一个作业，以免每项重新排队：
 
 ```sh
 bsub -I -q QUEUE -n 1 -cgsp 64 -mpecg 1 bash bench/run_sweep.sh results
