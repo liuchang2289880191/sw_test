@@ -133,20 +133,24 @@ bash run_dma.sh
 
 未指定队列时，脚本用 `bqueues -u` 列出当前用户队列，提示输入一个可用队列名；队列必须由用户选择。已知队列时可直接 `bash run_dma.sh 实际队列名`，也可预先设置 `DMA_QUEUE`。这是执行命令，**会编译并提交一个真实作业**；本地交付时未实际提交。
 
-入口自动检查 `swgcc`；命令不存在且 `module` 可用时加载 `swgcc/1473`，随后核对编译目标。它复制 DMA 源文件到新结果目录，按已经验证过的 `-mhost`、`-mslave -msimd`、`-mhybrid` 命令编译独立二进制，保存编译器版本及日志。然后以 `bsub -I -q 队列名 -n 1 -cgsp 64 -mpecg 1` 申请一个核组，在作业内先执行四模式 × 两种活跃核数的 8 个小规模正确性检查，再扫描四模式、1/64 核、主存偏移 0/4 B 和 8 B–64 KiB 的消息大小，共 224 项。小于 1 KiB 时重复 10000 次，其余规模重复 1000 次。每项都会验证返回码、CSV 结构、活跃核数量和所有 `errors`，失败则停止；仅完成全套扫描后写入 `COMPLETE` 标记。
+入口自动检查 `swgcc`；命令不存在且 `module` 可用时加载 `swgcc/1473`，随后核对编译目标。它复制 DMA 源文件到新结果目录，按已经验证过的 `-mhost`、`-mslave -msimd`、`-mhybrid` 命令编译独立二进制，保存编译器版本及日志。然后以 `bsub -I -q 队列名 -n 1 -cgsp 64 -mpecg 1 /bin/sh ...` 申请一个核组，执行自动生成的 POSIX `dma_worker.sh`。计算节点只需 `/bin/sh` 与 DMA 二进制，扫描不依赖 Bash、awk、mkdir、cp 或 date；结果目录均预先在登录节点创建。
+
+作业内先执行四模式 × 两种活跃核数的 8 个小规模正确性检查，再扫描四模式、1/64 核、主存偏移 0/4 B 和 8 B–64 KiB 的消息大小，共 224 项。小于 1 KiB 时重复 10000 次，其余规模重复 1000 次。DMA 程序返回非零时，计算节点立即停止；正常结束写入 `RUN_COMPLETE`。作业结束后，登录节点用 awk 复核每项 CSV 结构、活跃核数量和所有 `errors`，生成汇总；仅完整通过复核后写入 `COMPLETE`。
+
+用户已在 `q_share` 成功提交作业 8419325，但旧入口在计算节点调用 `bash`，报告 `sh: bash: not found`，尚未启动 DMA。修复后的入口将节点解释器改为 `/bin/sh`；登录节点仍使用 `bash run_dma.sh q_share`。不能只把旧提交命令的 `bash` 换成 `sh`，因为旧 worker 使用了 Bash 专用语法；应替换整个新版 `run_dma.sh`。
 
 默认结果存入 `bench/dma_results_时间_进程号/`，每次使用新目录。第二个位置参数可指定一个尚不存在且父目录已存在的结果目录：`bash run_dma.sh 实际队列名 新结果目录`。目录包括：
 
 | 文件 | 内容 |
 |---|---|
-| `source/`, `dma_bench`, `run_dma.sh` | 本次源代码、二进制与入口快照 |
+| `source/`, `dma_bench`, `run_dma.sh`, `dma_worker.sh` | 本次源代码、二进制、入口快照及 POSIX 节点脚本 |
 | `build_info.txt`, `build.log` | 编译器版本、容量、选项和编译日志 |
 | `job.log`, `errors.log` | 调度器及扫描进度、程序错误输出 |
-| `compute.txt`, `cpuinfo.txt`（若可读） | 计算资源上的时间、主机及 CPU 信息 |
+| `compute.txt`, `cpuinfo.txt`（若可读） | 节点环境变量、容量及 CPU 信息（环境变量可能不可用） |
 | `smoke/`, `raw/` | 8 项正确性检查和正式扫描原始 CSV |
 | `summary.csv` | 各正式扫描的聚合吞吐和完成周期 |
 | `scaling.csv` | 相同模式、大小、对齐条件下的 64 核／单核带宽比 |
-| `REPORT.md`, `COMPLETE` | 测量说明及成功完成标记 |
+| `REPORT.md`, `RUN_COMPLETE`, `COMPLETE` | 测量说明、节点扫描结束标记及登录节点复核成功标记 |
 
 可选 32 KiB 容量用 `BENCH_MAX_BYTES=32768 bash run_dma.sh 实际队列名`，需使用支持宏覆盖的新 `bench_common.h`。该配置只编译本次作业的独立 DMA 镜像，正式扫描为 208 项。脚本保留 B/cycle，不假设从核频率；cache、共享 LDM、资源共享情况与实际频率需随实验记录。入口为交互作业，会一直等到完成，保持提交终端开启即可。
 
@@ -172,7 +176,7 @@ bsub -I -q QUEUE -n 1 -cgsp 64 -mpecg 1 ./bench/rma_bcast_bench array 4 10 0
 
 `bytes` 必须是 4 B 的整数倍，默认范围 4–65536 B；可选容量配置以上限 `BENCH_MAX_BYTES` 为准。`dma_bench` 的 `active_pes` 为 1 或 64；`offset` 为 0（128 B 对齐）或 4（仅 4 B 对齐），用于比较未按 128 B 对齐的 DMA 影响。RMA `put|get` 的 `initiator` 表示发起核，`peer` 表示远端核。广播的 `root` 对 `row` 是列号、对 `col` 是行号（0–7），对 `array` 是从核号（0–63）。
 
-全套扫描可在项目根目录提交一个作业，以免每项重新排队：
+以下历史全套扫描示例要求计算节点可调用 Bash。用户当前 `q_share` 已报告找不到 Bash；DMA 请使用上述 `/bin/sh` 节点脚本的一键入口。其他站点若支持 Bash，可在项目根目录提交一个作业，以免每项重新排队：
 
 ```sh
 bsub -I -q QUEUE -n 1 -cgsp 64 -mpecg 1 bash bench/run_sweep.sh results
@@ -184,7 +188,7 @@ bsub -I -q QUEUE -n 1 -cgsp 64 -mpecg 1 bash bench/run_sweep.sh results
 
 ### DMA
 
-只扫描 DMA 时，可使用 `run_dma_sweep.sh`。在 `bench` 目录按本站手册的提交方式执行 `bsub -I -q QUEUE -n 1 -cgsp 64 -mpecg 1 bash run_dma_sweep.sh dma_results`，其中 `QUEUE` 必须替换为实际可用队列（可用 `bqueues` 查询）。脚本可从任意目录调用，会查找其同目录下的 `dma_bench`；结果目录相对于提交时的工作目录。它扫描四种模式、1/64 个活跃从核、主存偏移 0/4 B 和 8 B–64 KiB 的 2 倍递增消息大小，默认生成 224 个 CSV。小于 1 KiB 时重复 10000 次，其他规模重复 1000 次。若编译了可选 32 KiB 容量，需将 `BENCH_MAX_BYTES=32768` 传入作业脚本，例如 `bsub -I -q QUEUE -n 1 -cgsp 64 -mpecg 1 env BENCH_MAX_BYTES=32768 bash run_dma_sweep.sh dma_results_32k`。该脚本尚未在目标平台执行。
+只扫描 DMA 时，在 `bench` 目录使用 `bash run_dma.sh q_share`，构建、提交和汇总方法见上面的一键入口说明。早期的 `run_dma_sweep.sh` 使用 Bash，仅适用于计算节点确实提供 Bash 的环境，当前 `q_share` 请使用新版入口。
 
 每个活跃从核使用独立的主存槽位和 LDM 缓冲，主存槽位起始地址 128 B 对齐。先执行 8 次预热，再计时 `reps` 次。`get/put` 为阻塞接口；`iget/iput` 每次发起后立刻等待本地 reply 达到 1，因此它们测量的是 **单请求非阻塞接口的完成开销**，不是多请求流水化峰值。计时不包含 `athread_spawn/join`、缓冲初始化或最终校验。
 

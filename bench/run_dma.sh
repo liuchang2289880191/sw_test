@@ -37,36 +37,15 @@ check_csv() {
   ' "$1"
 }
 
-worker() {
+collect_results() {
   local out=$1 capacity=$2 mode active offset bytes reps file expected count
-  check_capacity "$capacity"
-  [[ -x "$out/dma_bench" ]] || die "Missing executable: $out/dma_bench"
-  mkdir "$out/smoke" "$out/raw"
-  {
-    printf 'compute_time_utc='; date -u '+%Y-%m-%dT%H:%M:%SZ'
-    printf 'hostname='; hostname
-    uname -a
-  } > "$out/compute.txt"
-  if [[ -r /proc/cpuinfo ]]; then cp /proc/cpuinfo "$out/cpuinfo.txt"; fi
-
-  run_case() {
-    local mode=$1 bytes=$2 reps=$3 active=$4 offset=$5 file=$6 status
-    printf 'DMA %s bytes=%s reps=%s active=%s offset=%s\n' "$mode" "$bytes" "$reps" "$active" "$offset"
-    if "$out/dma_bench" "$mode" "$bytes" "$reps" "$active" "$offset" > "$file" 2>> "$out/errors.log"; then
-      check_csv "$file" "$mode" "$bytes" "$reps" "$active" "$offset" || die "Invalid CSV or nonzero errors: $file"
-    else
-      status=$?
-      die "DMA exited with status $status: $file (see errors.log)"
-    fi
-  }
-
-  # Eight tiny cases check all four interfaces at both concurrency levels.
+  # CSV parsing runs on the login node, which already has the build tools.
   for mode in get put iget iput; do
     for active in 1 64; do
-      run_case "$mode" 8 10 "$active" 0 "$out/smoke/${mode}_${active}pe.csv"
+      file="$out/smoke/${mode}_${active}pe.csv"
+      check_csv "$file" "$mode" 8 10 "$active" 0 || die "Invalid CSV or nonzero errors: $file"
     done
   done
-  printf 'All eight correctness checks passed. Starting DMA sweep.\n'
   expected=0
   for mode in get put iget iput; do
     for active in 1 64; do
@@ -76,7 +55,7 @@ worker() {
           reps=10000
           if (( bytes >= 1024 )); then reps=1000; fi
           file="$out/raw/dma_${mode}_${active}pe_${bytes}B_offset${offset}.csv"
-          run_case "$mode" "$bytes" "$reps" "$active" "$offset" "$file"
+          check_csv "$file" "$mode" "$bytes" "$reps" "$active" "$offset" || die "Invalid CSV or nonzero errors: $file"
           expected=$((expected+1))
         done
       done
@@ -118,12 +97,6 @@ worker() {
   printf 'DMA completed: %s cases. Results: %s\n' "$count" "$out"
 }
 
-if [[ ${1:-} == --worker ]]; then
-  [[ $# == 3 ]] || die 'Invalid worker arguments'
-  worker "$2" "$3"
-  exit 0
-fi
-
 if [[ ${1:-} == --help || ${1:-} == -h ]]; then
   printf 'Usage: bash run_dma.sh [QUEUE] [NEW_OUTPUT_DIRECTORY]\n'
   printf 'With no QUEUE, display available queues and prompt for a name.\n'
@@ -161,13 +134,69 @@ esac
 out=${2:-"$script_dir/dma_results_$(date '+%Y%m%d_%H%M%S')_$$"}
 mkdir -- "$out" || die 'Output directory must be new and its parent must exist'
 out=$(cd -- "$out" && pwd)
-mkdir "$out/source" "$out/build"
+mkdir "$out/source" "$out/build" "$out/smoke" "$out/raw"
 for file in dma_host.c dma_slave.c bench_common.h; do
   [[ -f "$script_dir/$file" ]] || die "Missing source: $script_dir/$file"
   cp "$script_dir/$file" "$out/source/$file"
 done
-# Freeze this launcher's worker logic too, so later edits cannot change the job.
+# Preserve the entry point used for this run.
 cp "$script_dir/run_dma.sh" "$out/run_dma.sh"
+
+# Compute-node worker: POSIX shell builtins plus the Sunway executable only.
+# Do not submit this Bash entry point: this site has no bash on compute nodes.
+cat > "$out/dma_worker.sh" <<'DMA_WORKER'
+#!/bin/sh
+set -eu
+[ "$#" -eq 2 ] || { printf 'Invalid worker arguments\n' >&2; exit 2; }
+out=$1
+capacity=$2
+[ -x "$out/dma_bench" ] || { printf 'Missing DMA executable\n' >&2; exit 2; }
+{
+  printf 'hostname_environment=%s\n' "${HOSTNAME:-unknown}"
+  printf 'job_id_environment=%s\n' "${LSB_JOBID:-unknown}"
+  printf 'capacity_bytes=%s\n' "$capacity"
+} > "$out/compute.txt"
+if [ -r /proc/cpuinfo ]; then
+  while IFS= read -r cpu_line || [ -n "$cpu_line" ]; do
+    printf '%s\n' "$cpu_line"
+  done < /proc/cpuinfo > "$out/cpuinfo.txt"
+fi
+
+run_case() {
+  printf 'DMA %s bytes=%s reps=%s active=%s offset=%s\n' "$1" "$2" "$3" "$4" "$5"
+  if "$out/dma_bench" "$1" "$2" "$3" "$4" "$5" > "$6" 2>> "$out/errors.log"; then
+    :
+  else
+    status=$?
+    printf 'ERROR: DMA exited with status %s: %s (see errors.log)\n' "$status" "$6" >&2
+    exit "$status"
+  fi
+}
+
+for mode in get put iget iput; do
+  for active in 1 64; do
+    run_case "$mode" 8 10 "$active" 0 "$out/smoke/${mode}_${active}pe.csv"
+  done
+done
+printf 'All eight DMA programs returned success. Starting DMA sweep.\n'
+expected=0
+for mode in get put iget iput; do
+  for active in 1 64; do
+    for offset in 0 4; do
+      for bytes in 8 16 32 64 128 256 512 1024 2048 4096 8192 16384 32768 65536; do
+        if [ "$bytes" -gt "$capacity" ]; then continue; fi
+        reps=10000
+        if [ "$bytes" -ge 1024 ]; then reps=1000; fi
+        run_case "$mode" "$bytes" "$reps" "$active" "$offset" \
+          "$out/raw/dma_${mode}_${active}pe_${bytes}B_offset${offset}.csv"
+        expected=$((expected+1))
+      done
+    done
+  done
+done
+printf 'completed_cases=%s\n' "$expected" > "$out/RUN_COMPLETE"
+printf 'DMA worker finished. CSV validation and summaries run on the login node.\n'
+DMA_WORKER
 if [[ "$capacity" != 65536 ]]; then
   grep -Eq '^[[:space:]]*#ifndef[[:space:]]+BENCH_MAX_BYTES' "$out/source/bench_common.h" || die 'Update bench_common.h before choosing a non-default capacity'
 fi
@@ -192,7 +221,12 @@ printf 'Building DMA with %s. Output: %s\n' "$swcc" "$out"
 
 printf 'Submitting queue=%s, MPE=1, CG=1, CPE=64.\n' "$queue"
 # Keep the scheduler log separate from CSV data. pipefail propagates failures.
-bsub -I -q "$queue" -n 1 -cgsp 64 -mpecg 1 \
-  bash "$out/run_dma.sh" --worker "$out" "$capacity" 2>&1 | tee "$out/job.log"
-[[ -f "$out/COMPLETE" ]] || die "Job did not finish the sweep; inspect $out/job.log and errors.log"
+if bsub -I -q "$queue" -n 1 -cgsp 64 -mpecg 1 \
+  /bin/sh "$out/dma_worker.sh" "$out" "$capacity" 2>&1 | tee "$out/job.log"; then
+  :
+else
+  die "Job failed; inspect $out/job.log and $out/errors.log"
+fi
+[[ -f "$out/RUN_COMPLETE" ]] || die "Job did not finish the sweep; inspect $out/job.log and errors.log"
+collect_results "$out" "$capacity"
 printf '\nDone. Results: %s\nSummary: %s/summary.csv\nScaling: %s/scaling.csv\n' "$out" "$out" "$out"
