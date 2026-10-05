@@ -34,14 +34,61 @@
 
 ## 3. 在神威平台上构建
 
-从项目根目录执行：
+用户在 `sw_hpc_78` 上提供的 `module avail` 已确认有 `swgcc/1432`、`swgcc/1449`、`swgcc/1456`、`swgcc/1473`；当时没有加载任何模块。该站点可先使用 `swgcc/1473`。如果当前目录已经是 `~/liuchang/sw_test/bench`，执行：
+
+```sh
+module load swgcc/1473
+hash -r
+command -v swgcc
+swgcc -v
+make SWCC=swgcc SLAVE_FLAGS="-mslave -msimd" dma_bench
+```
+
+这一步加载编译器并构建 DMA 程序，不提交 benchmark 作业。用户已确认 `swgcc/1473` 的目标为 `sw_64sw6a-sunway-linux-gnu`。该版本的 `slave.h` 引入 `crts2ath.h`，DMA 接口在未启用 SIMD 时报告 `Please use -msimd option!!!`，因此从核编译必须加 `-msimd`。更新后的 Makefile 已将 `SLAVE_FLAGS` 默认设为 `-mslave -msimd`，适用于全部 DMA/RMA 从核源文件。
+
+若服务器仍使用将 `-mslave` 写死的旧 Makefile，传入 `SLAVE_FLAGS` 不会改变其命令。此时可先直接编译和链接：
+
+```sh
+swgcc -mhost -O2 -c dma_host.c -o dma_host.o
+swgcc -mslave -msimd -O2 -c dma_slave.c -o dma_slave.o
+swgcc -mhybrid dma_host.o dma_slave.o -o dma_bench
+```
+
+`command -v swgcc` 应打印路径；若模块加载失败或之后仍找不到命令，保留加载错误和 `module show swgcc/1473` 输出以核对配置。从项目根目录编译则使用 `make -C bench SWCC=swgcc dma_bench`；编译全部程序可去掉 `dma_bench` 目标。以上命令尚未在神威平台完成编译验证。
+
+以下是其他站点或环境仍未配置时的检查方法。
+
+先在登录节点检查实际工具链。不同站点不一定把 `swgcc` 放进 PATH；下面的脚本仅查询命令路径、机器架构与 module，不编译或运行测试。请从项目根目录执行：
+
+```sh
+bash bench/check_toolchain.sh
+```
+
+也可直接查询：
+
+```sh
+command -v gcc swgcc swcc sw5cc sw9cc sw9gcc mpicc
+gcc -dumpmachine
+gcc -v
+type module
+```
+
+这些名字只是查找候选项，不表示每个编译器都支持当前源码。如果有 `module`，用 `module list`、`module avail` 查看站点配置，并按站点说明加载对应工具链；不要猜测 module 名称。若没有工具链路径，需要站点提供环境初始化脚本或已成功编译 Athread 程序的命令。
+
+直接执行 `gcc` 时出现“没有输入文件”是正常的，但只能说明命令存在。站点可能将申威定制编译器安装为 `gcc`；需根据 `gcc -v` 的配置、目标架构及站点接口说明判断。如果确认该 `gcc` 支持当前 SACA 的 `-mhost/-mslave/-mhybrid` 选项，从项目根目录用 `make -C bench SWCC=gcc dma_bench`；若已经位于 `bench` 目录，则用 `make SWCC=gcc dma_bench`。普通 x86/ARM GCC 无法据此生成神威主从核程序。
+
+用户提供的系统 `gcc` 为 **Red Hat GCC 4.8.5，目标 `x86_64-redhat-linux`**，不能使用上述 `SWCC=gcc` 分支；此站点应加载开头列出的 `swgcc` 模块。若其他站点没有可见的工具链或 module，请管理员提供神威主核/从核编译器路径、环境初始化命令，以及一个成功编译 Athread 程序的示例。`Makefile` 已对名为 `gcc` 且报告 x86/ARM 目标的情况提前停止并提示。
+
+确认编译器版本、主核/从核/混合链接选项，以及新一代 DMA/RMA 接口头文件之后再构建。仅当实际工具链是手册所述的 `swgcc` 接口时，执行：
 
 ```sh
 swgcc -v
-make -C bench
+make -C bench SWCC=swgcc
 ```
 
-得到 `bench/dma_bench`、`bench/rma_bench`、`bench/rma_bcast_bench`、`bench/rma_cluster_bench`。`Makefile` 使用手册所示的 `-mhost`、`-mslave` 和 `-mhybrid`。如果站点将编译器安装为其他名字，可用 `make -C bench SWCC=/path/to/swgcc`。本地目录没有神威工具链，本工程未在该平台编译或执行；第一轮使用时应先根据实际编译报错核对本机头文件/库版本。
+编译成功后得到 `bench/dma_bench`、`bench/rma_bench`、`bench/rma_bcast_bench`、`bench/rma_cluster_bench`。`Makefile` 的 `SWCC`、`HOST_FLAGS`、`SLAVE_FLAGS`、`LINK_FLAGS` 均可覆盖；默认分别为 `-mhost`、`-mslave -msimd`、`-mhybrid`。主从核及混合链接选项依据当前目录手册，`-msimd` 同时依据 `swgcc/1473` 的实际 DMA 编译诊断补入。`CPPFLAGS`、`LDFLAGS`、`LDLIBS` 可补充站点要求的头文件和库配置。
+
+例如确认安装的是兼容这些选项的 `swgcc`，但未在 PATH 中，可用 `make -C bench SWCC=/实际安装路径/swgcc`。其他工具链可能采用不同选项：[无锡中心的旧版编译手册](https://www.nsccwx.cn/Upload/%E7%BC%96%E8%AF%91%E7%94%A8%E6%88%B7%E6%89%8B%E5%86%8C-f6641a5d3e914849b424558571a7430e.pdf)使用 `sw5cc -host/-slave/-hybrid`，这不能证明它支持本工程使用的新一代 RMA API、`__thread_local` 或 LDM 容量。不要仅替换编译器名称后直接套用；应先核对实际版本、目标 CPU 和 `slave.h`。本工程尚未在神威平台编译或执行。
 
 ## 4. 单项运行
 

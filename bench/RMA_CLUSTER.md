@@ -10,6 +10,10 @@
 
 ## 一、ping-pong latency matrix
 
+构建前先按 [README 的工具链检查步骤](README.md#3-在神威平台上构建)确认站点编译器及选项；`make` 默认的 `swgcc` 是本地手册给出的接口名称，不是对当前站点安装环境的确认。
+
+用户当前的 `sw_hpc_78` 环境已确认加载 `swgcc/1473` 后可以调用编译器。该版本运行库的 DMA 接口要求从核编译加 `-msimd`，RMA 程序中的参数及结果传输也使用这些接口；更新后的 Makefile 已默认使用 `-mslave -msimd`。新会话中应先执行 `module load swgcc/1473` 并确认 `swgcc -v` 成功，再执行下面的构建命令。如果已经位于 `bench` 目录，构建命令用 `make SWCC=swgcc rma_cluster_bench`。
+
 ```sh
 make -C bench
 bsub -I -q QUEUE -n 1 -cgsp 64 -mpecg 1 \
