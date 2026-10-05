@@ -54,7 +54,15 @@ swgcc -mslave -msimd -O2 -c dma_slave.c -o dma_slave.o
 swgcc -mhybrid dma_host.o dma_slave.o -o dma_bench
 ```
 
-`command -v swgcc` 应打印路径；若模块加载失败或之后仍找不到命令，保留加载错误和 `module show swgcc/1473` 输出以核对配置。从项目根目录编译则使用 `make -C bench SWCC=swgcc dma_bench`；编译全部程序可去掉 `dma_bench` 目标。以上命令尚未在神威平台完成编译验证。
+用户已在 `sw_hpc_78` 的 `swgcc/1473` 环境确认四个目标均编译、链接成功：`dma_bench`、`rma_bench`、`rma_bcast_bench`、`rma_cluster_bench`。三个 RMA 目标报告静态 LDM 用量超过 128 KB 的警告，具体见下面的说明。尚无运行、数据校验或性能实测结果。
+
+在同一 `bench` 目录继续编译 RMA 程序：
+
+```sh
+make SWCC=swgcc SLAVE_FLAGS="-mslave -msimd" rma_bench rma_bcast_bench rma_cluster_bench
+```
+
+`command -v swgcc` 应打印路径；若模块加载失败或之后仍找不到命令，保留加载错误和 `module show swgcc/1473` 输出以核对配置。从项目根目录编译则在命令中添加 `-C bench`；编译全部程序可去掉目标名称。
 
 以下是其他站点或环境仍未配置时的检查方法。
 
@@ -88,7 +96,29 @@ make -C bench SWCC=swgcc
 
 编译成功后得到 `bench/dma_bench`、`bench/rma_bench`、`bench/rma_bcast_bench`、`bench/rma_cluster_bench`。`Makefile` 的 `SWCC`、`HOST_FLAGS`、`SLAVE_FLAGS`、`LINK_FLAGS` 均可覆盖；默认分别为 `-mhost`、`-mslave -msimd`、`-mhybrid`。主从核及混合链接选项依据当前目录手册，`-msimd` 同时依据 `swgcc/1473` 的实际 DMA 编译诊断补入。`CPPFLAGS`、`LDFLAGS`、`LDLIBS` 可补充站点要求的头文件和库配置。
 
-例如确认安装的是兼容这些选项的 `swgcc`，但未在 PATH 中，可用 `make -C bench SWCC=/实际安装路径/swgcc`。其他工具链可能采用不同选项：[无锡中心的旧版编译手册](https://www.nsccwx.cn/Upload/%E7%BC%96%E8%AF%91%E7%94%A8%E6%88%B7%E6%89%8B%E5%86%8C-f6641a5d3e914849b424558571a7430e.pdf)使用 `sw5cc -host/-slave/-hybrid`，这不能证明它支持本工程使用的新一代 RMA API、`__thread_local` 或 LDM 容量。不要仅替换编译器名称后直接套用；应先核对实际版本、目标 CPU 和 `slave.h`。本工程尚未在神威平台编译或执行。
+例如确认安装的是兼容这些选项的 `swgcc`，但未在 PATH 中，可用 `make -C bench SWCC=/实际安装路径/swgcc`。其他工具链可能采用不同选项：[无锡中心的旧版编译手册](https://www.nsccwx.cn/Upload/%E7%BC%96%E8%AF%91%E7%94%A8%E6%88%B7%E6%89%8B%E5%86%8C-f6641a5d3e914849b424558571a7430e.pdf)使用 `sw5cc -host/-slave/-hybrid`，这不能证明它支持本工程使用的新一代 RMA API、`__thread_local` 或 LDM 容量。不要仅替换编译器名称后直接套用；应先核对实际版本、目标 CPU 和 `slave.h`。
+
+### 静态 LDM 超过 128 KB 的警告
+
+用户提供的成功链接日志如下；这些数字是链接器报告的静态用量，不包含后续可能需要的动态 LDM 或 LDM 栈空间。
+
+| 目标 | 静态 LDM 用量 |
+|---|---:|
+| `rma_bench` | 133608 B（约 130.48 KiB） |
+| `rma_bcast_bench` | 132584 B（约 129.48 KiB） |
+| `rma_cluster_bench` | 133736 B（约 130.60 KiB） |
+
+主要来源是每核两个 64 KiB 缓冲，再加应答字、参数、统计及运行库数据。`WARN: LDM static space is more than 128KB` 表示超过静态用量告警阈值，不能据此推断物理 LDM 总容量仅为 128 KiB。目录中 SACA 手册 PDF 第 13–14 页列出总容量 256 KiB、默认 D-cache 32 KiB：若目标机器确实使用此配置且没有共享 LDM，名义上剩余 224 KiB，当前静态用量小于该值。若 D-cache 为 128 KiB，则名义剩余仅 128 KiB，当前三个 RMA 镜像均超出；共享 LDM 还会减少私有空间。必须核对实际配置，链接成功本身不验证运行时容量。
+
+**可选 32 KiB 配置：**更新服务器的 `bench_common.h` 及相关文件后，在 `bench` 目录执行：
+
+```sh
+make -B SWCC=swgcc SLAVE_FLAGS="-mslave -msimd" CPPFLAGS="-DBENCH_MAX_BYTES=32768" all
+```
+
+`-B` 强制重编译主核和从核对象，避免复用旧容量的目标文件。此配置将两个缓冲总量从 128 KiB 降至 64 KiB；静态用量预期减少约 64 KiB，具体以新的链接日志为准。消息大小及 `bytes*window*max_incoming` 的上限变为 32768 B；8–256 B 延迟矩阵与常用争用对照仍可测，64 KiB 消息需恢复默认配置后测量。恢复方法是在同一目录执行 `make -B SWCC=swgcc SLAVE_FLAGS="-mslave -msimd" all`，并去掉其他来源中同一宏的覆盖。
+
+32 KiB 可选配置尚未在神威平台编译验证。按此配置批量测试时，从项目根目录将 `BENCH_MAX_BYTES=32768` 传给扫描脚本（例如在已分配的计算资源内使用 `BENCH_MAX_BYTES=32768 bash bench/run_cluster_sweep.sh cluster_results_32k`），让脚本跳过容量不允许的规模；该环境变量不改变已编译二进制的容量。测试记录需保留编译时的容量宏。
 
 ## 4. 单项运行
 
@@ -110,7 +140,7 @@ bsub -I -q QUEUE -n 1 -cgsp 64 -mpecg 1 ./bench/rma_bench put 4 1
 bsub -I -q QUEUE -n 1 -cgsp 64 -mpecg 1 ./bench/rma_bcast_bench array 4 10 0
 ```
 
-`bytes` 必须是 4 B 的整数倍，范围 4–65536 B。`dma_bench` 的 `active_pes` 为 1 或 64；`offset` 为 0（128 B 对齐）或 4（仅 4 B 对齐），用于比较未按 128 B 对齐的 DMA 影响。RMA `put|get` 的 `initiator` 表示发起核，`peer` 表示远端核。广播的 `root` 对 `row` 是列号、对 `col` 是行号（0–7），对 `array` 是从核号（0–63）。
+`bytes` 必须是 4 B 的整数倍，默认范围 4–65536 B；可选容量配置以上限 `BENCH_MAX_BYTES` 为准。`dma_bench` 的 `active_pes` 为 1 或 64；`offset` 为 0（128 B 对齐）或 4（仅 4 B 对齐），用于比较未按 128 B 对齐的 DMA 影响。RMA `put|get` 的 `initiator` 表示发起核，`peer` 表示远端核。广播的 `root` 对 `row` 是列号、对 `col` 是行号（0–7），对 `array` 是从核号（0–63）。
 
 全套扫描可在项目根目录提交一个作业，以免每项重新排队：
 
@@ -158,7 +188,7 @@ python3 bench/analyze_topology.py results/rma_get_64B.csv --origin 27
 ## 7. 限制与适配点
 
 - 默认使用单个完整核组；少于 64 个从核会使 `athread_ssync_array()` 无法正确配对。
-- RMA 和广播从核各使用两个 64 KiB 静态 LDM 缓冲。手册的默认 D-cache 为 32 KiB；若站点将 D-cache 设为 128 KiB 或启用较大的共享 LDM，需要缩小 `BENCH_MAX_BYTES` 并重新编译，以免局存空间不足。
+- RMA 和广播从核默认各使用两个 64 KiB 静态 LDM 缓冲。按上面的告警说明确认 cache、共享 LDM 和栈设置；需要减小容量时可用 `CPPFLAGS="-DBENCH_MAX_BYTES=32768"` 强制重新编译。
 - RMA 远端指针依赖所有从核的 `__thread_local` 对象具有相同 LDM 布局；它们由同一个从核程序镜像生成，符合手册示例的用法。
 - 手册给出的是 SW39000 环境。若目标为另一代申威处理器，首先核对 RMA API、LDM 大小、从核编号映射、广播 `root` 语义和作业参数。
-- 本工程仅测 RMA 单对单与集合广播；RMA 多播掩码、共享 LDM 模式、跨核组通信和 DMA 跨步传输不是本轮结果的一部分。
+- 本工程包含 RMA 单对单、ping-pong、小簇多流争用与集合广播；RMA 多播掩码、共享 LDM 模式、跨核组通信和 DMA 跨步传输不是本轮实验的一部分。

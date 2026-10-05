@@ -46,7 +46,7 @@ bsub -I -q QUEUE -n 1 -cgsp 64 -mpecg 1 \
 
 每次使用 `athread_rma_iput`。`window=1` 是发一条、等本地完成一条的串行传输；`window=W` 时连续发最多 W 条，再等累计本地 reply。远端等待累计远端 reply。不同 outstanding 请求写入 **不同 LDM slot**，避免同址覆盖影响结论；重复批次复用 slot。测量区外有 1 批预热，计时区内没有 barrier。输出 `aggregate_bytes_per_cycle = bytes*reps/max(active_PE_cycles)`，单 flow 即该 pair 的有效 payload 带宽。`reps` 是每条 flow 的传输次数。
 
-推荐消息大小 `8,16,32,64,128,256,1024,4096,16384,65536 B`，window `1,2,4,8,16`。容量条件为 `bytes*window*目标核入流数 <= 65536`；大消息不一定能测大 window。缓冲各 64 KiB，不能在 LDM 剩余空间不足时盲目增大到 128 KiB。
+推荐消息大小 `8,16,32,64,128,256,1024,4096,16384,32768,65536 B`，window `1,2,4,8,16`。容量条件为 `bytes*window*目标核入流数 <= BENCH_MAX_BYTES`，默认上限 65536 B；大消息不一定能测大 window。默认缓冲各 64 KiB，不能在 LDM 剩余空间不足时盲目增大到 128 KiB。用户已确认默认目标编译、链接成功，但有 133736 B 静态 LDM 用量警告；解释及可选的 32 KiB 构建配置见 [README](README.md#静态-ldm-超过-128-kb-的警告)。可选配置将消息与 slot 容量上限降至 32768 B，延迟矩阵和常用争用对照仍可测。
 
 关键 pair：`0→1` 簇内横向、`0→8` 簇内纵向、`0→9` 簇内对角、`1→2` 跨簇横向、`8→16` 跨簇纵向、`9→18` 跨簇对角、`0→7` 远同行、`0→56` 远同列、`0→63` 远对角。
 
@@ -75,7 +75,7 @@ python3 bench/analyze_contention.py intra2.csv split_near2.csv split_far2.csv
 | `ring4` | `0→1→9→8→0` | 四条同时工作的环形 flow |
 | `alltoall4` | 四核互发，共 12 条 flow | 簇内高争用 |
 
-三个 `split` case 的第二簇会随 `cluster_index` 平移，局部源/目的位置保持一致。每个目的核的不同入流写不同 lane，且每个 outstanding 请求有独立 slot。`incast3` 与 `alltoall4` 因入流数为 3，容量上限更严格：`3*bytes*window <= 65536`。
+三个 `split` case 的第二簇会随 `cluster_index` 平移，局部源/目的位置保持一致。每个目的核的不同入流写不同 lane，且每个 outstanding 请求有独立 slot。`incast3` 与 `alltoall4` 因入流数为 3，容量上限更严格：`3*bytes*window <= BENCH_MAX_BYTES`，默认 65536 B，可选配置为 32768 B。
 
 比较 **同样两条 flow** 的 `intra2`、`split_near2`、`split_side2`、`split_far2` 聚合 B/cycle；再比较它们与 `single` 的扩展比。若 `intra2` 在多个位置、消息大小和独立作业中稳定更慢，小簇共享资源是合理的解释。也要检查远近分散小簇的差别；若相邻分散的小簇仍慢而远端分散小簇快，可能是相邻区域共享路径，而不只是 2×2 内部资源。`incast3` 主要探测目标端口/LDM 写入争用，不能与独立目的核的两个 flow 直接归因比较。
 
@@ -103,4 +103,4 @@ bsub -I -q QUEUE -n 1 -cgsp 64 -mpecg 1 bash bench/run_cluster_sweep.sh cluster_
 
 脚本生成 8 B ping-pong 矩阵、代表性 pair 的 bandwidth-window 曲线，以及 0/5/10/15 号小簇上的争用对照。机器时间有限时，先执行：8 B 矩阵；`0→1` 与 `1→2` 的 `8 B–64 KiB, W=1`；`single/intra2/split_near2/split_side2/split_far2` 的 `1024 B, W=4`，再平移到至少两个其他小簇。
 
-每项至少在相同配置下重复 3 次并保存原始 CSV。记录 CPU 型号、核组号、从核频率、编译器/运行库版本、D-cache/LDM 配置、作业队列与是否独占、`bytes/reps/window/cluster_index`。有 `errors>0`、编译接口不匹配或资源配置不满足 64 从核的结果应先修复，不能用于结构推断。本工程未在 SW 平台编译或运行。
+每项至少在相同配置下重复 3 次并保存原始 CSV。记录 CPU 型号、核组号、从核频率、编译器/运行库版本、`BENCH_MAX_BYTES`、D-cache/LDM 配置、作业队列与是否独占、`bytes/reps/window/cluster_index`。有 `errors>0`、编译接口不匹配或资源配置不满足 64 从核的结果应先修复，不能用于结构推断。目前四个默认目标均已由用户在 `sw_hpc_78` 的 `swgcc/1473` 环境确认编译、链接成功；三个 RMA 目标有超过 128 KiB 静态 LDM 的警告，运行正确性与性能尚未验证。

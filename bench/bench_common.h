@@ -2,7 +2,13 @@
 #define SW_BENCH_COMMON_H
 
 #define BENCH_PES 64
+#ifndef BENCH_MAX_BYTES
 #define BENCH_MAX_BYTES (64 * 1024)
+#endif
+/* Keep host slots aligned and the ping-pong sizes available in every build. */
+#if BENCH_MAX_BYTES < 256 || BENCH_MAX_BYTES > 65536 || BENCH_MAX_BYTES % 128
+#error "BENCH_MAX_BYTES must be 256..65536 and a multiple of 128"
+#endif
 #define BENCH_SLOT_BYTES (BENCH_MAX_BYTES + 128)
 #define BENCH_MAX_FLOWS 12
 

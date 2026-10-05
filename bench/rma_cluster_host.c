@@ -131,7 +131,8 @@ int main(int argc, char **argv)
     }
     if (a.bytes < 0 || (a.bytes & 3) || a.reps < 0 || a.window < 0 ||
         (a.mode == 1 && !valid_capacity(&a))) {
-        fprintf(stderr, "invalid size/window: require bytes*window*max_incoming <= 65536\n");
+        fprintf(stderr, "invalid size/window: require bytes*window*max_incoming <= %d\n",
+                BENCH_MAX_BYTES);
         return 2;
     }
     if (posix_memalign((void **)&cycles, 128, BENCH_PES * BENCH_PES * sizeof(*cycles)) ||

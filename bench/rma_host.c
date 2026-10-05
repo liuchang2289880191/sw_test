@@ -30,7 +30,8 @@ int main(int argc, char **argv)
     a.bytes = number(argv[2], 4, BENCH_MAX_BYTES);
     a.reps = number(argv[3], 1, 100000);
     if (a.bytes < 0 || (a.bytes & 3) || a.reps < 0) {
-        fprintf(stderr, "bytes must be 4..65536 and a multiple of 4; reps 1..100000\n");
+        fprintf(stderr, "bytes must be 4..%d and a multiple of 4; reps 1..100000\n",
+                BENCH_MAX_BYTES);
         return 2;
     }
     if (posix_memalign((void **)&cycles, 128,
