@@ -1,0 +1,3 @@
+benchmark,mode,bytes,reps,active_pes,offset,pe,cycles,cycles_per_op,aggregate_bytes_per_cycle,errors
+dma,iget,8192,1000,1,0,0,957400,957.400000,,0
+dma,iget,8192,1000,1,0,aggregate,957400,957.400000,8.556507207,0

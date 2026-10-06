@@ -1,0 +1,3 @@
+capacity_bytes=131072
+hostname_environment=sw_hpc_78.qd.sw
+job_id_environment=unknown

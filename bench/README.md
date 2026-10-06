@@ -31,7 +31,8 @@
 | `analyze_topology.py` | 分类统计、曼哈顿距离统计、8×8 目的核图 |
 | `run_sweep.sh` | 批量生成 CSV 文件 |
 | `rma_cluster_host.c`, `rma_cluster_slave.c` | 小簇 ping-pong 矩阵、pair 带宽、并发 flow |
-| `RMA_CLUSTER.md`, `run_cluster_sweep.sh` | 小簇实验设计和批量脚本 |
+| `run_rma.sh`, `rma_cluster_suite.h`, `collect_rma.awk` | RMA 一键编译、原生批量执行、独立作业重复与结果校验 |
+| `RMA_RUN.md`, `RMA_CLUSTER.md` | 一键运行说明与小簇实验设计；旧 `run_cluster_sweep.sh` 要求计算节点 Bash |
 | `analyze_cluster.py`, `analyze_contention.py` | 边界/距离模型和争用对照 |
 
 ## 3. 在神威平台上构建
@@ -120,9 +121,23 @@ make -B SWCC=swgcc SLAVE_FLAGS="-mslave -msimd" CPPFLAGS="-DBENCH_MAX_BYTES=3276
 
 `-B` 强制重编译主核和从核对象，避免复用旧容量的目标文件。此配置将两个缓冲总量从 128 KiB 降至 64 KiB；静态用量预期减少约 64 KiB，具体以新的链接日志为准。消息大小及 `bytes*window*max_incoming` 的上限变为 32768 B；8–256 B 延迟矩阵与常用争用对照仍可测，64 KiB 消息需恢复默认配置后测量。恢复方法是在同一目录执行 `make -B SWCC=swgcc SLAVE_FLAGS="-mslave -msimd" all`，并去掉其他来源中同一宏的覆盖。
 
-32 KiB 可选配置尚未在神威平台编译验证。按此配置批量测试时，从项目根目录将 `BENCH_MAX_BYTES=32768` 传给扫描脚本（例如在已分配的计算资源内使用 `BENCH_MAX_BYTES=32768 bash bench/run_cluster_sweep.sh cluster_results_32k`），让脚本跳过容量不允许的规模；该环境变量不改变已编译二进制的容量。测试记录需保留编译时的容量宏。
+32 KiB 可选配置尚未在神威平台编译验证。新版一键入口在 `bench` 目录执行 `BENCH_MAX_BYTES=32768 bash run_rma.sh q_share`，会同时重新编译并过滤不允许的窗口规模，保存容量宏与源码快照。旧扫描脚本的同名环境变量仅过滤规模，不改变二进制容量。
 
 ## 4. 单项运行
+
+### RMA 一键运行入口
+
+将更新后的 `bench` 文件同步到服务器，在登录节点执行：
+
+```sh
+cd ~/liuchang/sw_test/bench
+module load swgcc/1473
+bash run_rma.sh q_share
+```
+
+默认单次作业先运行 18 项正确性检查，再执行 548 项正式配置：6 种消息大小的 64×64 ping-pong 延迟矩阵、9 个代表核对的带宽与窗口、4 个小簇位置的 8 类争用对照。独立提交 3 次，各次打乱正式配置顺序。直接提交原生二进制，不需要计算节点 Bash 或子程序。任一数据错误、零计时、作业失败或结果不完整都会停止。
+
+仅做检查：`RMA_DIAG_ONLY=1 bash run_rma.sh q_share`。较短扫描：`RMA_PROFILE=quick RMA_REPEATS=1 bash run_rma.sh q_share`。结果包含原始 CSV、带宽/争用 `summary.csv`、延迟 `latency.csv`、运行计划、源码和调度日志。正式分析筛选 `phase=raw`。容量、重复次数、计时次数和资源记录详见 [RMA_RUN.md](RMA_RUN.md)。此入口聚焦小簇实验；单向 put/get 矩阵与广播仍使用下面的单项命令。
 
 ### DMA 扩展实验入口
 
@@ -211,7 +226,7 @@ bsub -I -q QUEUE -n 1 -cgsp 64 -mpecg 1 ./bench/rma_bcast_bench array 4 10 0
 
 `bytes` 必须是 4 B 的整数倍，DMA 默认范围 4–65536 B；DMA 上限由 `DMA_MAX_BYTES` 决定，未设置时继承 `BENCH_MAX_BYTES`，只扩大 DMA 不改变 RMA 缓冲。`dma_bench` 的 `active_pes` 为 1–64；`offset` 为 0–124 B 的 4 B 整数倍。原基线仍使用 1/64 核及 0/4 B 偏移；新实验见上面的扩展入口。RMA `put|get` 的 `initiator` 表示发起核，`peer` 表示远端核。广播的 `root` 对 `row` 是列号、对 `col` 是行号（0–7），对 `array` 是从核号（0–63）。
 
-以下历史全套扫描示例要求计算节点可调用 Bash。用户当前 `q_share` 已报告找不到 Bash；DMA 请使用上述直接提交二进制的一键入口。其他站点若支持 Bash，可在项目根目录提交一个作业，以免每项重新排队：
+以下历史全套扫描示例要求计算节点可调用 Bash。用户当前 `q_share` 已报告找不到 Bash；DMA 和小簇 RMA 请使用上述直接提交二进制的一键入口。其他站点若支持 Bash，可在项目根目录提交一个作业，以免每项重新排队：
 
 ```sh
 bsub -I -q QUEUE -n 1 -cgsp 64 -mpecg 1 bash bench/run_sweep.sh results

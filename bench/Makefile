@@ -41,7 +41,7 @@ bcast_host.o: bcast_host.c bench_common.h
 	$(SWCC) $(HOST_FLAGS) $(CPPFLAGS) $(CFLAGS) -c $< -o $@
 bcast_slave.o: bcast_slave.c bench_common.h
 	$(SWCC) $(SLAVE_FLAGS) $(CPPFLAGS) $(CFLAGS) -c $< -o $@
-cluster_host.o: rma_cluster_host.c bench_common.h
+cluster_host.o: rma_cluster_host.c bench_common.h rma_cluster_suite.h
 	$(SWCC) $(HOST_FLAGS) $(CPPFLAGS) $(CFLAGS) -c $< -o $@
 cluster_slave.o: rma_cluster_slave.c bench_common.h
 	$(SWCC) $(SLAVE_FLAGS) $(CPPFLAGS) $(CFLAGS) -c $< -o $@

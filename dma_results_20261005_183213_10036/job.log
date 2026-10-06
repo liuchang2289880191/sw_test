@@ -1,0 +1,1872 @@
+Job <8419757> has been submitted to queue <q_share>
+waiting for dispatch ...
+DMA_STAGE host.enter
+DMA_STAGE host.allocate.begin
+DMA_ADDRESSES src=0x500001406000 dst=0x50000180a000 cycles=0x500001c0e000 errors=0x500001c10000 slot_bytes=65664
+DMA_STAGE host.allocate.done
+DMA_STAGE host.init.begin
+DMA_STAGE host.init.done
+DMA get bytes=8 reps=10 active=1 offset=0
+DMA_CONFIG mode=get bytes=8 reps=10 active=1 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA get bytes=8 reps=10 active=64 offset=0
+DMA_CONFIG mode=get bytes=8 reps=10 active=64 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA put bytes=8 reps=10 active=1 offset=0
+DMA_CONFIG mode=put bytes=8 reps=10 active=1 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA put bytes=8 reps=10 active=64 offset=0
+DMA_CONFIG mode=put bytes=8 reps=10 active=64 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iget bytes=8 reps=10 active=1 offset=0
+DMA_CONFIG mode=iget bytes=8 reps=10 active=1 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iget bytes=8 reps=10 active=64 offset=0
+DMA_CONFIG mode=iget bytes=8 reps=10 active=64 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iput bytes=8 reps=10 active=1 offset=0
+DMA_CONFIG mode=iput bytes=8 reps=10 active=1 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iput bytes=8 reps=10 active=64 offset=0
+DMA_CONFIG mode=iput bytes=8 reps=10 active=64 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+All eight correctness checks passed. Starting DMA sweep.
+DMA get bytes=8 reps=10000 active=1 offset=0
+DMA_CONFIG mode=get bytes=8 reps=10000 active=1 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA get bytes=16 reps=10000 active=1 offset=0
+DMA_CONFIG mode=get bytes=16 reps=10000 active=1 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA get bytes=32 reps=10000 active=1 offset=0
+DMA_CONFIG mode=get bytes=32 reps=10000 active=1 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA get bytes=64 reps=10000 active=1 offset=0
+DMA_CONFIG mode=get bytes=64 reps=10000 active=1 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA get bytes=128 reps=10000 active=1 offset=0
+DMA_CONFIG mode=get bytes=128 reps=10000 active=1 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA get bytes=256 reps=10000 active=1 offset=0
+DMA_CONFIG mode=get bytes=256 reps=10000 active=1 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA get bytes=512 reps=10000 active=1 offset=0
+DMA_CONFIG mode=get bytes=512 reps=10000 active=1 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA get bytes=1024 reps=1000 active=1 offset=0
+DMA_CONFIG mode=get bytes=1024 reps=1000 active=1 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA get bytes=2048 reps=1000 active=1 offset=0
+DMA_CONFIG mode=get bytes=2048 reps=1000 active=1 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA get bytes=4096 reps=1000 active=1 offset=0
+DMA_CONFIG mode=get bytes=4096 reps=1000 active=1 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA get bytes=8192 reps=1000 active=1 offset=0
+DMA_CONFIG mode=get bytes=8192 reps=1000 active=1 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA get bytes=16384 reps=1000 active=1 offset=0
+DMA_CONFIG mode=get bytes=16384 reps=1000 active=1 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA get bytes=32768 reps=1000 active=1 offset=0
+DMA_CONFIG mode=get bytes=32768 reps=1000 active=1 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA get bytes=65536 reps=1000 active=1 offset=0
+DMA_CONFIG mode=get bytes=65536 reps=1000 active=1 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA get bytes=8 reps=10000 active=1 offset=4
+DMA_CONFIG mode=get bytes=8 reps=10000 active=1 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA get bytes=16 reps=10000 active=1 offset=4
+DMA_CONFIG mode=get bytes=16 reps=10000 active=1 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA get bytes=32 reps=10000 active=1 offset=4
+DMA_CONFIG mode=get bytes=32 reps=10000 active=1 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA get bytes=64 reps=10000 active=1 offset=4
+DMA_CONFIG mode=get bytes=64 reps=10000 active=1 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA get bytes=128 reps=10000 active=1 offset=4
+DMA_CONFIG mode=get bytes=128 reps=10000 active=1 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA get bytes=256 reps=10000 active=1 offset=4
+DMA_CONFIG mode=get bytes=256 reps=10000 active=1 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA get bytes=512 reps=10000 active=1 offset=4
+DMA_CONFIG mode=get bytes=512 reps=10000 active=1 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA get bytes=1024 reps=1000 active=1 offset=4
+DMA_CONFIG mode=get bytes=1024 reps=1000 active=1 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA get bytes=2048 reps=1000 active=1 offset=4
+DMA_CONFIG mode=get bytes=2048 reps=1000 active=1 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA get bytes=4096 reps=1000 active=1 offset=4
+DMA_CONFIG mode=get bytes=4096 reps=1000 active=1 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA get bytes=8192 reps=1000 active=1 offset=4
+DMA_CONFIG mode=get bytes=8192 reps=1000 active=1 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA get bytes=16384 reps=1000 active=1 offset=4
+DMA_CONFIG mode=get bytes=16384 reps=1000 active=1 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA get bytes=32768 reps=1000 active=1 offset=4
+DMA_CONFIG mode=get bytes=32768 reps=1000 active=1 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA get bytes=65536 reps=1000 active=1 offset=4
+DMA_CONFIG mode=get bytes=65536 reps=1000 active=1 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA get bytes=8 reps=10000 active=64 offset=0
+DMA_CONFIG mode=get bytes=8 reps=10000 active=64 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA get bytes=16 reps=10000 active=64 offset=0
+DMA_CONFIG mode=get bytes=16 reps=10000 active=64 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA get bytes=32 reps=10000 active=64 offset=0
+DMA_CONFIG mode=get bytes=32 reps=10000 active=64 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA get bytes=64 reps=10000 active=64 offset=0
+DMA_CONFIG mode=get bytes=64 reps=10000 active=64 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA get bytes=128 reps=10000 active=64 offset=0
+DMA_CONFIG mode=get bytes=128 reps=10000 active=64 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA get bytes=256 reps=10000 active=64 offset=0
+DMA_CONFIG mode=get bytes=256 reps=10000 active=64 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA get bytes=512 reps=10000 active=64 offset=0
+DMA_CONFIG mode=get bytes=512 reps=10000 active=64 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA get bytes=1024 reps=1000 active=64 offset=0
+DMA_CONFIG mode=get bytes=1024 reps=1000 active=64 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA get bytes=2048 reps=1000 active=64 offset=0
+DMA_CONFIG mode=get bytes=2048 reps=1000 active=64 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA get bytes=4096 reps=1000 active=64 offset=0
+DMA_CONFIG mode=get bytes=4096 reps=1000 active=64 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA get bytes=8192 reps=1000 active=64 offset=0
+DMA_CONFIG mode=get bytes=8192 reps=1000 active=64 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA get bytes=16384 reps=1000 active=64 offset=0
+DMA_CONFIG mode=get bytes=16384 reps=1000 active=64 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA get bytes=32768 reps=1000 active=64 offset=0
+DMA_CONFIG mode=get bytes=32768 reps=1000 active=64 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA get bytes=65536 reps=1000 active=64 offset=0
+DMA_CONFIG mode=get bytes=65536 reps=1000 active=64 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA get bytes=8 reps=10000 active=64 offset=4
+DMA_CONFIG mode=get bytes=8 reps=10000 active=64 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA get bytes=16 reps=10000 active=64 offset=4
+DMA_CONFIG mode=get bytes=16 reps=10000 active=64 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA get bytes=32 reps=10000 active=64 offset=4
+DMA_CONFIG mode=get bytes=32 reps=10000 active=64 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA get bytes=64 reps=10000 active=64 offset=4
+DMA_CONFIG mode=get bytes=64 reps=10000 active=64 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA get bytes=128 reps=10000 active=64 offset=4
+DMA_CONFIG mode=get bytes=128 reps=10000 active=64 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA get bytes=256 reps=10000 active=64 offset=4
+DMA_CONFIG mode=get bytes=256 reps=10000 active=64 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA get bytes=512 reps=10000 active=64 offset=4
+DMA_CONFIG mode=get bytes=512 reps=10000 active=64 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA get bytes=1024 reps=1000 active=64 offset=4
+DMA_CONFIG mode=get bytes=1024 reps=1000 active=64 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA get bytes=2048 reps=1000 active=64 offset=4
+DMA_CONFIG mode=get bytes=2048 reps=1000 active=64 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA get bytes=4096 reps=1000 active=64 offset=4
+DMA_CONFIG mode=get bytes=4096 reps=1000 active=64 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA get bytes=8192 reps=1000 active=64 offset=4
+DMA_CONFIG mode=get bytes=8192 reps=1000 active=64 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA get bytes=16384 reps=1000 active=64 offset=4
+DMA_CONFIG mode=get bytes=16384 reps=1000 active=64 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA get bytes=32768 reps=1000 active=64 offset=4
+DMA_CONFIG mode=get bytes=32768 reps=1000 active=64 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA get bytes=65536 reps=1000 active=64 offset=4
+DMA_CONFIG mode=get bytes=65536 reps=1000 active=64 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA put bytes=8 reps=10000 active=1 offset=0
+DMA_CONFIG mode=put bytes=8 reps=10000 active=1 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA put bytes=16 reps=10000 active=1 offset=0
+DMA_CONFIG mode=put bytes=16 reps=10000 active=1 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA put bytes=32 reps=10000 active=1 offset=0
+DMA_CONFIG mode=put bytes=32 reps=10000 active=1 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA put bytes=64 reps=10000 active=1 offset=0
+DMA_CONFIG mode=put bytes=64 reps=10000 active=1 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA put bytes=128 reps=10000 active=1 offset=0
+DMA_CONFIG mode=put bytes=128 reps=10000 active=1 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA put bytes=256 reps=10000 active=1 offset=0
+DMA_CONFIG mode=put bytes=256 reps=10000 active=1 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA put bytes=512 reps=10000 active=1 offset=0
+DMA_CONFIG mode=put bytes=512 reps=10000 active=1 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA put bytes=1024 reps=1000 active=1 offset=0
+DMA_CONFIG mode=put bytes=1024 reps=1000 active=1 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA put bytes=2048 reps=1000 active=1 offset=0
+DMA_CONFIG mode=put bytes=2048 reps=1000 active=1 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA put bytes=4096 reps=1000 active=1 offset=0
+DMA_CONFIG mode=put bytes=4096 reps=1000 active=1 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA put bytes=8192 reps=1000 active=1 offset=0
+DMA_CONFIG mode=put bytes=8192 reps=1000 active=1 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA put bytes=16384 reps=1000 active=1 offset=0
+DMA_CONFIG mode=put bytes=16384 reps=1000 active=1 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA put bytes=32768 reps=1000 active=1 offset=0
+DMA_CONFIG mode=put bytes=32768 reps=1000 active=1 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA put bytes=65536 reps=1000 active=1 offset=0
+DMA_CONFIG mode=put bytes=65536 reps=1000 active=1 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA put bytes=8 reps=10000 active=1 offset=4
+DMA_CONFIG mode=put bytes=8 reps=10000 active=1 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA put bytes=16 reps=10000 active=1 offset=4
+DMA_CONFIG mode=put bytes=16 reps=10000 active=1 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA put bytes=32 reps=10000 active=1 offset=4
+DMA_CONFIG mode=put bytes=32 reps=10000 active=1 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA put bytes=64 reps=10000 active=1 offset=4
+DMA_CONFIG mode=put bytes=64 reps=10000 active=1 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA put bytes=128 reps=10000 active=1 offset=4
+DMA_CONFIG mode=put bytes=128 reps=10000 active=1 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA put bytes=256 reps=10000 active=1 offset=4
+DMA_CONFIG mode=put bytes=256 reps=10000 active=1 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA put bytes=512 reps=10000 active=1 offset=4
+DMA_CONFIG mode=put bytes=512 reps=10000 active=1 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA put bytes=1024 reps=1000 active=1 offset=4
+DMA_CONFIG mode=put bytes=1024 reps=1000 active=1 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA put bytes=2048 reps=1000 active=1 offset=4
+DMA_CONFIG mode=put bytes=2048 reps=1000 active=1 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA put bytes=4096 reps=1000 active=1 offset=4
+DMA_CONFIG mode=put bytes=4096 reps=1000 active=1 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA put bytes=8192 reps=1000 active=1 offset=4
+DMA_CONFIG mode=put bytes=8192 reps=1000 active=1 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA put bytes=16384 reps=1000 active=1 offset=4
+DMA_CONFIG mode=put bytes=16384 reps=1000 active=1 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA put bytes=32768 reps=1000 active=1 offset=4
+DMA_CONFIG mode=put bytes=32768 reps=1000 active=1 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA put bytes=65536 reps=1000 active=1 offset=4
+DMA_CONFIG mode=put bytes=65536 reps=1000 active=1 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA put bytes=8 reps=10000 active=64 offset=0
+DMA_CONFIG mode=put bytes=8 reps=10000 active=64 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA put bytes=16 reps=10000 active=64 offset=0
+DMA_CONFIG mode=put bytes=16 reps=10000 active=64 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA put bytes=32 reps=10000 active=64 offset=0
+DMA_CONFIG mode=put bytes=32 reps=10000 active=64 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA put bytes=64 reps=10000 active=64 offset=0
+DMA_CONFIG mode=put bytes=64 reps=10000 active=64 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA put bytes=128 reps=10000 active=64 offset=0
+DMA_CONFIG mode=put bytes=128 reps=10000 active=64 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA put bytes=256 reps=10000 active=64 offset=0
+DMA_CONFIG mode=put bytes=256 reps=10000 active=64 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA put bytes=512 reps=10000 active=64 offset=0
+DMA_CONFIG mode=put bytes=512 reps=10000 active=64 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA put bytes=1024 reps=1000 active=64 offset=0
+DMA_CONFIG mode=put bytes=1024 reps=1000 active=64 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA put bytes=2048 reps=1000 active=64 offset=0
+DMA_CONFIG mode=put bytes=2048 reps=1000 active=64 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA put bytes=4096 reps=1000 active=64 offset=0
+DMA_CONFIG mode=put bytes=4096 reps=1000 active=64 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA put bytes=8192 reps=1000 active=64 offset=0
+DMA_CONFIG mode=put bytes=8192 reps=1000 active=64 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA put bytes=16384 reps=1000 active=64 offset=0
+DMA_CONFIG mode=put bytes=16384 reps=1000 active=64 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA put bytes=32768 reps=1000 active=64 offset=0
+DMA_CONFIG mode=put bytes=32768 reps=1000 active=64 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA put bytes=65536 reps=1000 active=64 offset=0
+DMA_CONFIG mode=put bytes=65536 reps=1000 active=64 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA put bytes=8 reps=10000 active=64 offset=4
+DMA_CONFIG mode=put bytes=8 reps=10000 active=64 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA put bytes=16 reps=10000 active=64 offset=4
+DMA_CONFIG mode=put bytes=16 reps=10000 active=64 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA put bytes=32 reps=10000 active=64 offset=4
+DMA_CONFIG mode=put bytes=32 reps=10000 active=64 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA put bytes=64 reps=10000 active=64 offset=4
+DMA_CONFIG mode=put bytes=64 reps=10000 active=64 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA put bytes=128 reps=10000 active=64 offset=4
+DMA_CONFIG mode=put bytes=128 reps=10000 active=64 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA put bytes=256 reps=10000 active=64 offset=4
+DMA_CONFIG mode=put bytes=256 reps=10000 active=64 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA put bytes=512 reps=10000 active=64 offset=4
+DMA_CONFIG mode=put bytes=512 reps=10000 active=64 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA put bytes=1024 reps=1000 active=64 offset=4
+DMA_CONFIG mode=put bytes=1024 reps=1000 active=64 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA put bytes=2048 reps=1000 active=64 offset=4
+DMA_CONFIG mode=put bytes=2048 reps=1000 active=64 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA put bytes=4096 reps=1000 active=64 offset=4
+DMA_CONFIG mode=put bytes=4096 reps=1000 active=64 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA put bytes=8192 reps=1000 active=64 offset=4
+DMA_CONFIG mode=put bytes=8192 reps=1000 active=64 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA put bytes=16384 reps=1000 active=64 offset=4
+DMA_CONFIG mode=put bytes=16384 reps=1000 active=64 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA put bytes=32768 reps=1000 active=64 offset=4
+DMA_CONFIG mode=put bytes=32768 reps=1000 active=64 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA put bytes=65536 reps=1000 active=64 offset=4
+DMA_CONFIG mode=put bytes=65536 reps=1000 active=64 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iget bytes=8 reps=10000 active=1 offset=0
+DMA_CONFIG mode=iget bytes=8 reps=10000 active=1 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iget bytes=16 reps=10000 active=1 offset=0
+DMA_CONFIG mode=iget bytes=16 reps=10000 active=1 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iget bytes=32 reps=10000 active=1 offset=0
+DMA_CONFIG mode=iget bytes=32 reps=10000 active=1 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iget bytes=64 reps=10000 active=1 offset=0
+DMA_CONFIG mode=iget bytes=64 reps=10000 active=1 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iget bytes=128 reps=10000 active=1 offset=0
+DMA_CONFIG mode=iget bytes=128 reps=10000 active=1 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iget bytes=256 reps=10000 active=1 offset=0
+DMA_CONFIG mode=iget bytes=256 reps=10000 active=1 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iget bytes=512 reps=10000 active=1 offset=0
+DMA_CONFIG mode=iget bytes=512 reps=10000 active=1 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iget bytes=1024 reps=1000 active=1 offset=0
+DMA_CONFIG mode=iget bytes=1024 reps=1000 active=1 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iget bytes=2048 reps=1000 active=1 offset=0
+DMA_CONFIG mode=iget bytes=2048 reps=1000 active=1 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iget bytes=4096 reps=1000 active=1 offset=0
+DMA_CONFIG mode=iget bytes=4096 reps=1000 active=1 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iget bytes=8192 reps=1000 active=1 offset=0
+DMA_CONFIG mode=iget bytes=8192 reps=1000 active=1 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iget bytes=16384 reps=1000 active=1 offset=0
+DMA_CONFIG mode=iget bytes=16384 reps=1000 active=1 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iget bytes=32768 reps=1000 active=1 offset=0
+DMA_CONFIG mode=iget bytes=32768 reps=1000 active=1 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iget bytes=65536 reps=1000 active=1 offset=0
+DMA_CONFIG mode=iget bytes=65536 reps=1000 active=1 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iget bytes=8 reps=10000 active=1 offset=4
+DMA_CONFIG mode=iget bytes=8 reps=10000 active=1 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iget bytes=16 reps=10000 active=1 offset=4
+DMA_CONFIG mode=iget bytes=16 reps=10000 active=1 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iget bytes=32 reps=10000 active=1 offset=4
+DMA_CONFIG mode=iget bytes=32 reps=10000 active=1 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iget bytes=64 reps=10000 active=1 offset=4
+DMA_CONFIG mode=iget bytes=64 reps=10000 active=1 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iget bytes=128 reps=10000 active=1 offset=4
+DMA_CONFIG mode=iget bytes=128 reps=10000 active=1 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iget bytes=256 reps=10000 active=1 offset=4
+DMA_CONFIG mode=iget bytes=256 reps=10000 active=1 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iget bytes=512 reps=10000 active=1 offset=4
+DMA_CONFIG mode=iget bytes=512 reps=10000 active=1 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iget bytes=1024 reps=1000 active=1 offset=4
+DMA_CONFIG mode=iget bytes=1024 reps=1000 active=1 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iget bytes=2048 reps=1000 active=1 offset=4
+DMA_CONFIG mode=iget bytes=2048 reps=1000 active=1 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iget bytes=4096 reps=1000 active=1 offset=4
+DMA_CONFIG mode=iget bytes=4096 reps=1000 active=1 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iget bytes=8192 reps=1000 active=1 offset=4
+DMA_CONFIG mode=iget bytes=8192 reps=1000 active=1 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iget bytes=16384 reps=1000 active=1 offset=4
+DMA_CONFIG mode=iget bytes=16384 reps=1000 active=1 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iget bytes=32768 reps=1000 active=1 offset=4
+DMA_CONFIG mode=iget bytes=32768 reps=1000 active=1 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iget bytes=65536 reps=1000 active=1 offset=4
+DMA_CONFIG mode=iget bytes=65536 reps=1000 active=1 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iget bytes=8 reps=10000 active=64 offset=0
+DMA_CONFIG mode=iget bytes=8 reps=10000 active=64 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iget bytes=16 reps=10000 active=64 offset=0
+DMA_CONFIG mode=iget bytes=16 reps=10000 active=64 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iget bytes=32 reps=10000 active=64 offset=0
+DMA_CONFIG mode=iget bytes=32 reps=10000 active=64 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iget bytes=64 reps=10000 active=64 offset=0
+DMA_CONFIG mode=iget bytes=64 reps=10000 active=64 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iget bytes=128 reps=10000 active=64 offset=0
+DMA_CONFIG mode=iget bytes=128 reps=10000 active=64 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iget bytes=256 reps=10000 active=64 offset=0
+DMA_CONFIG mode=iget bytes=256 reps=10000 active=64 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iget bytes=512 reps=10000 active=64 offset=0
+DMA_CONFIG mode=iget bytes=512 reps=10000 active=64 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iget bytes=1024 reps=1000 active=64 offset=0
+DMA_CONFIG mode=iget bytes=1024 reps=1000 active=64 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iget bytes=2048 reps=1000 active=64 offset=0
+DMA_CONFIG mode=iget bytes=2048 reps=1000 active=64 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iget bytes=4096 reps=1000 active=64 offset=0
+DMA_CONFIG mode=iget bytes=4096 reps=1000 active=64 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iget bytes=8192 reps=1000 active=64 offset=0
+DMA_CONFIG mode=iget bytes=8192 reps=1000 active=64 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iget bytes=16384 reps=1000 active=64 offset=0
+DMA_CONFIG mode=iget bytes=16384 reps=1000 active=64 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iget bytes=32768 reps=1000 active=64 offset=0
+DMA_CONFIG mode=iget bytes=32768 reps=1000 active=64 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iget bytes=65536 reps=1000 active=64 offset=0
+DMA_CONFIG mode=iget bytes=65536 reps=1000 active=64 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iget bytes=8 reps=10000 active=64 offset=4
+DMA_CONFIG mode=iget bytes=8 reps=10000 active=64 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iget bytes=16 reps=10000 active=64 offset=4
+DMA_CONFIG mode=iget bytes=16 reps=10000 active=64 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iget bytes=32 reps=10000 active=64 offset=4
+DMA_CONFIG mode=iget bytes=32 reps=10000 active=64 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iget bytes=64 reps=10000 active=64 offset=4
+DMA_CONFIG mode=iget bytes=64 reps=10000 active=64 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iget bytes=128 reps=10000 active=64 offset=4
+DMA_CONFIG mode=iget bytes=128 reps=10000 active=64 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iget bytes=256 reps=10000 active=64 offset=4
+DMA_CONFIG mode=iget bytes=256 reps=10000 active=64 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iget bytes=512 reps=10000 active=64 offset=4
+DMA_CONFIG mode=iget bytes=512 reps=10000 active=64 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iget bytes=1024 reps=1000 active=64 offset=4
+DMA_CONFIG mode=iget bytes=1024 reps=1000 active=64 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iget bytes=2048 reps=1000 active=64 offset=4
+DMA_CONFIG mode=iget bytes=2048 reps=1000 active=64 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iget bytes=4096 reps=1000 active=64 offset=4
+DMA_CONFIG mode=iget bytes=4096 reps=1000 active=64 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iget bytes=8192 reps=1000 active=64 offset=4
+DMA_CONFIG mode=iget bytes=8192 reps=1000 active=64 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iget bytes=16384 reps=1000 active=64 offset=4
+DMA_CONFIG mode=iget bytes=16384 reps=1000 active=64 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iget bytes=32768 reps=1000 active=64 offset=4
+DMA_CONFIG mode=iget bytes=32768 reps=1000 active=64 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iget bytes=65536 reps=1000 active=64 offset=4
+DMA_CONFIG mode=iget bytes=65536 reps=1000 active=64 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iput bytes=8 reps=10000 active=1 offset=0
+DMA_CONFIG mode=iput bytes=8 reps=10000 active=1 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iput bytes=16 reps=10000 active=1 offset=0
+DMA_CONFIG mode=iput bytes=16 reps=10000 active=1 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iput bytes=32 reps=10000 active=1 offset=0
+DMA_CONFIG mode=iput bytes=32 reps=10000 active=1 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iput bytes=64 reps=10000 active=1 offset=0
+DMA_CONFIG mode=iput bytes=64 reps=10000 active=1 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iput bytes=128 reps=10000 active=1 offset=0
+DMA_CONFIG mode=iput bytes=128 reps=10000 active=1 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iput bytes=256 reps=10000 active=1 offset=0
+DMA_CONFIG mode=iput bytes=256 reps=10000 active=1 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iput bytes=512 reps=10000 active=1 offset=0
+DMA_CONFIG mode=iput bytes=512 reps=10000 active=1 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iput bytes=1024 reps=1000 active=1 offset=0
+DMA_CONFIG mode=iput bytes=1024 reps=1000 active=1 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iput bytes=2048 reps=1000 active=1 offset=0
+DMA_CONFIG mode=iput bytes=2048 reps=1000 active=1 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iput bytes=4096 reps=1000 active=1 offset=0
+DMA_CONFIG mode=iput bytes=4096 reps=1000 active=1 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iput bytes=8192 reps=1000 active=1 offset=0
+DMA_CONFIG mode=iput bytes=8192 reps=1000 active=1 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iput bytes=16384 reps=1000 active=1 offset=0
+DMA_CONFIG mode=iput bytes=16384 reps=1000 active=1 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iput bytes=32768 reps=1000 active=1 offset=0
+DMA_CONFIG mode=iput bytes=32768 reps=1000 active=1 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iput bytes=65536 reps=1000 active=1 offset=0
+DMA_CONFIG mode=iput bytes=65536 reps=1000 active=1 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iput bytes=8 reps=10000 active=1 offset=4
+DMA_CONFIG mode=iput bytes=8 reps=10000 active=1 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iput bytes=16 reps=10000 active=1 offset=4
+DMA_CONFIG mode=iput bytes=16 reps=10000 active=1 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iput bytes=32 reps=10000 active=1 offset=4
+DMA_CONFIG mode=iput bytes=32 reps=10000 active=1 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iput bytes=64 reps=10000 active=1 offset=4
+DMA_CONFIG mode=iput bytes=64 reps=10000 active=1 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iput bytes=128 reps=10000 active=1 offset=4
+DMA_CONFIG mode=iput bytes=128 reps=10000 active=1 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iput bytes=256 reps=10000 active=1 offset=4
+DMA_CONFIG mode=iput bytes=256 reps=10000 active=1 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iput bytes=512 reps=10000 active=1 offset=4
+DMA_CONFIG mode=iput bytes=512 reps=10000 active=1 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iput bytes=1024 reps=1000 active=1 offset=4
+DMA_CONFIG mode=iput bytes=1024 reps=1000 active=1 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iput bytes=2048 reps=1000 active=1 offset=4
+DMA_CONFIG mode=iput bytes=2048 reps=1000 active=1 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iput bytes=4096 reps=1000 active=1 offset=4
+DMA_CONFIG mode=iput bytes=4096 reps=1000 active=1 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iput bytes=8192 reps=1000 active=1 offset=4
+DMA_CONFIG mode=iput bytes=8192 reps=1000 active=1 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iput bytes=16384 reps=1000 active=1 offset=4
+DMA_CONFIG mode=iput bytes=16384 reps=1000 active=1 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iput bytes=32768 reps=1000 active=1 offset=4
+DMA_CONFIG mode=iput bytes=32768 reps=1000 active=1 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iput bytes=65536 reps=1000 active=1 offset=4
+DMA_CONFIG mode=iput bytes=65536 reps=1000 active=1 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iput bytes=8 reps=10000 active=64 offset=0
+DMA_CONFIG mode=iput bytes=8 reps=10000 active=64 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iput bytes=16 reps=10000 active=64 offset=0
+DMA_CONFIG mode=iput bytes=16 reps=10000 active=64 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iput bytes=32 reps=10000 active=64 offset=0
+DMA_CONFIG mode=iput bytes=32 reps=10000 active=64 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iput bytes=64 reps=10000 active=64 offset=0
+DMA_CONFIG mode=iput bytes=64 reps=10000 active=64 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iput bytes=128 reps=10000 active=64 offset=0
+DMA_CONFIG mode=iput bytes=128 reps=10000 active=64 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iput bytes=256 reps=10000 active=64 offset=0
+DMA_CONFIG mode=iput bytes=256 reps=10000 active=64 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iput bytes=512 reps=10000 active=64 offset=0
+DMA_CONFIG mode=iput bytes=512 reps=10000 active=64 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iput bytes=1024 reps=1000 active=64 offset=0
+DMA_CONFIG mode=iput bytes=1024 reps=1000 active=64 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iput bytes=2048 reps=1000 active=64 offset=0
+DMA_CONFIG mode=iput bytes=2048 reps=1000 active=64 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iput bytes=4096 reps=1000 active=64 offset=0
+DMA_CONFIG mode=iput bytes=4096 reps=1000 active=64 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iput bytes=8192 reps=1000 active=64 offset=0
+DMA_CONFIG mode=iput bytes=8192 reps=1000 active=64 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iput bytes=16384 reps=1000 active=64 offset=0
+DMA_CONFIG mode=iput bytes=16384 reps=1000 active=64 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iput bytes=32768 reps=1000 active=64 offset=0
+DMA_CONFIG mode=iput bytes=32768 reps=1000 active=64 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iput bytes=65536 reps=1000 active=64 offset=0
+DMA_CONFIG mode=iput bytes=65536 reps=1000 active=64 offset=0 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iput bytes=8 reps=10000 active=64 offset=4
+DMA_CONFIG mode=iput bytes=8 reps=10000 active=64 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iput bytes=16 reps=10000 active=64 offset=4
+DMA_CONFIG mode=iput bytes=16 reps=10000 active=64 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iput bytes=32 reps=10000 active=64 offset=4
+DMA_CONFIG mode=iput bytes=32 reps=10000 active=64 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iput bytes=64 reps=10000 active=64 offset=4
+DMA_CONFIG mode=iput bytes=64 reps=10000 active=64 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iput bytes=128 reps=10000 active=64 offset=4
+DMA_CONFIG mode=iput bytes=128 reps=10000 active=64 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iput bytes=256 reps=10000 active=64 offset=4
+DMA_CONFIG mode=iput bytes=256 reps=10000 active=64 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iput bytes=512 reps=10000 active=64 offset=4
+DMA_CONFIG mode=iput bytes=512 reps=10000 active=64 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iput bytes=1024 reps=1000 active=64 offset=4
+DMA_CONFIG mode=iput bytes=1024 reps=1000 active=64 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iput bytes=2048 reps=1000 active=64 offset=4
+DMA_CONFIG mode=iput bytes=2048 reps=1000 active=64 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iput bytes=4096 reps=1000 active=64 offset=4
+DMA_CONFIG mode=iput bytes=4096 reps=1000 active=64 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iput bytes=8192 reps=1000 active=64 offset=4
+DMA_CONFIG mode=iput bytes=8192 reps=1000 active=64 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iput bytes=16384 reps=1000 active=64 offset=4
+DMA_CONFIG mode=iput bytes=16384 reps=1000 active=64 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iput bytes=32768 reps=1000 active=64 offset=4
+DMA_CONFIG mode=iput bytes=32768 reps=1000 active=64 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA iput bytes=65536 reps=1000 active=64 offset=4
+DMA_CONFIG mode=iput bytes=65536 reps=1000 active=64 offset=4 args=0x500000d27820 args_size=56
+DMA_STAGE host.spawn.begin
+DMA_STAGE host.spawn.done
+DMA_STAGE host.join.begin
+DMA_STAGE host.join.done
+DMA_STAGE host.verify.done
+DMA_STAGE host.print.done
+DMA_STAGE host.halt.begin
+DMA_STAGE host.halt.done
+DMA_STAGE host.free.begin
+DMA_STAGE host.free.done
+DMA process completed: 224 sweep cases.
+dispatching ...
+Job 8419757 has been finished.

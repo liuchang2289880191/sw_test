@@ -98,9 +98,13 @@ python3 bench/analyze_contention.py cluster_results/cont_*.csv
 ## 五、批量运行与记录
 
 ```sh
-bsub -I -q QUEUE -n 1 -cgsp 64 -mpecg 1 bash bench/run_cluster_sweep.sh cluster_results
+cd bench
+module load swgcc/1473
+bash run_rma.sh q_share
 ```
 
-脚本生成 8 B ping-pong 矩阵、代表性 pair 的 bandwidth-window 曲线，以及 0/5/10/15 号小簇上的争用对照。机器时间有限时，先执行：8 B 矩阵；`0→1` 与 `1→2` 的 `8 B–64 KiB, W=1`；`single/intra2/split_near2/split_side2/split_far2` 的 `1024 B, W=4`，再平移到至少两个其他小簇。
+新版入口默认生成 8/16/32/64/128/256 B ping-pong 矩阵、9 个代表性 pair 的 bandwidth-window 曲线，以及 0/5/10/15 号小簇上的 8 类争用对照。每个作业先通过 18 项检查，再执行 548 项正式配置，独立提交 3 次并打乱顺序。仅检查可用 `RMA_DIAG_ONLY=1 bash run_rma.sh q_share`；减少扫描可用 `RMA_PROFILE=quick RMA_REPEATS=1 bash run_rma.sh q_share`。参数、容量和文件说明见 [RMA_RUN.md](RMA_RUN.md)。
+
+登录节点 Bash 只负责编译、提交与采集；计算节点直接执行同一个原生进程的全部配置。旧 `run_cluster_sweep.sh` 在计算节点启动 Bash 和子程序，不适用于当前 `q_share` 环境。
 
 每项至少在相同配置下重复 3 次并保存原始 CSV。记录 CPU 型号、核组号、从核频率、编译器/运行库版本、`BENCH_MAX_BYTES`、D-cache/LDM 配置、作业队列与是否独占、`bytes/reps/window/cluster_index`。有 `errors>0`、编译接口不匹配或资源配置不满足 64 从核的结果应先修复，不能用于结构推断。目前四个默认目标均已由用户在 `sw_hpc_78` 的 `swgcc/1473` 环境确认编译、链接成功；三个 RMA 目标有超过 128 KiB 静态 LDM 的警告，运行正确性与性能尚未验证。

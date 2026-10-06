@@ -1,0 +1,4 @@
+benchmark,mode,bytes,reps,active_pes,offset,pe,cycles,cycles_per_op,aggregate_bytes_per_cycle,errors,slot_stride,mapping,mapping_seed,slot,src_address,dst_address
+dma,iget,384,10000,2,0,0,4678473,467.847300,,0,131200,identity,20261005,0,0x500001406000,0x500002408000
+dma,iget,384,10000,2,0,1,4679810,467.981000,,0,131200,identity,20261005,1,0x500001426080,0x500002428080
+dma,iget,384,10000,2,0,aggregate,4679810,467.981000,1.641092267,0,131200,identity,20261005,,,

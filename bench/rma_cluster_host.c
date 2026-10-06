@@ -87,9 +87,12 @@ static int valid_capacity(const cluster_args_t *a)
     return (long long)a->bytes * a->window * max_in <= BENCH_MAX_BYTES;
 }
 
-int main(int argc, char **argv)
+static int runtime_ready;
+
+static int run_case(int argc, char **argv, FILE *csv)
 {
-    cluster_args_t a;
+    /* Arguments are DMA-readable host storage, including in suite mode. */
+    static cluster_args_t a __attribute__((aligned(128)));
     unsigned long *cycles, max_cycles = 0;
     int *errors, *peer_errors, i, j, failed = 0;
     const char *case_name;
@@ -145,46 +148,63 @@ int main(int argc, char **argv)
     memset(errors, 0, BENCH_PES * BENCH_PES * sizeof(*errors));
     memset(peer_errors, 0, BENCH_PES * BENCH_PES * sizeof(*peer_errors));
     a.cycles = cycles; a.errors = errors; a.peer_errors = peer_errors;
-    if (athread_init() != 0 || athread_spawn(cluster_kernel, &a) != 0 ||
+    if (!runtime_ready) {
+        if (athread_init() != 0) { fprintf(stderr, "athread init failed\n"); return 1; }
+        runtime_ready = 1;
+    }
+    if (athread_spawn(cluster_kernel, &a) != 0 ||
         athread_join() != 0) {
         fprintf(stderr, "athread launch failed\n"); return 1;
     }
-    athread_halt();
     if (a.mode == 0) {
-        printf("benchmark,bytes,reps,initiator,peer,same_cluster,row_distance,col_distance,rtt_cycles,latency_cycles,errors\n");
+        fprintf(csv, "benchmark,bytes,reps,initiator,peer,same_cluster,row_distance,col_distance,rtt_cycles,latency_cycles,errors\n");
         for (i = 0; i < BENCH_PES; ++i)
             for (j = 0; j < BENCH_PES; ++j) {
                 int idx = i * BENCH_PES + j;
                 int err, dr, dc;
                 if (i == j) continue;
                 err = errors[idx] + peer_errors[j * BENCH_PES + i];
+                if (!cycles[idx]) { fprintf(stderr, "zero timing for %d->%d\n", i, j); failed = 1; }
                 if (err) failed = 1;
                 dr = abs(i / 8 - j / 8);
                 dc = abs(i % 8 - j % 8);
-                printf("rma_pingpong,%d,%d,%d,%d,%d,%d,%d,%lu,%.6f,%d\n",
+                fprintf(csv, "rma_pingpong,%d,%d,%d,%d,%d,%d,%d,%lu,%.6f,%d\n",
                        a.bytes, a.reps, i, j, cluster_of(i) == cluster_of(j),
                        dr, dc, cycles[idx], (double)cycles[idx] / (2 * a.reps), err);
             }
     } else {
-        printf("benchmark,case,cluster_index,bytes,reps,window,flows,pe,cycles,aggregate_bytes_per_cycle,errors\n");
+        fprintf(csv, "benchmark,case,cluster_index,bytes,reps,window,flows,pe,cycles,aggregate_bytes_per_cycle,errors\n");
         for (i = 0; i < BENCH_PES; ++i) {
             int active = 0;
             for (j = 0; j < a.nflows; ++j)
                 if (a.flows[j].src == i || a.flows[j].dst == i) active = 1;
             if (!active) continue;
             if (cycles[i] > max_cycles) max_cycles = cycles[i];
-            if (errors[i]) failed = 1;
-            printf("rma_flow,%s,%d,%d,%d,%d,%d,%d,%lu,,%d\n",
+            if (!cycles[i] || errors[i]) failed = 1;
+            fprintf(csv, "rma_flow,%s,%d,%d,%d,%d,%d,%d,%lu,,%d\n",
                    case_name, a.cluster_index, a.bytes, a.reps,
                    a.window, a.nflows,
                    i, cycles[i], errors[i]);
         }
-        printf("rma_flow,%s,%d,%d,%d,%d,%d,aggregate,%lu,%.9f,%d\n",
+        fprintf(csv, "rma_flow,%s,%d,%d,%d,%d,%d,aggregate,%lu,%.9f,%d\n",
                case_name, a.cluster_index, a.bytes, a.reps,
                a.window, a.nflows, max_cycles,
                max_cycles ? (double)a.bytes * a.reps * a.nflows / max_cycles : 0.0,
                failed);
     }
+    if (fflush(csv) != 0 || ferror(csv)) failed = 1;
     free(cycles); free(errors); free(peer_errors);
     return failed ? 1 : 0;
+}
+
+#include "rma_cluster_suite.h"
+
+int main(int argc, char **argv)
+{
+    int status;
+    if (argc == 4 && !strcmp(argv[1], "--suite"))
+        status = run_suite(argv[2], argv[3]);
+    else status = run_case(argc, argv, stdout);
+    if (runtime_ready) athread_halt();
+    return status;
 }

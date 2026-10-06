@@ -1,0 +1,1 @@
+WARN: LDM static space is more than 128KB [size: 132840 B], use ldm-malloc or -b carefully

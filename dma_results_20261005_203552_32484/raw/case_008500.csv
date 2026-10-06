@@ -1,0 +1,4 @@
+benchmark,mode,bytes,reps,active_pes,offset,pe,cycles,cycles_per_op,aggregate_bytes_per_cycle,errors,slot_stride,mapping,mapping_seed,slot,src_address,dst_address
+dma,iput,4096,1000,2,4,0,1118813,1118.813000,,0,131200,shuffle,20261005,51,0x500001a67984,0x500002a69984
+dma,iput,4096,1000,2,4,1,1120577,1120.577000,,0,131200,shuffle,20261005,60,0x500001b87e04,0x500002b89e04
+dma,iput,4096,1000,2,4,aggregate,1120577,1120.577000,7.310519491,0,131200,shuffle,20261005,,,

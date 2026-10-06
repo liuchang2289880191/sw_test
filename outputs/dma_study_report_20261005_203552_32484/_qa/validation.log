@@ -1,0 +1,216 @@
+﻿{
+  "source": "E:\\ת��\\2026��\\����\\sunway-qd\\dma_results_20261005_203552_32484",
+  "capacity_bytes": 131072,
+  "mapping_seed": 20261005,
+  "phase_counts": {
+    "boundary": 1008,
+    "load": 1680,
+    "mapping": 7168
+  },
+  "formal_cases": 9856,
+  "smoke_cases": 8,
+  "validated_pe_rows": 179076,
+  "scaling_rows": 8448,
+  "all_errors_zero": true,
+  "fixed_src_base": "0x500001406000",
+  "fixed_dst_base": "0x500002408000",
+  "raw_content_sha256": "03d08efe3cf55bc8a720547c8ed9961bf280f7e3d33976163c49b485adbf8e98",
+  "source_sha256": {
+    "plan.csv": "8c72383ec1a335cb837d3eeabdf26e2e6448fcfb99e7bba3f6903a01bf32b682",
+    "slot_maps.csv": "388b826458c8a59c110abf1ed1c5e19a26c15629746649b3e07e5e1ab3be3121",
+    "study_summary.csv": "7a23b2651c4371611f689a5239290b90d6c725c332cce6391809e9bcda0864c8",
+    "study_scaling.csv": "73d591cc063fd42d6d8f942c0e302e6d0b53057dfde2ccb0dd3724e6ee054e6d",
+    "build_info.txt": "74d6ea269cf6d8cb6aa45e05b340639046375f8b77f3c205bd40fc1b6c0cb01a",
+    "cpuinfo.txt": "6beadac953a8234be82fba3ed1bc32301e461aaf240468588f4ba9a07c60d739",
+    "source/dma_host.c": "46bb020f7c8fe234abd2699e2d4c782ead369117374ed8eade9d871e0c424d25",
+    "source/dma_slave.c": "ea900c5793209d2aed9116eae236aafa58bde73743c530481ce515adcc635c4c",
+    "source/bench_common.h": "900982d615ff8b72569ea008859e645a7eec78f393e37d73cbd332665d4541b2"
+  },
+  "cache_size_kib": "0",
+  "resource_exclusivity": "not_established_by_queue_name",
+  "overlap_stats": {
+    "boundary_to_load": {
+      "n": 504,
+      "min": 1.719513856413002e-06,
+      "median": 0.0009840191540412269,
+      "p90": 0.007349242528833908,
+      "max": 0.07637482432895593
+    },
+    "load_to_mapping": {
+      "n": 448,
+      "min": 3.0644815858238417e-06,
+      "median": 0.001082195333008129,
+      "p90": 0.006824888234950555,
+      "max": 0.06525900597616463
+    }
+  },
+  "sync_async_ratios": {
+    "iget/get": {
+      "n": 420,
+      "min": 0.9685879867353657,
+      "median": 1.0005732646311747,
+      "p90": 1.0066748270549426,
+      "max": 1.0550961889087833
+    },
+    "iput/put": {
+      "n": 420,
+      "min": 0.8920170721700218,
+      "median": 1.0005265657717821,
+      "p90": 1.0211423413737675,
+      "max": 1.0752757380914157
+    }
+  },
+  "layout64_stats": {
+    "get": {
+      "n": 16,
+      "min": 1.1017893041118239,
+      "median": 1.284558008037294,
+      "p90": 1.3976593741477248,
+      "max": 1.458329381108892
+    },
+    "put": {
+      "n": 16,
+      "min": 1.0572729130521044,
+      "median": 1.1702868881850375,
+      "p90": 1.3295154279468666,
+      "max": 1.343492411710036
+    },
+    "iget": {
+      "n": 16,
+      "min": 1.102783573434351,
+      "median": 1.2827956121480046,
+      "p90": 1.375207351240789,
+      "max": 1.4572151861394316
+    },
+    "iput": {
+      "n": 16,
+      "min": 1.047476554650078,
+      "median": 1.1707997032594148,
+      "p90": 1.3339898324207584,
+      "max": 1.3435146568186633
+    }
+  },
+  "correlation64_stats": {
+    "get": {
+      "corr_by_pe": {
+        "n": 192,
+        "min": -0.8623257669756298,
+        "median": 0.0446227461365938,
+        "p90": 0.9059978413935177,
+        "max": 0.9982864472857624
+      },
+      "corr_by_slot": {
+        "n": 192,
+        "min": -0.5302583065712443,
+        "median": 0.32624011878370895,
+        "p90": 0.9999726086480172,
+        "max": 0.999992374458698
+      }
+    },
+    "put": {
+      "corr_by_pe": {
+        "n": 192,
+        "min": -0.9999917135328368,
+        "median": 0.9975670510887196,
+        "p90": 0.9998911754895972,
+        "max": 0.9999927705000506
+      },
+      "corr_by_slot": {
+        "n": 192,
+        "min": -0.9997733531420409,
+        "median": -0.08703092904558979,
+        "p90": 0.6910248882288194,
+        "max": 0.9999914394046925
+      }
+    },
+    "iget": {
+      "corr_by_pe": {
+        "n": 192,
+        "min": -0.690528634720993,
+        "median": 0.046287537408375566,
+        "p90": 0.9359484199759524,
+        "max": 0.9980646581648688
+      },
+      "corr_by_slot": {
+        "n": 192,
+        "min": -0.7948918581051333,
+        "median": 0.29646246504254276,
+        "p90": 0.9999781052998805,
+        "max": 0.9999947489301835
+      }
+    },
+    "iput": {
+      "corr_by_pe": {
+        "n": 192,
+        "min": -0.9889261002565686,
+        "median": 0.9983069000984631,
+        "p90": 0.9998945936670215,
+        "max": 0.9999922672475781
+      },
+      "corr_by_slot": {
+        "n": 192,
+        "min": -0.9999830936267401,
+        "median": -0.08602391367224588,
+        "p90": 0.711651641419616,
+        "max": 0.9975505555549458
+      }
+    }
+  }
+}
+BOUNDARY64 put size and cycles for offsets 0 4 64 124
+64 1916.82 3578.6 1913.48 3498.34
+96 1917.49 3571.86 3503.49 5014.15
+124 3577.09 3573.98 3504.05 3492.66
+128 439.42 5179.92 3502.36 5008.27
+132 2735.08 5166.38 5027.86 2684.06
+192 2716.46 6690.86 2694.59 4582.6
+252 4279.26 4376.84 4602.3 4589.93
+256 885.38 6060.12 4590.04 6222.33
+260 3521.9 6057.3 6169.4 3493.38
+LOAD large aligned: mode N and bandwidth for 4 32 64 96 128 KiB
+get 1 5.7024 13.9379 15.6136 16.3373 16.7049
+get 2 10.5615 17.4122 17.4781 17.3947 16.878
+get 4 15.6327 19.5523 19.6548 19.7585 19.5108
+get 8 20.0953 20.6992 20.8916 20.9379 20.918
+get 16 19.4568 20.6783 21.3155 21.3107 21.1148
+get 32 20.6888 21.2844 21.4662 21.4646 21.3609
+get 64 19.649 20.9339 20.9553 20.9774 20.8514
+put 1 8.8097 16.4253 17.5019 17.9092 18.1199
+put 2 17.4489 18.6951 18.7358 18.7464 18.7413
+put 4 20.1035 20.786 21.2042 21.3175 21.3255
+put 8 19.5823 20.2287 20.4405 20.5257 20.5765
+put 16 17.8456 20.4943 20.5305 20.6447 20.4709
+put 32 16.9592 18.5474 18.7672 18.7937 18.4066
+put 64 14.9314 15.5475 15.6009 15.5934 15.3809
+iget 1 5.7193 13.8866 15.7173 16.3594 16.7037
+iget 2 10.4914 16.8652 17.4331 17.3579 16.9297
+iget 4 15.8236 19.4411 19.6762 19.7437 19.5552
+iget 8 20.0023 20.7232 20.8797 20.9418 20.9273
+iget 16 19.6453 20.6388 21.3435 21.2682 21.109
+iget 32 20.6941 21.3931 21.4704 21.4635 21.3729
+iget 64 19.8708 20.9432 20.9568 20.9835 20.8635
+iput 1 8.9118 16.4743 17.5472 17.9378 18.137
+iput 2 17.637 18.6941 18.7323 18.7452 18.7493
+iput 4 20.336 20.8281 21.1648 21.3279 21.3243
+iput 8 19.5698 20.2421 20.4488 20.5418 20.5626
+iput 16 17.4224 20.4403 20.551 20.6321 20.4246
+iput 32 16.935 18.6752 18.7723 18.8295 18.4391
+iput 64 15.1052 15.5567 15.5726 15.5444 15.2538
+Top full64 layout contrasts
+{'mode': 'get', 'active_pes': 64, 'bytes': 128, 'offset': 4, 'best_bw': 7.536457105, 'worst_bw': 5.167870306, 'layout_max_to_min': 1.458329381108892, 'best_stride': 262144, 'best_mapping': 'shuffle', 'worst_stride': 131200, 'worst_mapping': 'reverse', 'identity_stride_max_to_min': 1.4530128507320037, 'max_mapping_ratio_at_fixed_stride': 1.0036040125254553}
+{'mode': 'get', 'active_pes': 64, 'bytes': 256, 'offset': 0, 'best_bw': 15.071167203, 'worst_bw': 10.338948258, 'layout_max_to_min': 1.457707962832519, 'best_stride': 262144, 'best_mapping': 'reverse', 'worst_stride': 131200, 'worst_mapping': 'transpose', 'identity_stride_max_to_min': 1.4530424219564362, 'max_mapping_ratio_at_fixed_stride': 1.0029717354139704}
+{'mode': 'iget', 'active_pes': 64, 'bytes': 128, 'offset': 4, 'best_bw': 7.52692608, 'worst_bw': 5.165281114, 'layout_max_to_min': 1.4572151861394316, 'best_stride': 262144, 'best_mapping': 'transpose', 'worst_stride': 131200, 'worst_mapping': 'transpose', 'identity_stride_max_to_min': 1.4549805563943472, 'max_mapping_ratio_at_fixed_stride': 1.00350747722568}
+{'mode': 'iget', 'active_pes': 64, 'bytes': 256, 'offset': 0, 'best_bw': 15.046455841, 'worst_bw': 10.326966613, 'layout_max_to_min': 1.4570063412482537, 'best_stride': 262144, 'best_mapping': 'transpose', 'worst_stride': 131200, 'worst_mapping': 'transpose', 'identity_stride_max_to_min': 1.453646731159419, 'max_mapping_ratio_at_fixed_stride': 1.0051649633108133}
+{'mode': 'iput', 'active_pes': 64, 'bytes': 64, 'offset': 4, 'best_bw': 1.145634539, 'worst_bw': 0.852714582, 'layout_max_to_min': 1.3435146568186633, 'best_stride': 131200, 'best_mapping': 'identity', 'worst_stride': 135168, 'worst_mapping': 'shuffle', 'identity_stride_max_to_min': 1.3364710451025792, 'max_mapping_ratio_at_fixed_stride': 1.0321380410793295}
+{'mode': 'put', 'active_pes': 64, 'bytes': 64, 'offset': 4, 'best_bw': 1.146094219, 'worst_bw': 0.853070854, 'layout_max_to_min': 1.343492411710036, 'best_stride': 131200, 'best_mapping': 'identity', 'worst_stride': 135168, 'worst_mapping': 'shuffle', 'identity_stride_max_to_min': 1.3374209387372595, 'max_mapping_ratio_at_fixed_stride': 1.0473228639416403}
+{'mode': 'get', 'active_pes': 64, 'bytes': 4096, 'offset': 4, 'best_bw': 20.557617856, 'worst_bw': 15.368908564, 'layout_max_to_min': 1.3376107854629307, 'best_stride': 135168, 'best_mapping': 'shuffle', 'worst_stride': 262144, 'worst_mapping': 'shuffle', 'identity_stride_max_to_min': 1.2315337949896734, 'max_mapping_ratio_at_fixed_stride': 1.0895953095193418}
+{'mode': 'iput', 'active_pes': 64, 'bytes': 64, 'offset': 0, 'best_bw': 2.214374001, 'worst_bw': 1.655999432, 'layout_max_to_min': 1.3371828264008727, 'best_stride': 262144, 'best_mapping': 'reverse', 'worst_stride': 135168, 'worst_mapping': 'shuffle', 'identity_stride_max_to_min': 1.3237624436400572, 'max_mapping_ratio_at_fixed_stride': 1.0290382130778362}
+Largest phase overlaps
+{'first_phase': 'boundary', 'second_phase': 'load', 'mode': 'put', 'active_pes': 4, 'bytes': 124, 'offset': 4, 'first_case_id': 336, 'second_case_id': 1584, 'first_bw': 0.576273116, 'second_bw': 0.620285874, 'bw_ratio_second_to_first': 1.076374824328956, 'abs_relative_change': 0.07637482432895593}
+{'first_phase': 'load', 'second_phase': 'mapping', 'mode': 'get', 'active_pes': 4, 'bytes': 4096, 'offset': 4, 'first_case_id': 1178, 'second_case_id': 3377, 'first_bw': 15.606113283, 'second_bw': 14.587673843, 'bw_ratio_second_to_first': 0.9347409940238354, 'abs_relative_change': 0.06525900597616463}
+{'first_phase': 'boundary', 'second_phase': 'load', 'mode': 'put', 'active_pes': 4, 'bytes': 124, 'offset': 0, 'first_case_id': 327, 'second_case_id': 1554, 'first_bw': 0.622212588, 'second_bw': 0.586602033, 'bw_ratio_second_to_first': 0.9427678647350027, 'abs_relative_change': 0.057232135264997264}
+{'first_phase': 'boundary', 'second_phase': 'load', 'mode': 'iput', 'active_pes': 4, 'bytes': 96, 'offset': 4, 'first_case_id': 839, 'second_case_id': 2423, 'first_bw': 0.459257794, 'second_bw': 0.485349338, 'bw_ratio_second_to_first': 1.056812414162317, 'abs_relative_change': 0.05681241416231697}
+{'first_phase': 'boundary', 'second_phase': 'load', 'mode': 'put', 'active_pes': 4, 'bytes': 96, 'offset': 4, 'first_case_id': 335, 'second_case_id': 1583, 'first_bw': 0.480074952, 'second_bw': 0.459736592, 'bw_ratio_second_to_first': 0.9576350319564266, 'abs_relative_change': 0.04236496804357337}
+{'first_phase': 'boundary', 'second_phase': 'load', 'mode': 'iput', 'active_pes': 4, 'bytes': 124, 'offset': 0, 'first_case_id': 831, 'second_case_id': 2394, 'first_bw': 0.607847458, 'second_bw': 0.630758934, 'bw_ratio_second_to_first': 1.0376928054867347, 'abs_relative_change': 0.037692805486734704}
+{'first_phase': 'boundary', 'second_phase': 'load', 'mode': 'put', 'active_pes': 2, 'bytes': 192, 'offset': 4, 'first_case_id': 303, 'second_case_id': 1527, 'first_bw': 0.784178224, 'second_bw': 0.813595693, 'bw_ratio_second_to_first': 1.0375137540162043, 'abs_relative_change': 0.03751375401620427}
+{'first_phase': 'load', 'second_phase': 'mapping', 'mode': 'iput', 'active_pes': 4, 'bytes': 4096, 'offset': 0, 'first_case_id': 2408, 'second_case_id': 8625, 'first_bw': 20.336020972, 'second_bw': 21.012967658, 'bw_ratio_second_to_first': 1.0332880599863694, 'abs_relative_change': 0.03328805998636941}
