@@ -1,0 +1,6 @@
+benchmark,case,cluster_index,bytes,reps,window,flows,pe,cycles,aggregate_bytes_per_cycle,errors
+rma_flow,intra2,10,64,2000,4,2,36,188036,,0
+rma_flow,intra2,10,64,2000,4,2,37,188014,,0
+rma_flow,intra2,10,64,2000,4,2,44,195248,,0
+rma_flow,intra2,10,64,2000,4,2,45,195236,,0
+rma_flow,intra2,10,64,2000,4,2,aggregate,195248,1.311152995,0

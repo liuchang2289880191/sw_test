@@ -1,0 +1,28 @@
+queue=q_share
+compiler=/usr/sw/swgcc/swgcc710-tools-SEA-1473/usr/bin/swgcc
+target=sw_64sw6a-sunway-linux-gnu
+profile=full
+repeats=3
+capacity_bytes=65536
+cache_size_kib_requested=0
+order_seed=20261006
+latency_reps=2000
+bandwidth_reps=2000
+resource_request=MPE:1,CG:1,CPE:64
+resource_exclusivity=unknown
+shared_ldm_configuration=unknown
+counter_frequency_hz=not_calibrated
+resource_note=not_provided
+host_flags=-mhost -O2 -g
+slave_flags=-mslave -msimd -O2 -g
+link_flags=-mhybrid -g
+submit_time_utc=2026-10-06T11:40:29Z
+Reading specs from /usr/sw/swgcc/swgcc710-tools-SEA-1473/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/specs
+COLLECT_GCC=swgcc
+COLLECT_LTO_WRAPPER=/usr/sw/swgcc/swgcc710-tools-SEA-1473/usr/bin/../libexec/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/lto-wrapper
+Target: sw_64sw6a-sunway-linux-gnu
+Configured with: /usr1/comp9/swgcc710/gcc-7.1.0/configure --prefix=/usr1/comp9/swgcc710-tools-SEA-1473/usr --with-gmp=/usr1/comp9/swgcc710-tools-SEA-1473/usr/lib_for_gcc --with-mpfr=/usr1/comp9/swgcc710-tools-SEA-1473/usr/lib_for_gcc --with-isl=/usr1/comp9/swgcc710-tools-SEA-1473/usr/lib_for_gcc --enable-shared --enable-languages=c,c++,fortran --build=x86_64-redhat-linux --host=x86_64-redhat-linux --target=sw_64sw6a-sunway-linux-gnu --disable-multilib --enable-c99 --enable-long-long --enable-threads=posix --enable-__cxa_atexit --disable-nls --disable-libgcc_slave --disable-libgfortran_slave --disable-libstdcxx_slave --with-sysroot=/usr1/comp9/swgcc710-tools-SEA-1473 CFLAGS='-g -gdwarf-2' CXXFLAGS='-g -gdwarf-2 -fpermissive' --disable-werror
+Thread model: posix
+gcc version 7.1.0 20170502 (swgcc-1473 Committer: qianh <qianh@example.com> by comp9 at localhost.localdomain on Mon Apr 20 19:56:20 CST 2026) (GCC) 
+Currently Loaded Modulefiles:
+ 1) swgcc/1473  

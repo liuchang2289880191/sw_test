@@ -1,0 +1,2 @@
+repeat=2
+shuffle_seed=20261008

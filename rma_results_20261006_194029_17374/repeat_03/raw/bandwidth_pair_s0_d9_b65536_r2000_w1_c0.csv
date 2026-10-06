@@ -1,0 +1,4 @@
+benchmark,case,cluster_index,bytes,reps,window,flows,pe,cycles,aggregate_bytes_per_cycle,errors
+rma_flow,pair,0,65536,2000,1,1,0,5350042,,0
+rma_flow,pair,0,65536,2000,1,1,9,5350004,,0
+rma_flow,pair,0,65536,2000,1,1,aggregate,5350042,24.499246922,0

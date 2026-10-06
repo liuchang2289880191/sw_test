@@ -1,0 +1,6 @@
+benchmark,case,cluster_index,bytes,reps,window,flows,pe,cycles,aggregate_bytes_per_cycle,errors
+rma_flow,split_far2,15,1024,2000,4,2,22,218041,,0
+rma_flow,split_far2,15,1024,2000,4,2,23,218025,,0
+rma_flow,split_far2,15,1024,2000,4,2,54,204042,,0
+rma_flow,split_far2,15,1024,2000,4,2,55,204025,,0
+rma_flow,split_far2,15,1024,2000,4,2,aggregate,218041,18.785457781,0
