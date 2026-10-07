@@ -1,0 +1,22 @@
+{
+  "copied_from_successful_hardware_run": true,
+  "source_result": "results_20261007_211507_31272",
+  "kernel_bytes_unchanged": true,
+  "files": [
+    {
+      "file": "topology_host.c",
+      "source": "outputs\\results_20261007_211507_31272\\source\\topology_host.c",
+      "sha256": "2eca313ef3de49bf02ea4e3fe31f405d87a86a56e6c2798cbe283d8367374943"
+    },
+    {
+      "file": "topology_slave.c",
+      "source": "outputs\\results_20261007_211507_31272\\source\\topology_slave.c",
+      "sha256": "5ad5732a74cc3aba2660b64305f4fb04be7892bb927d6fb07599f5811a98b25e"
+    },
+    {
+      "file": "topology_common.h",
+      "source": "outputs\\results_20261007_211507_31272\\source\\topology_common.h",
+      "sha256": "21da3b093f8865142b39fb9f0d25b3aa1632c8f3b3ac5e1b3ad4ef28945f9e1a"
+    }
+  ]
+}

@@ -1,0 +1,257 @@
+# case group family label role mode background_bytes probe_bytes reply_bytes reps window nflows src dst ...
+g0025_control_00000 g0025 routes p0_15_bg6_13_pb1024 control 1 4096 1024 8 2048 4 1 0 54
+g0025_treatment_00001 g0025 routes p0_15_bg6_13_pb1024 treatment 1 4096 1024 8 2048 4 2 0 54 20 50
+g0025_treatment_00002 g0025 routes p0_15_bg6_13_pb1024 treatment 1 4096 1024 8 2048 4 2 0 54 20 50
+g0025_control_00003 g0025 routes p0_15_bg6_13_pb1024 control 1 4096 1024 8 2048 4 1 0 54
+g0020_treatment_00004 g0020 routes p0_15_bg1_6_pb8 treatment 1 4096 8 8 2048 4 2 0 54 2 20
+g0020_control_00005 g0020 routes p0_15_bg1_6_pb8 control 1 4096 8 8 2048 4 1 0 54
+g0020_control_00006 g0020 routes p0_15_bg1_6_pb8 control 1 4096 8 8 2048 4 1 0 54
+g0020_treatment_00007 g0020 routes p0_15_bg1_6_pb8 treatment 1 4096 8 8 2048 4 2 0 54 2 20
+g0010_control_00008 g0010 routes p0_15_bg2_1_pb8 control 1 4096 8 8 2048 4 1 0 54
+g0010_treatment_00009 g0010 routes p0_15_bg2_1_pb8 treatment 1 4096 8 8 2048 4 2 0 54 4 2
+g0010_treatment_00010 g0010 routes p0_15_bg2_1_pb8 treatment 1 4096 8 8 2048 4 2 0 54 4 2
+g0010_control_00011 g0010 routes p0_15_bg2_1_pb8 control 1 4096 8 8 2048 4 1 0 54
+g0032_control_00012 g0032 routes p15_0_bg8_4_pb8 control 1 4096 8 8 2048 4 1 54 0
+g0032_treatment_00013 g0032 routes p15_0_bg8_4_pb8 treatment 1 4096 8 8 2048 4 2 54 0 32 16
+g0032_treatment_00014 g0032 routes p15_0_bg8_4_pb8 treatment 1 4096 8 8 2048 4 2 54 0 32 16
+g0032_control_00015 g0032 routes p15_0_bg8_4_pb8 control 1 4096 8 8 2048 4 1 54 0
+g0060_control_00016 g0060 routes p15_0_bg9_4_pb8 control 1 4096 8 8 2048 4 1 54 0
+g0060_treatment_00017 g0060 routes p15_0_bg9_4_pb8 treatment 1 4096 8 8 2048 4 2 54 0 34 16
+g0060_treatment_00018 g0060 routes p15_0_bg9_4_pb8 treatment 1 4096 8 8 2048 4 2 54 0 34 16
+g0060_control_00019 g0060 routes p15_0_bg9_4_pb8 control 1 4096 8 8 2048 4 1 54 0
+g0026_control_00020 g0026 routes p0_15_bg6_1_pb8 control 1 4096 8 8 2048 4 1 0 54
+g0026_treatment_00021 g0026 routes p0_15_bg6_1_pb8 treatment 1 4096 8 8 2048 4 2 0 54 20 2
+g0026_treatment_00022 g0026 routes p0_15_bg6_1_pb8 treatment 1 4096 8 8 2048 4 2 0 54 20 2
+g0026_control_00023 g0026 routes p0_15_bg6_1_pb8 control 1 4096 8 8 2048 4 1 0 54
+g0040_control_00024 g0040 routes p15_0_bg1_2_pb8 control 1 4096 8 8 2048 4 1 54 0
+g0040_treatment_00025 g0040 routes p15_0_bg1_2_pb8 treatment 1 4096 8 8 2048 4 2 54 0 2 4
+g0040_treatment_00026 g0040 routes p15_0_bg1_2_pb8 treatment 1 4096 8 8 2048 4 2 54 0 2 4
+g0040_control_00027 g0040 routes p15_0_bg1_2_pb8 control 1 4096 8 8 2048 4 1 54 0
+g0046_treatment_00028 g0046 routes p15_0_bg11_4_pb8 treatment 1 4096 8 8 2048 4 2 54 0 38 16
+g0046_control_00029 g0046 routes p15_0_bg11_4_pb8 control 1 4096 8 8 2048 4 1 54 0
+g0046_control_00030 g0046 routes p15_0_bg11_4_pb8 control 1 4096 8 8 2048 4 1 54 0
+g0046_treatment_00031 g0046 routes p15_0_bg11_4_pb8 treatment 1 4096 8 8 2048 4 2 54 0 38 16
+g0019_control_00032 g0019 routes p0_15_bg1_4_pb1024 control 1 4096 1024 8 2048 4 1 0 54
+g0019_treatment_00033 g0019 routes p0_15_bg1_4_pb1024 treatment 1 4096 1024 8 2048 4 2 0 54 2 16
+g0019_treatment_00034 g0019 routes p0_15_bg1_4_pb1024 treatment 1 4096 1024 8 2048 4 2 0 54 2 16
+g0019_control_00035 g0019 routes p0_15_bg1_4_pb1024 control 1 4096 1024 8 2048 4 1 0 54
+g0028_control_00036 g0028 routes p0_15_bg4_9_pb8 control 1 4096 8 8 2048 4 1 0 54
+g0028_treatment_00037 g0028 routes p0_15_bg4_9_pb8 treatment 1 4096 8 8 2048 4 2 0 54 16 34
+g0028_treatment_00038 g0028 routes p0_15_bg4_9_pb8 treatment 1 4096 8 8 2048 4 2 0 54 16 34
+g0028_control_00039 g0028 routes p0_15_bg4_9_pb8 control 1 4096 8 8 2048 4 1 0 54
+g0036_control_00040 g0036 routes p15_0_bg2_1_pb8 control 1 4096 8 8 2048 4 1 54 0
+g0036_treatment_00041 g0036 routes p15_0_bg2_1_pb8 treatment 1 4096 8 8 2048 4 2 54 0 4 2
+g0036_treatment_00042 g0036 routes p15_0_bg2_1_pb8 treatment 1 4096 8 8 2048 4 2 54 0 4 2
+g0036_control_00043 g0036 routes p15_0_bg2_1_pb8 control 1 4096 8 8 2048 4 1 54 0
+g0004_control_00044 g0004 routes p0_15_bg4_8_pb8 control 1 4096 8 8 2048 4 1 0 54
+g0004_treatment_00045 g0004 routes p0_15_bg4_8_pb8 treatment 1 4096 8 8 2048 4 2 0 54 16 32
+g0004_treatment_00046 g0004 routes p0_15_bg4_8_pb8 treatment 1 4096 8 8 2048 4 2 0 54 16 32
+g0004_control_00047 g0004 routes p0_15_bg4_8_pb8 control 1 4096 8 8 2048 4 1 0 54
+g0034_treatment_00048 g0034 routes p15_0_bg12_8_pb8 treatment 1 4096 8 8 2048 4 2 54 0 48 32
+g0034_control_00049 g0034 routes p15_0_bg12_8_pb8 control 1 4096 8 8 2048 4 1 54 0
+g0034_control_00050 g0034 routes p15_0_bg12_8_pb8 control 1 4096 8 8 2048 4 1 54 0
+g0034_treatment_00051 g0034 routes p15_0_bg12_8_pb8 treatment 1 4096 8 8 2048 4 2 54 0 48 32
+g0059_treatment_00052 g0059 routes p15_0_bg1_6_pb1024 treatment 1 4096 1024 8 2048 4 2 54 0 2 20
+g0059_control_00053 g0059 routes p15_0_bg1_6_pb1024 control 1 4096 1024 8 2048 4 1 54 0
+g0059_control_00054 g0059 routes p15_0_bg1_6_pb1024 control 1 4096 1024 8 2048 4 1 54 0
+g0059_treatment_00055 g0059 routes p15_0_bg1_6_pb1024 treatment 1 4096 1024 8 2048 4 2 54 0 2 20
+g0053_control_00056 g0053 routes p15_0_bg6_1_pb1024 control 1 4096 1024 8 2048 4 1 54 0
+g0053_treatment_00057 g0053 routes p15_0_bg6_1_pb1024 treatment 1 4096 1024 8 2048 4 2 54 0 20 2
+g0053_treatment_00058 g0053 routes p15_0_bg6_1_pb1024 treatment 1 4096 1024 8 2048 4 2 54 0 20 2
+g0053_control_00059 g0053 routes p15_0_bg6_1_pb1024 control 1 4096 1024 8 2048 4 1 54 0
+g0051_control_00060 g0051 routes p15_0_bg4_1_pb1024 control 1 4096 1024 8 2048 4 1 54 0
+g0051_treatment_00061 g0051 routes p15_0_bg4_1_pb1024 treatment 1 4096 1024 8 2048 4 2 54 0 16 2
+g0051_treatment_00062 g0051 routes p15_0_bg4_1_pb1024 treatment 1 4096 1024 8 2048 4 2 54 0 16 2
+g0051_control_00063 g0051 routes p15_0_bg4_1_pb1024 control 1 4096 1024 8 2048 4 1 54 0
+g0054_treatment_00064 g0054 routes p15_0_bg13_8_pb8 treatment 1 4096 8 8 2048 4 2 54 0 50 32
+g0054_control_00065 g0054 routes p15_0_bg13_8_pb8 control 1 4096 8 8 2048 4 1 54 0
+g0054_control_00066 g0054 routes p15_0_bg13_8_pb8 control 1 4096 8 8 2048 4 1 54 0
+g0054_treatment_00067 g0054 routes p15_0_bg13_8_pb8 treatment 1 4096 8 8 2048 4 2 54 0 50 32
+g0039_treatment_00068 g0039 routes p15_0_bg3_2_pb1024 treatment 1 4096 1024 8 2048 4 2 54 0 6 4
+g0039_control_00069 g0039 routes p15_0_bg3_2_pb1024 control 1 4096 1024 8 2048 4 1 54 0
+g0039_control_00070 g0039 routes p15_0_bg3_2_pb1024 control 1 4096 1024 8 2048 4 1 54 0
+g0039_treatment_00071 g0039 routes p15_0_bg3_2_pb1024 treatment 1 4096 1024 8 2048 4 2 54 0 6 4
+g0005_control_00072 g0005 routes p0_15_bg4_8_pb1024 control 1 4096 1024 8 2048 4 1 0 54
+g0005_treatment_00073 g0005 routes p0_15_bg4_8_pb1024 treatment 1 4096 1024 8 2048 4 2 0 54 16 32
+g0005_treatment_00074 g0005 routes p0_15_bg4_8_pb1024 treatment 1 4096 1024 8 2048 4 2 0 54 16 32
+g0005_control_00075 g0005 routes p0_15_bg4_8_pb1024 control 1 4096 1024 8 2048 4 1 0 54
+g0058_control_00076 g0058 routes p15_0_bg1_6_pb8 control 1 4096 8 8 2048 4 1 54 0
+g0058_treatment_00077 g0058 routes p15_0_bg1_6_pb8 treatment 1 4096 8 8 2048 4 2 54 0 2 20
+g0058_treatment_00078 g0058 routes p15_0_bg1_6_pb8 treatment 1 4096 8 8 2048 4 2 54 0 2 20
+g0058_control_00079 g0058 routes p15_0_bg1_6_pb8 control 1 4096 8 8 2048 4 1 54 0
+g0016_treatment_00080 g0016 routes p0_15_bg2_7_pb8 treatment 1 4096 8 8 2048 4 2 0 54 4 22
+g0016_control_00081 g0016 routes p0_15_bg2_7_pb8 control 1 4096 8 8 2048 4 1 0 54
+g0016_control_00082 g0016 routes p0_15_bg2_7_pb8 control 1 4096 8 8 2048 4 1 0 54
+g0016_treatment_00083 g0016 routes p0_15_bg2_7_pb8 treatment 1 4096 8 8 2048 4 2 0 54 4 22
+g0027_control_00084 g0027 routes p0_15_bg6_1_pb1024 control 1 4096 1024 8 2048 4 1 0 54
+g0027_treatment_00085 g0027 routes p0_15_bg6_1_pb1024 treatment 1 4096 1024 8 2048 4 2 0 54 20 2
+g0027_treatment_00086 g0027 routes p0_15_bg6_1_pb1024 treatment 1 4096 1024 8 2048 4 2 0 54 20 2
+g0027_control_00087 g0027 routes p0_15_bg6_1_pb1024 control 1 4096 1024 8 2048 4 1 0 54
+g0007_treatment_00088 g0007 routes p0_15_bg8_12_pb1024 treatment 1 4096 1024 8 2048 4 2 0 54 32 48
+g0007_control_00089 g0007 routes p0_15_bg8_12_pb1024 control 1 4096 1024 8 2048 4 1 0 54
+g0007_control_00090 g0007 routes p0_15_bg8_12_pb1024 control 1 4096 1024 8 2048 4 1 0 54
+g0007_treatment_00091 g0007 routes p0_15_bg8_12_pb1024 treatment 1 4096 1024 8 2048 4 2 0 54 32 48
+g0037_control_00092 g0037 routes p15_0_bg2_1_pb1024 control 1 4096 1024 8 2048 4 1 54 0
+g0037_treatment_00093 g0037 routes p15_0_bg2_1_pb1024 treatment 1 4096 1024 8 2048 4 2 54 0 4 2
+g0037_treatment_00094 g0037 routes p15_0_bg2_1_pb1024 treatment 1 4096 1024 8 2048 4 2 54 0 4 2
+g0037_control_00095 g0037 routes p15_0_bg2_1_pb1024 control 1 4096 1024 8 2048 4 1 54 0
+g0006_control_00096 g0006 routes p0_15_bg8_12_pb8 control 1 4096 8 8 2048 4 1 0 54
+g0006_treatment_00097 g0006 routes p0_15_bg8_12_pb8 treatment 1 4096 8 8 2048 4 2 0 54 32 48
+g0006_treatment_00098 g0006 routes p0_15_bg8_12_pb8 treatment 1 4096 8 8 2048 4 2 0 54 32 48
+g0006_control_00099 g0006 routes p0_15_bg8_12_pb8 control 1 4096 8 8 2048 4 1 0 54
+g0035_treatment_00100 g0035 routes p15_0_bg12_8_pb1024 treatment 1 4096 1024 8 2048 4 2 54 0 48 32
+g0035_control_00101 g0035 routes p15_0_bg12_8_pb1024 control 1 4096 1024 8 2048 4 1 54 0
+g0035_control_00102 g0035 routes p15_0_bg12_8_pb1024 control 1 4096 1024 8 2048 4 1 54 0
+g0035_treatment_00103 g0035 routes p15_0_bg12_8_pb1024 treatment 1 4096 1024 8 2048 4 2 54 0 48 32
+g0024_treatment_00104 g0024 routes p0_15_bg6_13_pb8 treatment 1 4096 8 8 2048 4 2 0 54 20 50
+g0024_control_00105 g0024 routes p0_15_bg6_13_pb8 control 1 4096 8 8 2048 4 1 0 54
+g0024_control_00106 g0024 routes p0_15_bg6_13_pb8 control 1 4096 8 8 2048 4 1 0 54
+g0024_treatment_00107 g0024 routes p0_15_bg6_13_pb8 treatment 1 4096 8 8 2048 4 2 0 54 20 50
+g0011_control_00108 g0011 routes p0_15_bg2_1_pb1024 control 1 4096 1024 8 2048 4 1 0 54
+g0011_treatment_00109 g0011 routes p0_15_bg2_1_pb1024 treatment 1 4096 1024 8 2048 4 2 0 54 4 2
+g0011_treatment_00110 g0011 routes p0_15_bg2_1_pb1024 treatment 1 4096 1024 8 2048 4 2 0 54 4 2
+g0011_control_00111 g0011 routes p0_15_bg2_1_pb1024 control 1 4096 1024 8 2048 4 1 0 54
+g0050_control_00112 g0050 routes p15_0_bg4_1_pb8 control 1 4096 8 8 2048 4 1 54 0
+g0050_treatment_00113 g0050 routes p15_0_bg4_1_pb8 treatment 1 4096 8 8 2048 4 2 54 0 16 2
+g0050_treatment_00114 g0050 routes p15_0_bg4_1_pb8 treatment 1 4096 8 8 2048 4 2 54 0 16 2
+g0050_control_00115 g0050 routes p15_0_bg4_1_pb8 control 1 4096 8 8 2048 4 1 54 0
+g0047_treatment_00116 g0047 routes p15_0_bg11_4_pb1024 treatment 1 4096 1024 8 2048 4 2 54 0 38 16
+g0047_control_00117 g0047 routes p15_0_bg11_4_pb1024 control 1 4096 1024 8 2048 4 1 54 0
+g0047_control_00118 g0047 routes p15_0_bg11_4_pb1024 control 1 4096 1024 8 2048 4 1 54 0
+g0047_treatment_00119 g0047 routes p15_0_bg11_4_pb1024 treatment 1 4096 1024 8 2048 4 2 54 0 38 16
+g0061_control_00120 g0061 routes p15_0_bg9_4_pb1024 control 1 4096 1024 8 2048 4 1 54 0
+g0061_treatment_00121 g0061 routes p15_0_bg9_4_pb1024 treatment 1 4096 1024 8 2048 4 2 54 0 34 16
+g0061_treatment_00122 g0061 routes p15_0_bg9_4_pb1024 treatment 1 4096 1024 8 2048 4 2 54 0 34 16
+g0061_control_00123 g0061 routes p15_0_bg9_4_pb1024 control 1 4096 1024 8 2048 4 1 54 0
+g0043_treatment_00124 g0043 routes p15_0_bg1_5_pb1024 treatment 1 4096 1024 8 2048 4 2 54 0 2 18
+g0043_control_00125 g0043 routes p15_0_bg1_5_pb1024 control 1 4096 1024 8 2048 4 1 54 0
+g0043_control_00126 g0043 routes p15_0_bg1_5_pb1024 control 1 4096 1024 8 2048 4 1 54 0
+g0043_treatment_00127 g0043 routes p15_0_bg1_5_pb1024 treatment 1 4096 1024 8 2048 4 2 54 0 2 18
+g0041_control_00128 g0041 routes p15_0_bg1_2_pb1024 control 1 4096 1024 8 2048 4 1 54 0
+g0041_treatment_00129 g0041 routes p15_0_bg1_2_pb1024 treatment 1 4096 1024 8 2048 4 2 54 0 2 4
+g0041_treatment_00130 g0041 routes p15_0_bg1_2_pb1024 treatment 1 4096 1024 8 2048 4 2 54 0 2 4
+g0041_control_00131 g0041 routes p15_0_bg1_2_pb1024 control 1 4096 1024 8 2048 4 1 54 0
+g0018_control_00132 g0018 routes p0_15_bg1_4_pb8 control 1 4096 8 8 2048 4 1 0 54
+g0018_treatment_00133 g0018 routes p0_15_bg1_4_pb8 treatment 1 4096 8 8 2048 4 2 0 54 2 16
+g0018_treatment_00134 g0018 routes p0_15_bg1_4_pb8 treatment 1 4096 8 8 2048 4 2 0 54 2 16
+g0018_control_00135 g0018 routes p0_15_bg1_4_pb8 control 1 4096 8 8 2048 4 1 0 54
+g0029_control_00136 g0029 routes p0_15_bg4_9_pb1024 control 1 4096 1024 8 2048 4 1 0 54
+g0029_treatment_00137 g0029 routes p0_15_bg4_9_pb1024 treatment 1 4096 1024 8 2048 4 2 0 54 16 34
+g0029_treatment_00138 g0029 routes p0_15_bg4_9_pb1024 treatment 1 4096 1024 8 2048 4 2 0 54 16 34
+g0029_control_00139 g0029 routes p0_15_bg4_9_pb1024 control 1 4096 1024 8 2048 4 1 0 54
+g0023_treatment_00140 g0023 routes p0_15_bg8_13_pb1024 treatment 1 4096 1024 8 2048 4 2 0 54 32 50
+g0023_control_00141 g0023 routes p0_15_bg8_13_pb1024 control 1 4096 1024 8 2048 4 1 0 54
+g0023_control_00142 g0023 routes p0_15_bg8_13_pb1024 control 1 4096 1024 8 2048 4 1 0 54
+g0023_treatment_00143 g0023 routes p0_15_bg8_13_pb1024 treatment 1 4096 1024 8 2048 4 2 0 54 32 50
+g0012_control_00144 g0012 routes p0_15_bg9_4_pb8 control 1 4096 8 8 2048 4 1 0 54
+g0012_treatment_00145 g0012 routes p0_15_bg9_4_pb8 treatment 1 4096 8 8 2048 4 2 0 54 34 16
+g0012_treatment_00146 g0012 routes p0_15_bg9_4_pb8 treatment 1 4096 8 8 2048 4 2 0 54 34 16
+g0012_control_00147 g0012 routes p0_15_bg9_4_pb8 control 1 4096 8 8 2048 4 1 0 54
+g0009_treatment_00148 g0009 routes p0_15_bg1_5_pb1024 treatment 1 4096 1024 8 2048 4 2 0 54 2 18
+g0009_control_00149 g0009 routes p0_15_bg1_5_pb1024 control 1 4096 1024 8 2048 4 1 0 54
+g0009_control_00150 g0009 routes p0_15_bg1_5_pb1024 control 1 4096 1024 8 2048 4 1 0 54
+g0009_treatment_00151 g0009 routes p0_15_bg1_5_pb1024 treatment 1 4096 1024 8 2048 4 2 0 54 2 18
+g0015_control_00152 g0015 routes p0_15_bg1_14_pb1024 control 1 4096 1024 8 2048 4 1 0 54
+g0015_treatment_00153 g0015 routes p0_15_bg1_14_pb1024 treatment 1 4096 1024 8 2048 4 2 0 54 2 52
+g0015_treatment_00154 g0015 routes p0_15_bg1_14_pb1024 treatment 1 4096 1024 8 2048 4 2 0 54 2 52
+g0015_control_00155 g0015 routes p0_15_bg1_14_pb1024 control 1 4096 1024 8 2048 4 1 0 54
+g0014_control_00156 g0014 routes p0_15_bg1_14_pb8 control 1 4096 8 8 2048 4 1 0 54
+g0014_treatment_00157 g0014 routes p0_15_bg1_14_pb8 treatment 1 4096 8 8 2048 4 2 0 54 2 52
+g0014_treatment_00158 g0014 routes p0_15_bg1_14_pb8 treatment 1 4096 8 8 2048 4 2 0 54 2 52
+g0014_control_00159 g0014 routes p0_15_bg1_14_pb8 control 1 4096 8 8 2048 4 1 0 54
+g0052_control_00160 g0052 routes p15_0_bg6_1_pb8 control 1 4096 8 8 2048 4 1 54 0
+g0052_treatment_00161 g0052 routes p15_0_bg6_1_pb8 treatment 1 4096 8 8 2048 4 2 54 0 20 2
+g0052_treatment_00162 g0052 routes p15_0_bg6_1_pb8 treatment 1 4096 8 8 2048 4 2 54 0 20 2
+g0052_control_00163 g0052 routes p15_0_bg6_1_pb8 control 1 4096 8 8 2048 4 1 54 0
+g0001_treatment_00164 g0001 routes p0_15_bg1_2_pb1024 treatment 1 4096 1024 8 2048 4 2 0 54 2 4
+g0001_control_00165 g0001 routes p0_15_bg1_2_pb1024 control 1 4096 1024 8 2048 4 1 0 54
+g0001_control_00166 g0001 routes p0_15_bg1_2_pb1024 control 1 4096 1024 8 2048 4 1 0 54
+g0001_treatment_00167 g0001 routes p0_15_bg1_2_pb1024 treatment 1 4096 1024 8 2048 4 2 0 54 2 4
+g0055_treatment_00168 g0055 routes p15_0_bg13_8_pb1024 treatment 1 4096 1024 8 2048 4 2 54 0 50 32
+g0055_control_00169 g0055 routes p15_0_bg13_8_pb1024 control 1 4096 1024 8 2048 4 1 54 0
+g0055_control_00170 g0055 routes p15_0_bg13_8_pb1024 control 1 4096 1024 8 2048 4 1 54 0
+g0055_treatment_00171 g0055 routes p15_0_bg13_8_pb1024 treatment 1 4096 1024 8 2048 4 2 54 0 50 32
+g0008_control_00172 g0008 routes p0_15_bg1_5_pb8 control 1 4096 8 8 2048 4 1 0 54
+g0008_treatment_00173 g0008 routes p0_15_bg1_5_pb8 treatment 1 4096 8 8 2048 4 2 0 54 2 18
+g0008_treatment_00174 g0008 routes p0_15_bg1_5_pb8 treatment 1 4096 8 8 2048 4 2 0 54 2 18
+g0008_control_00175 g0008 routes p0_15_bg1_5_pb8 control 1 4096 8 8 2048 4 1 0 54
+g0033_control_00176 g0033 routes p15_0_bg8_4_pb1024 control 1 4096 1024 8 2048 4 1 54 0
+g0033_treatment_00177 g0033 routes p15_0_bg8_4_pb1024 treatment 1 4096 1024 8 2048 4 2 54 0 32 16
+g0033_treatment_00178 g0033 routes p15_0_bg8_4_pb1024 treatment 1 4096 1024 8 2048 4 2 54 0 32 16
+g0033_control_00179 g0033 routes p15_0_bg8_4_pb1024 control 1 4096 1024 8 2048 4 1 54 0
+g0038_control_00180 g0038 routes p15_0_bg3_2_pb8 control 1 4096 8 8 2048 4 1 54 0
+g0038_treatment_00181 g0038 routes p15_0_bg3_2_pb8 treatment 1 4096 8 8 2048 4 2 54 0 6 4
+g0038_treatment_00182 g0038 routes p15_0_bg3_2_pb8 treatment 1 4096 8 8 2048 4 2 54 0 6 4
+g0038_control_00183 g0038 routes p15_0_bg3_2_pb8 control 1 4096 8 8 2048 4 1 54 0
+g0049_control_00184 g0049 routes p15_0_bg7_2_pb1024 control 1 4096 1024 8 2048 4 1 54 0
+g0049_treatment_00185 g0049 routes p15_0_bg7_2_pb1024 treatment 1 4096 1024 8 2048 4 2 54 0 22 4
+g0049_treatment_00186 g0049 routes p15_0_bg7_2_pb1024 treatment 1 4096 1024 8 2048 4 2 54 0 22 4
+g0049_control_00187 g0049 routes p15_0_bg7_2_pb1024 control 1 4096 1024 8 2048 4 1 54 0
+g0013_control_00188 g0013 routes p0_15_bg9_4_pb1024 control 1 4096 1024 8 2048 4 1 0 54
+g0013_treatment_00189 g0013 routes p0_15_bg9_4_pb1024 treatment 1 4096 1024 8 2048 4 2 0 54 34 16
+g0013_treatment_00190 g0013 routes p0_15_bg9_4_pb1024 treatment 1 4096 1024 8 2048 4 2 0 54 34 16
+g0013_control_00191 g0013 routes p0_15_bg9_4_pb1024 control 1 4096 1024 8 2048 4 1 0 54
+g0056_treatment_00192 g0056 routes p15_0_bg5_8_pb8 treatment 1 4096 8 8 2048 4 2 54 0 18 32
+g0056_control_00193 g0056 routes p15_0_bg5_8_pb8 control 1 4096 8 8 2048 4 1 54 0
+g0056_control_00194 g0056 routes p15_0_bg5_8_pb8 control 1 4096 8 8 2048 4 1 54 0
+g0056_treatment_00195 g0056 routes p15_0_bg5_8_pb8 treatment 1 4096 8 8 2048 4 2 54 0 18 32
+g0042_treatment_00196 g0042 routes p15_0_bg1_5_pb8 treatment 1 4096 8 8 2048 4 2 54 0 2 18
+g0042_control_00197 g0042 routes p15_0_bg1_5_pb8 control 1 4096 8 8 2048 4 1 54 0
+g0042_control_00198 g0042 routes p15_0_bg1_5_pb8 control 1 4096 8 8 2048 4 1 54 0
+g0042_treatment_00199 g0042 routes p15_0_bg1_5_pb8 treatment 1 4096 8 8 2048 4 2 54 0 2 18
+g0048_control_00200 g0048 routes p15_0_bg7_2_pb8 control 1 4096 8 8 2048 4 1 54 0
+g0048_treatment_00201 g0048 routes p15_0_bg7_2_pb8 treatment 1 4096 8 8 2048 4 2 54 0 22 4
+g0048_treatment_00202 g0048 routes p15_0_bg7_2_pb8 treatment 1 4096 8 8 2048 4 2 54 0 22 4
+g0048_control_00203 g0048 routes p15_0_bg7_2_pb8 control 1 4096 8 8 2048 4 1 54 0
+g0045_control_00204 g0045 routes p15_0_bg4_9_pb1024 control 1 4096 1024 8 2048 4 1 54 0
+g0045_treatment_00205 g0045 routes p15_0_bg4_9_pb1024 treatment 1 4096 1024 8 2048 4 2 54 0 16 34
+g0045_treatment_00206 g0045 routes p15_0_bg4_9_pb1024 treatment 1 4096 1024 8 2048 4 2 54 0 16 34
+g0045_control_00207 g0045 routes p15_0_bg4_9_pb1024 control 1 4096 1024 8 2048 4 1 54 0
+g0000_control_00208 g0000 routes p0_15_bg1_2_pb8 control 1 4096 8 8 2048 4 1 0 54
+g0000_treatment_00209 g0000 routes p0_15_bg1_2_pb8 treatment 1 4096 8 8 2048 4 2 0 54 2 4
+g0000_treatment_00210 g0000 routes p0_15_bg1_2_pb8 treatment 1 4096 8 8 2048 4 2 0 54 2 4
+g0000_control_00211 g0000 routes p0_15_bg1_2_pb8 control 1 4096 8 8 2048 4 1 0 54
+g0044_treatment_00212 g0044 routes p15_0_bg4_9_pb8 treatment 1 4096 8 8 2048 4 2 54 0 16 34
+g0044_control_00213 g0044 routes p15_0_bg4_9_pb8 control 1 4096 8 8 2048 4 1 54 0
+g0044_control_00214 g0044 routes p15_0_bg4_9_pb8 control 1 4096 8 8 2048 4 1 54 0
+g0044_treatment_00215 g0044 routes p15_0_bg4_9_pb8 treatment 1 4096 8 8 2048 4 2 54 0 16 34
+g0057_treatment_00216 g0057 routes p15_0_bg5_8_pb1024 treatment 1 4096 1024 8 2048 4 2 54 0 18 32
+g0057_control_00217 g0057 routes p15_0_bg5_8_pb1024 control 1 4096 1024 8 2048 4 1 54 0
+g0057_control_00218 g0057 routes p15_0_bg5_8_pb1024 control 1 4096 1024 8 2048 4 1 54 0
+g0057_treatment_00219 g0057 routes p15_0_bg5_8_pb1024 treatment 1 4096 1024 8 2048 4 2 54 0 18 32
+g0030_control_00220 g0030 routes p0_15_bg5_8_pb8 control 1 4096 8 8 2048 4 1 0 54
+g0030_treatment_00221 g0030 routes p0_15_bg5_8_pb8 treatment 1 4096 8 8 2048 4 2 0 54 18 32
+g0030_treatment_00222 g0030 routes p0_15_bg5_8_pb8 treatment 1 4096 8 8 2048 4 2 0 54 18 32
+g0030_control_00223 g0030 routes p0_15_bg5_8_pb8 control 1 4096 8 8 2048 4 1 0 54
+g0063_control_00224 g0063 routes p15_0_bg6_13_pb1024 control 1 4096 1024 8 2048 4 1 54 0
+g0063_treatment_00225 g0063 routes p15_0_bg6_13_pb1024 treatment 1 4096 1024 8 2048 4 2 54 0 20 50
+g0063_treatment_00226 g0063 routes p15_0_bg6_13_pb1024 treatment 1 4096 1024 8 2048 4 2 54 0 20 50
+g0063_control_00227 g0063 routes p15_0_bg6_13_pb1024 control 1 4096 1024 8 2048 4 1 54 0
+g0002_control_00228 g0002 routes p0_15_bg2_3_pb8 control 1 4096 8 8 2048 4 1 0 54
+g0002_treatment_00229 g0002 routes p0_15_bg2_3_pb8 treatment 1 4096 8 8 2048 4 2 0 54 4 6
+g0002_treatment_00230 g0002 routes p0_15_bg2_3_pb8 treatment 1 4096 8 8 2048 4 2 0 54 4 6
+g0002_control_00231 g0002 routes p0_15_bg2_3_pb8 control 1 4096 8 8 2048 4 1 0 54
+g0003_treatment_00232 g0003 routes p0_15_bg2_3_pb1024 treatment 1 4096 1024 8 2048 4 2 0 54 4 6
+g0003_control_00233 g0003 routes p0_15_bg2_3_pb1024 control 1 4096 1024 8 2048 4 1 0 54
+g0003_control_00234 g0003 routes p0_15_bg2_3_pb1024 control 1 4096 1024 8 2048 4 1 0 54
+g0003_treatment_00235 g0003 routes p0_15_bg2_3_pb1024 treatment 1 4096 1024 8 2048 4 2 0 54 4 6
+g0017_treatment_00236 g0017 routes p0_15_bg2_7_pb1024 treatment 1 4096 1024 8 2048 4 2 0 54 4 22
+g0017_control_00237 g0017 routes p0_15_bg2_7_pb1024 control 1 4096 1024 8 2048 4 1 0 54
+g0017_control_00238 g0017 routes p0_15_bg2_7_pb1024 control 1 4096 1024 8 2048 4 1 0 54
+g0017_treatment_00239 g0017 routes p0_15_bg2_7_pb1024 treatment 1 4096 1024 8 2048 4 2 0 54 4 22
+g0021_treatment_00240 g0021 routes p0_15_bg1_6_pb1024 treatment 1 4096 1024 8 2048 4 2 0 54 2 20
+g0021_control_00241 g0021 routes p0_15_bg1_6_pb1024 control 1 4096 1024 8 2048 4 1 0 54
+g0021_control_00242 g0021 routes p0_15_bg1_6_pb1024 control 1 4096 1024 8 2048 4 1 0 54
+g0021_treatment_00243 g0021 routes p0_15_bg1_6_pb1024 treatment 1 4096 1024 8 2048 4 2 0 54 2 20
+g0031_control_00244 g0031 routes p0_15_bg5_8_pb1024 control 1 4096 1024 8 2048 4 1 0 54
+g0031_treatment_00245 g0031 routes p0_15_bg5_8_pb1024 treatment 1 4096 1024 8 2048 4 2 0 54 18 32
+g0031_treatment_00246 g0031 routes p0_15_bg5_8_pb1024 treatment 1 4096 1024 8 2048 4 2 0 54 18 32
+g0031_control_00247 g0031 routes p0_15_bg5_8_pb1024 control 1 4096 1024 8 2048 4 1 0 54
+g0022_control_00248 g0022 routes p0_15_bg8_13_pb8 control 1 4096 8 8 2048 4 1 0 54
+g0022_treatment_00249 g0022 routes p0_15_bg8_13_pb8 treatment 1 4096 8 8 2048 4 2 0 54 32 50
+g0022_treatment_00250 g0022 routes p0_15_bg8_13_pb8 treatment 1 4096 8 8 2048 4 2 0 54 32 50
+g0022_control_00251 g0022 routes p0_15_bg8_13_pb8 control 1 4096 8 8 2048 4 1 0 54
+g0062_treatment_00252 g0062 routes p15_0_bg6_13_pb8 treatment 1 4096 8 8 2048 4 2 54 0 20 50
+g0062_control_00253 g0062 routes p15_0_bg6_13_pb8 control 1 4096 8 8 2048 4 1 54 0
+g0062_control_00254 g0062 routes p15_0_bg6_13_pb8 control 1 4096 8 8 2048 4 1 54 0
+g0062_treatment_00255 g0062 routes p15_0_bg6_13_pb8 treatment 1 4096 8 8 2048 4 2 54 0 20 50

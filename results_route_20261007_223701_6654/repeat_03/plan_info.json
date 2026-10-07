@@ -1,0 +1,12 @@
+{
+  "profile": "route_identify",
+  "seed": 20261011,
+  "reps": 2048,
+  "cases": 256,
+  "groups": 64,
+  "diagnostic": false,
+  "catalogue_sha256": "9b793dd3807dfa06ee736e0b8476e117aa97fc46313d2b57f343a3d75720d848",
+  "buffer_bytes": 32768,
+  "geometries_fixed_across_jobs": true,
+  "only_order_changes_with_seed": true
+}

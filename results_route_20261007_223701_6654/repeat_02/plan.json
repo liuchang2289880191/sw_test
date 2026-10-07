@@ -1,0 +1,5378 @@
+[
+  {
+    "case_id": "g0050_control_00000",
+    "group": "g0050",
+    "family": "routes",
+    "label": "p15_0_bg4_1_pb8",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ]
+    ]
+  },
+  {
+    "case_id": "g0050_treatment_00001",
+    "group": "g0050",
+    "family": "routes",
+    "label": "p15_0_bg4_1_pb8",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ],
+      [
+        16,
+        2
+      ]
+    ]
+  },
+  {
+    "case_id": "g0050_treatment_00002",
+    "group": "g0050",
+    "family": "routes",
+    "label": "p15_0_bg4_1_pb8",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ],
+      [
+        16,
+        2
+      ]
+    ]
+  },
+  {
+    "case_id": "g0050_control_00003",
+    "group": "g0050",
+    "family": "routes",
+    "label": "p15_0_bg4_1_pb8",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ]
+    ]
+  },
+  {
+    "case_id": "g0045_control_00004",
+    "group": "g0045",
+    "family": "routes",
+    "label": "p15_0_bg4_9_pb1024",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ]
+    ]
+  },
+  {
+    "case_id": "g0045_treatment_00005",
+    "group": "g0045",
+    "family": "routes",
+    "label": "p15_0_bg4_9_pb1024",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ],
+      [
+        16,
+        34
+      ]
+    ]
+  },
+  {
+    "case_id": "g0045_treatment_00006",
+    "group": "g0045",
+    "family": "routes",
+    "label": "p15_0_bg4_9_pb1024",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ],
+      [
+        16,
+        34
+      ]
+    ]
+  },
+  {
+    "case_id": "g0045_control_00007",
+    "group": "g0045",
+    "family": "routes",
+    "label": "p15_0_bg4_9_pb1024",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ]
+    ]
+  },
+  {
+    "case_id": "g0063_treatment_00008",
+    "group": "g0063",
+    "family": "routes",
+    "label": "p15_0_bg6_13_pb1024",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ],
+      [
+        20,
+        50
+      ]
+    ]
+  },
+  {
+    "case_id": "g0063_control_00009",
+    "group": "g0063",
+    "family": "routes",
+    "label": "p15_0_bg6_13_pb1024",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ]
+    ]
+  },
+  {
+    "case_id": "g0063_control_00010",
+    "group": "g0063",
+    "family": "routes",
+    "label": "p15_0_bg6_13_pb1024",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ]
+    ]
+  },
+  {
+    "case_id": "g0063_treatment_00011",
+    "group": "g0063",
+    "family": "routes",
+    "label": "p15_0_bg6_13_pb1024",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ],
+      [
+        20,
+        50
+      ]
+    ]
+  },
+  {
+    "case_id": "g0049_control_00012",
+    "group": "g0049",
+    "family": "routes",
+    "label": "p15_0_bg7_2_pb1024",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ]
+    ]
+  },
+  {
+    "case_id": "g0049_treatment_00013",
+    "group": "g0049",
+    "family": "routes",
+    "label": "p15_0_bg7_2_pb1024",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ],
+      [
+        22,
+        4
+      ]
+    ]
+  },
+  {
+    "case_id": "g0049_treatment_00014",
+    "group": "g0049",
+    "family": "routes",
+    "label": "p15_0_bg7_2_pb1024",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ],
+      [
+        22,
+        4
+      ]
+    ]
+  },
+  {
+    "case_id": "g0049_control_00015",
+    "group": "g0049",
+    "family": "routes",
+    "label": "p15_0_bg7_2_pb1024",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ]
+    ]
+  },
+  {
+    "case_id": "g0034_treatment_00016",
+    "group": "g0034",
+    "family": "routes",
+    "label": "p15_0_bg12_8_pb8",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ],
+      [
+        48,
+        32
+      ]
+    ]
+  },
+  {
+    "case_id": "g0034_control_00017",
+    "group": "g0034",
+    "family": "routes",
+    "label": "p15_0_bg12_8_pb8",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ]
+    ]
+  },
+  {
+    "case_id": "g0034_control_00018",
+    "group": "g0034",
+    "family": "routes",
+    "label": "p15_0_bg12_8_pb8",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ]
+    ]
+  },
+  {
+    "case_id": "g0034_treatment_00019",
+    "group": "g0034",
+    "family": "routes",
+    "label": "p15_0_bg12_8_pb8",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ],
+      [
+        48,
+        32
+      ]
+    ]
+  },
+  {
+    "case_id": "g0033_control_00020",
+    "group": "g0033",
+    "family": "routes",
+    "label": "p15_0_bg8_4_pb1024",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ]
+    ]
+  },
+  {
+    "case_id": "g0033_treatment_00021",
+    "group": "g0033",
+    "family": "routes",
+    "label": "p15_0_bg8_4_pb1024",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ],
+      [
+        32,
+        16
+      ]
+    ]
+  },
+  {
+    "case_id": "g0033_treatment_00022",
+    "group": "g0033",
+    "family": "routes",
+    "label": "p15_0_bg8_4_pb1024",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ],
+      [
+        32,
+        16
+      ]
+    ]
+  },
+  {
+    "case_id": "g0033_control_00023",
+    "group": "g0033",
+    "family": "routes",
+    "label": "p15_0_bg8_4_pb1024",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ]
+    ]
+  },
+  {
+    "case_id": "g0007_control_00024",
+    "group": "g0007",
+    "family": "routes",
+    "label": "p0_15_bg8_12_pb1024",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ]
+    ]
+  },
+  {
+    "case_id": "g0007_treatment_00025",
+    "group": "g0007",
+    "family": "routes",
+    "label": "p0_15_bg8_12_pb1024",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ],
+      [
+        32,
+        48
+      ]
+    ]
+  },
+  {
+    "case_id": "g0007_treatment_00026",
+    "group": "g0007",
+    "family": "routes",
+    "label": "p0_15_bg8_12_pb1024",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ],
+      [
+        32,
+        48
+      ]
+    ]
+  },
+  {
+    "case_id": "g0007_control_00027",
+    "group": "g0007",
+    "family": "routes",
+    "label": "p0_15_bg8_12_pb1024",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ]
+    ]
+  },
+  {
+    "case_id": "g0041_control_00028",
+    "group": "g0041",
+    "family": "routes",
+    "label": "p15_0_bg1_2_pb1024",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ]
+    ]
+  },
+  {
+    "case_id": "g0041_treatment_00029",
+    "group": "g0041",
+    "family": "routes",
+    "label": "p15_0_bg1_2_pb1024",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ],
+      [
+        2,
+        4
+      ]
+    ]
+  },
+  {
+    "case_id": "g0041_treatment_00030",
+    "group": "g0041",
+    "family": "routes",
+    "label": "p15_0_bg1_2_pb1024",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ],
+      [
+        2,
+        4
+      ]
+    ]
+  },
+  {
+    "case_id": "g0041_control_00031",
+    "group": "g0041",
+    "family": "routes",
+    "label": "p15_0_bg1_2_pb1024",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ]
+    ]
+  },
+  {
+    "case_id": "g0043_treatment_00032",
+    "group": "g0043",
+    "family": "routes",
+    "label": "p15_0_bg1_5_pb1024",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ],
+      [
+        2,
+        18
+      ]
+    ]
+  },
+  {
+    "case_id": "g0043_control_00033",
+    "group": "g0043",
+    "family": "routes",
+    "label": "p15_0_bg1_5_pb1024",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ]
+    ]
+  },
+  {
+    "case_id": "g0043_control_00034",
+    "group": "g0043",
+    "family": "routes",
+    "label": "p15_0_bg1_5_pb1024",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ]
+    ]
+  },
+  {
+    "case_id": "g0043_treatment_00035",
+    "group": "g0043",
+    "family": "routes",
+    "label": "p15_0_bg1_5_pb1024",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ],
+      [
+        2,
+        18
+      ]
+    ]
+  },
+  {
+    "case_id": "g0058_treatment_00036",
+    "group": "g0058",
+    "family": "routes",
+    "label": "p15_0_bg1_6_pb8",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ],
+      [
+        2,
+        20
+      ]
+    ]
+  },
+  {
+    "case_id": "g0058_control_00037",
+    "group": "g0058",
+    "family": "routes",
+    "label": "p15_0_bg1_6_pb8",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ]
+    ]
+  },
+  {
+    "case_id": "g0058_control_00038",
+    "group": "g0058",
+    "family": "routes",
+    "label": "p15_0_bg1_6_pb8",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ]
+    ]
+  },
+  {
+    "case_id": "g0058_treatment_00039",
+    "group": "g0058",
+    "family": "routes",
+    "label": "p15_0_bg1_6_pb8",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ],
+      [
+        2,
+        20
+      ]
+    ]
+  },
+  {
+    "case_id": "g0060_treatment_00040",
+    "group": "g0060",
+    "family": "routes",
+    "label": "p15_0_bg9_4_pb8",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ],
+      [
+        34,
+        16
+      ]
+    ]
+  },
+  {
+    "case_id": "g0060_control_00041",
+    "group": "g0060",
+    "family": "routes",
+    "label": "p15_0_bg9_4_pb8",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ]
+    ]
+  },
+  {
+    "case_id": "g0060_control_00042",
+    "group": "g0060",
+    "family": "routes",
+    "label": "p15_0_bg9_4_pb8",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ]
+    ]
+  },
+  {
+    "case_id": "g0060_treatment_00043",
+    "group": "g0060",
+    "family": "routes",
+    "label": "p15_0_bg9_4_pb8",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ],
+      [
+        34,
+        16
+      ]
+    ]
+  },
+  {
+    "case_id": "g0031_control_00044",
+    "group": "g0031",
+    "family": "routes",
+    "label": "p0_15_bg5_8_pb1024",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ]
+    ]
+  },
+  {
+    "case_id": "g0031_treatment_00045",
+    "group": "g0031",
+    "family": "routes",
+    "label": "p0_15_bg5_8_pb1024",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ],
+      [
+        18,
+        32
+      ]
+    ]
+  },
+  {
+    "case_id": "g0031_treatment_00046",
+    "group": "g0031",
+    "family": "routes",
+    "label": "p0_15_bg5_8_pb1024",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ],
+      [
+        18,
+        32
+      ]
+    ]
+  },
+  {
+    "case_id": "g0031_control_00047",
+    "group": "g0031",
+    "family": "routes",
+    "label": "p0_15_bg5_8_pb1024",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ]
+    ]
+  },
+  {
+    "case_id": "g0047_treatment_00048",
+    "group": "g0047",
+    "family": "routes",
+    "label": "p15_0_bg11_4_pb1024",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ],
+      [
+        38,
+        16
+      ]
+    ]
+  },
+  {
+    "case_id": "g0047_control_00049",
+    "group": "g0047",
+    "family": "routes",
+    "label": "p15_0_bg11_4_pb1024",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ]
+    ]
+  },
+  {
+    "case_id": "g0047_control_00050",
+    "group": "g0047",
+    "family": "routes",
+    "label": "p15_0_bg11_4_pb1024",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ]
+    ]
+  },
+  {
+    "case_id": "g0047_treatment_00051",
+    "group": "g0047",
+    "family": "routes",
+    "label": "p15_0_bg11_4_pb1024",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ],
+      [
+        38,
+        16
+      ]
+    ]
+  },
+  {
+    "case_id": "g0015_control_00052",
+    "group": "g0015",
+    "family": "routes",
+    "label": "p0_15_bg1_14_pb1024",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ]
+    ]
+  },
+  {
+    "case_id": "g0015_treatment_00053",
+    "group": "g0015",
+    "family": "routes",
+    "label": "p0_15_bg1_14_pb1024",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ],
+      [
+        2,
+        52
+      ]
+    ]
+  },
+  {
+    "case_id": "g0015_treatment_00054",
+    "group": "g0015",
+    "family": "routes",
+    "label": "p0_15_bg1_14_pb1024",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ],
+      [
+        2,
+        52
+      ]
+    ]
+  },
+  {
+    "case_id": "g0015_control_00055",
+    "group": "g0015",
+    "family": "routes",
+    "label": "p0_15_bg1_14_pb1024",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ]
+    ]
+  },
+  {
+    "case_id": "g0030_control_00056",
+    "group": "g0030",
+    "family": "routes",
+    "label": "p0_15_bg5_8_pb8",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ]
+    ]
+  },
+  {
+    "case_id": "g0030_treatment_00057",
+    "group": "g0030",
+    "family": "routes",
+    "label": "p0_15_bg5_8_pb8",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ],
+      [
+        18,
+        32
+      ]
+    ]
+  },
+  {
+    "case_id": "g0030_treatment_00058",
+    "group": "g0030",
+    "family": "routes",
+    "label": "p0_15_bg5_8_pb8",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ],
+      [
+        18,
+        32
+      ]
+    ]
+  },
+  {
+    "case_id": "g0030_control_00059",
+    "group": "g0030",
+    "family": "routes",
+    "label": "p0_15_bg5_8_pb8",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ]
+    ]
+  },
+  {
+    "case_id": "g0013_control_00060",
+    "group": "g0013",
+    "family": "routes",
+    "label": "p0_15_bg9_4_pb1024",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ]
+    ]
+  },
+  {
+    "case_id": "g0013_treatment_00061",
+    "group": "g0013",
+    "family": "routes",
+    "label": "p0_15_bg9_4_pb1024",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ],
+      [
+        34,
+        16
+      ]
+    ]
+  },
+  {
+    "case_id": "g0013_treatment_00062",
+    "group": "g0013",
+    "family": "routes",
+    "label": "p0_15_bg9_4_pb1024",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ],
+      [
+        34,
+        16
+      ]
+    ]
+  },
+  {
+    "case_id": "g0013_control_00063",
+    "group": "g0013",
+    "family": "routes",
+    "label": "p0_15_bg9_4_pb1024",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ]
+    ]
+  },
+  {
+    "case_id": "g0023_treatment_00064",
+    "group": "g0023",
+    "family": "routes",
+    "label": "p0_15_bg8_13_pb1024",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ],
+      [
+        32,
+        50
+      ]
+    ]
+  },
+  {
+    "case_id": "g0023_control_00065",
+    "group": "g0023",
+    "family": "routes",
+    "label": "p0_15_bg8_13_pb1024",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ]
+    ]
+  },
+  {
+    "case_id": "g0023_control_00066",
+    "group": "g0023",
+    "family": "routes",
+    "label": "p0_15_bg8_13_pb1024",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ]
+    ]
+  },
+  {
+    "case_id": "g0023_treatment_00067",
+    "group": "g0023",
+    "family": "routes",
+    "label": "p0_15_bg8_13_pb1024",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ],
+      [
+        32,
+        50
+      ]
+    ]
+  },
+  {
+    "case_id": "g0035_treatment_00068",
+    "group": "g0035",
+    "family": "routes",
+    "label": "p15_0_bg12_8_pb1024",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ],
+      [
+        48,
+        32
+      ]
+    ]
+  },
+  {
+    "case_id": "g0035_control_00069",
+    "group": "g0035",
+    "family": "routes",
+    "label": "p15_0_bg12_8_pb1024",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ]
+    ]
+  },
+  {
+    "case_id": "g0035_control_00070",
+    "group": "g0035",
+    "family": "routes",
+    "label": "p15_0_bg12_8_pb1024",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ]
+    ]
+  },
+  {
+    "case_id": "g0035_treatment_00071",
+    "group": "g0035",
+    "family": "routes",
+    "label": "p15_0_bg12_8_pb1024",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ],
+      [
+        48,
+        32
+      ]
+    ]
+  },
+  {
+    "case_id": "g0017_control_00072",
+    "group": "g0017",
+    "family": "routes",
+    "label": "p0_15_bg2_7_pb1024",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ]
+    ]
+  },
+  {
+    "case_id": "g0017_treatment_00073",
+    "group": "g0017",
+    "family": "routes",
+    "label": "p0_15_bg2_7_pb1024",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ],
+      [
+        4,
+        22
+      ]
+    ]
+  },
+  {
+    "case_id": "g0017_treatment_00074",
+    "group": "g0017",
+    "family": "routes",
+    "label": "p0_15_bg2_7_pb1024",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ],
+      [
+        4,
+        22
+      ]
+    ]
+  },
+  {
+    "case_id": "g0017_control_00075",
+    "group": "g0017",
+    "family": "routes",
+    "label": "p0_15_bg2_7_pb1024",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ]
+    ]
+  },
+  {
+    "case_id": "g0024_control_00076",
+    "group": "g0024",
+    "family": "routes",
+    "label": "p0_15_bg6_13_pb8",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ]
+    ]
+  },
+  {
+    "case_id": "g0024_treatment_00077",
+    "group": "g0024",
+    "family": "routes",
+    "label": "p0_15_bg6_13_pb8",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ],
+      [
+        20,
+        50
+      ]
+    ]
+  },
+  {
+    "case_id": "g0024_treatment_00078",
+    "group": "g0024",
+    "family": "routes",
+    "label": "p0_15_bg6_13_pb8",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ],
+      [
+        20,
+        50
+      ]
+    ]
+  },
+  {
+    "case_id": "g0024_control_00079",
+    "group": "g0024",
+    "family": "routes",
+    "label": "p0_15_bg6_13_pb8",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ]
+    ]
+  },
+  {
+    "case_id": "g0004_control_00080",
+    "group": "g0004",
+    "family": "routes",
+    "label": "p0_15_bg4_8_pb8",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ]
+    ]
+  },
+  {
+    "case_id": "g0004_treatment_00081",
+    "group": "g0004",
+    "family": "routes",
+    "label": "p0_15_bg4_8_pb8",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ],
+      [
+        16,
+        32
+      ]
+    ]
+  },
+  {
+    "case_id": "g0004_treatment_00082",
+    "group": "g0004",
+    "family": "routes",
+    "label": "p0_15_bg4_8_pb8",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ],
+      [
+        16,
+        32
+      ]
+    ]
+  },
+  {
+    "case_id": "g0004_control_00083",
+    "group": "g0004",
+    "family": "routes",
+    "label": "p0_15_bg4_8_pb8",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ]
+    ]
+  },
+  {
+    "case_id": "g0026_treatment_00084",
+    "group": "g0026",
+    "family": "routes",
+    "label": "p0_15_bg6_1_pb8",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ],
+      [
+        20,
+        2
+      ]
+    ]
+  },
+  {
+    "case_id": "g0026_control_00085",
+    "group": "g0026",
+    "family": "routes",
+    "label": "p0_15_bg6_1_pb8",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ]
+    ]
+  },
+  {
+    "case_id": "g0026_control_00086",
+    "group": "g0026",
+    "family": "routes",
+    "label": "p0_15_bg6_1_pb8",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ]
+    ]
+  },
+  {
+    "case_id": "g0026_treatment_00087",
+    "group": "g0026",
+    "family": "routes",
+    "label": "p0_15_bg6_1_pb8",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ],
+      [
+        20,
+        2
+      ]
+    ]
+  },
+  {
+    "case_id": "g0062_treatment_00088",
+    "group": "g0062",
+    "family": "routes",
+    "label": "p15_0_bg6_13_pb8",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ],
+      [
+        20,
+        50
+      ]
+    ]
+  },
+  {
+    "case_id": "g0062_control_00089",
+    "group": "g0062",
+    "family": "routes",
+    "label": "p15_0_bg6_13_pb8",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ]
+    ]
+  },
+  {
+    "case_id": "g0062_control_00090",
+    "group": "g0062",
+    "family": "routes",
+    "label": "p15_0_bg6_13_pb8",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ]
+    ]
+  },
+  {
+    "case_id": "g0062_treatment_00091",
+    "group": "g0062",
+    "family": "routes",
+    "label": "p15_0_bg6_13_pb8",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ],
+      [
+        20,
+        50
+      ]
+    ]
+  },
+  {
+    "case_id": "g0001_control_00092",
+    "group": "g0001",
+    "family": "routes",
+    "label": "p0_15_bg1_2_pb1024",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ]
+    ]
+  },
+  {
+    "case_id": "g0001_treatment_00093",
+    "group": "g0001",
+    "family": "routes",
+    "label": "p0_15_bg1_2_pb1024",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ],
+      [
+        2,
+        4
+      ]
+    ]
+  },
+  {
+    "case_id": "g0001_treatment_00094",
+    "group": "g0001",
+    "family": "routes",
+    "label": "p0_15_bg1_2_pb1024",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ],
+      [
+        2,
+        4
+      ]
+    ]
+  },
+  {
+    "case_id": "g0001_control_00095",
+    "group": "g0001",
+    "family": "routes",
+    "label": "p0_15_bg1_2_pb1024",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ]
+    ]
+  },
+  {
+    "case_id": "g0055_control_00096",
+    "group": "g0055",
+    "family": "routes",
+    "label": "p15_0_bg13_8_pb1024",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ]
+    ]
+  },
+  {
+    "case_id": "g0055_treatment_00097",
+    "group": "g0055",
+    "family": "routes",
+    "label": "p15_0_bg13_8_pb1024",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ],
+      [
+        50,
+        32
+      ]
+    ]
+  },
+  {
+    "case_id": "g0055_treatment_00098",
+    "group": "g0055",
+    "family": "routes",
+    "label": "p15_0_bg13_8_pb1024",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ],
+      [
+        50,
+        32
+      ]
+    ]
+  },
+  {
+    "case_id": "g0055_control_00099",
+    "group": "g0055",
+    "family": "routes",
+    "label": "p15_0_bg13_8_pb1024",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ]
+    ]
+  },
+  {
+    "case_id": "g0009_control_00100",
+    "group": "g0009",
+    "family": "routes",
+    "label": "p0_15_bg1_5_pb1024",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ]
+    ]
+  },
+  {
+    "case_id": "g0009_treatment_00101",
+    "group": "g0009",
+    "family": "routes",
+    "label": "p0_15_bg1_5_pb1024",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ],
+      [
+        2,
+        18
+      ]
+    ]
+  },
+  {
+    "case_id": "g0009_treatment_00102",
+    "group": "g0009",
+    "family": "routes",
+    "label": "p0_15_bg1_5_pb1024",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ],
+      [
+        2,
+        18
+      ]
+    ]
+  },
+  {
+    "case_id": "g0009_control_00103",
+    "group": "g0009",
+    "family": "routes",
+    "label": "p0_15_bg1_5_pb1024",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ]
+    ]
+  },
+  {
+    "case_id": "g0037_treatment_00104",
+    "group": "g0037",
+    "family": "routes",
+    "label": "p15_0_bg2_1_pb1024",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ],
+      [
+        4,
+        2
+      ]
+    ]
+  },
+  {
+    "case_id": "g0037_control_00105",
+    "group": "g0037",
+    "family": "routes",
+    "label": "p15_0_bg2_1_pb1024",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ]
+    ]
+  },
+  {
+    "case_id": "g0037_control_00106",
+    "group": "g0037",
+    "family": "routes",
+    "label": "p15_0_bg2_1_pb1024",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ]
+    ]
+  },
+  {
+    "case_id": "g0037_treatment_00107",
+    "group": "g0037",
+    "family": "routes",
+    "label": "p15_0_bg2_1_pb1024",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ],
+      [
+        4,
+        2
+      ]
+    ]
+  },
+  {
+    "case_id": "g0027_treatment_00108",
+    "group": "g0027",
+    "family": "routes",
+    "label": "p0_15_bg6_1_pb1024",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ],
+      [
+        20,
+        2
+      ]
+    ]
+  },
+  {
+    "case_id": "g0027_control_00109",
+    "group": "g0027",
+    "family": "routes",
+    "label": "p0_15_bg6_1_pb1024",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ]
+    ]
+  },
+  {
+    "case_id": "g0027_control_00110",
+    "group": "g0027",
+    "family": "routes",
+    "label": "p0_15_bg6_1_pb1024",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ]
+    ]
+  },
+  {
+    "case_id": "g0027_treatment_00111",
+    "group": "g0027",
+    "family": "routes",
+    "label": "p0_15_bg6_1_pb1024",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ],
+      [
+        20,
+        2
+      ]
+    ]
+  },
+  {
+    "case_id": "g0039_treatment_00112",
+    "group": "g0039",
+    "family": "routes",
+    "label": "p15_0_bg3_2_pb1024",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ],
+      [
+        6,
+        4
+      ]
+    ]
+  },
+  {
+    "case_id": "g0039_control_00113",
+    "group": "g0039",
+    "family": "routes",
+    "label": "p15_0_bg3_2_pb1024",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ]
+    ]
+  },
+  {
+    "case_id": "g0039_control_00114",
+    "group": "g0039",
+    "family": "routes",
+    "label": "p15_0_bg3_2_pb1024",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ]
+    ]
+  },
+  {
+    "case_id": "g0039_treatment_00115",
+    "group": "g0039",
+    "family": "routes",
+    "label": "p15_0_bg3_2_pb1024",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ],
+      [
+        6,
+        4
+      ]
+    ]
+  },
+  {
+    "case_id": "g0008_treatment_00116",
+    "group": "g0008",
+    "family": "routes",
+    "label": "p0_15_bg1_5_pb8",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ],
+      [
+        2,
+        18
+      ]
+    ]
+  },
+  {
+    "case_id": "g0008_control_00117",
+    "group": "g0008",
+    "family": "routes",
+    "label": "p0_15_bg1_5_pb8",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ]
+    ]
+  },
+  {
+    "case_id": "g0008_control_00118",
+    "group": "g0008",
+    "family": "routes",
+    "label": "p0_15_bg1_5_pb8",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ]
+    ]
+  },
+  {
+    "case_id": "g0008_treatment_00119",
+    "group": "g0008",
+    "family": "routes",
+    "label": "p0_15_bg1_5_pb8",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ],
+      [
+        2,
+        18
+      ]
+    ]
+  },
+  {
+    "case_id": "g0059_control_00120",
+    "group": "g0059",
+    "family": "routes",
+    "label": "p15_0_bg1_6_pb1024",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ]
+    ]
+  },
+  {
+    "case_id": "g0059_treatment_00121",
+    "group": "g0059",
+    "family": "routes",
+    "label": "p15_0_bg1_6_pb1024",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ],
+      [
+        2,
+        20
+      ]
+    ]
+  },
+  {
+    "case_id": "g0059_treatment_00122",
+    "group": "g0059",
+    "family": "routes",
+    "label": "p15_0_bg1_6_pb1024",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ],
+      [
+        2,
+        20
+      ]
+    ]
+  },
+  {
+    "case_id": "g0059_control_00123",
+    "group": "g0059",
+    "family": "routes",
+    "label": "p15_0_bg1_6_pb1024",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ]
+    ]
+  },
+  {
+    "case_id": "g0003_treatment_00124",
+    "group": "g0003",
+    "family": "routes",
+    "label": "p0_15_bg2_3_pb1024",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ],
+      [
+        4,
+        6
+      ]
+    ]
+  },
+  {
+    "case_id": "g0003_control_00125",
+    "group": "g0003",
+    "family": "routes",
+    "label": "p0_15_bg2_3_pb1024",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ]
+    ]
+  },
+  {
+    "case_id": "g0003_control_00126",
+    "group": "g0003",
+    "family": "routes",
+    "label": "p0_15_bg2_3_pb1024",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ]
+    ]
+  },
+  {
+    "case_id": "g0003_treatment_00127",
+    "group": "g0003",
+    "family": "routes",
+    "label": "p0_15_bg2_3_pb1024",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ],
+      [
+        4,
+        6
+      ]
+    ]
+  },
+  {
+    "case_id": "g0005_treatment_00128",
+    "group": "g0005",
+    "family": "routes",
+    "label": "p0_15_bg4_8_pb1024",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ],
+      [
+        16,
+        32
+      ]
+    ]
+  },
+  {
+    "case_id": "g0005_control_00129",
+    "group": "g0005",
+    "family": "routes",
+    "label": "p0_15_bg4_8_pb1024",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ]
+    ]
+  },
+  {
+    "case_id": "g0005_control_00130",
+    "group": "g0005",
+    "family": "routes",
+    "label": "p0_15_bg4_8_pb1024",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ]
+    ]
+  },
+  {
+    "case_id": "g0005_treatment_00131",
+    "group": "g0005",
+    "family": "routes",
+    "label": "p0_15_bg4_8_pb1024",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ],
+      [
+        16,
+        32
+      ]
+    ]
+  },
+  {
+    "case_id": "g0006_treatment_00132",
+    "group": "g0006",
+    "family": "routes",
+    "label": "p0_15_bg8_12_pb8",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ],
+      [
+        32,
+        48
+      ]
+    ]
+  },
+  {
+    "case_id": "g0006_control_00133",
+    "group": "g0006",
+    "family": "routes",
+    "label": "p0_15_bg8_12_pb8",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ]
+    ]
+  },
+  {
+    "case_id": "g0006_control_00134",
+    "group": "g0006",
+    "family": "routes",
+    "label": "p0_15_bg8_12_pb8",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ]
+    ]
+  },
+  {
+    "case_id": "g0006_treatment_00135",
+    "group": "g0006",
+    "family": "routes",
+    "label": "p0_15_bg8_12_pb8",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ],
+      [
+        32,
+        48
+      ]
+    ]
+  },
+  {
+    "case_id": "g0019_treatment_00136",
+    "group": "g0019",
+    "family": "routes",
+    "label": "p0_15_bg1_4_pb1024",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ],
+      [
+        2,
+        16
+      ]
+    ]
+  },
+  {
+    "case_id": "g0019_control_00137",
+    "group": "g0019",
+    "family": "routes",
+    "label": "p0_15_bg1_4_pb1024",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ]
+    ]
+  },
+  {
+    "case_id": "g0019_control_00138",
+    "group": "g0019",
+    "family": "routes",
+    "label": "p0_15_bg1_4_pb1024",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ]
+    ]
+  },
+  {
+    "case_id": "g0019_treatment_00139",
+    "group": "g0019",
+    "family": "routes",
+    "label": "p0_15_bg1_4_pb1024",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ],
+      [
+        2,
+        16
+      ]
+    ]
+  },
+  {
+    "case_id": "g0061_treatment_00140",
+    "group": "g0061",
+    "family": "routes",
+    "label": "p15_0_bg9_4_pb1024",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ],
+      [
+        34,
+        16
+      ]
+    ]
+  },
+  {
+    "case_id": "g0061_control_00141",
+    "group": "g0061",
+    "family": "routes",
+    "label": "p15_0_bg9_4_pb1024",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ]
+    ]
+  },
+  {
+    "case_id": "g0061_control_00142",
+    "group": "g0061",
+    "family": "routes",
+    "label": "p15_0_bg9_4_pb1024",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ]
+    ]
+  },
+  {
+    "case_id": "g0061_treatment_00143",
+    "group": "g0061",
+    "family": "routes",
+    "label": "p15_0_bg9_4_pb1024",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ],
+      [
+        34,
+        16
+      ]
+    ]
+  },
+  {
+    "case_id": "g0052_treatment_00144",
+    "group": "g0052",
+    "family": "routes",
+    "label": "p15_0_bg6_1_pb8",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ],
+      [
+        20,
+        2
+      ]
+    ]
+  },
+  {
+    "case_id": "g0052_control_00145",
+    "group": "g0052",
+    "family": "routes",
+    "label": "p15_0_bg6_1_pb8",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ]
+    ]
+  },
+  {
+    "case_id": "g0052_control_00146",
+    "group": "g0052",
+    "family": "routes",
+    "label": "p15_0_bg6_1_pb8",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ]
+    ]
+  },
+  {
+    "case_id": "g0052_treatment_00147",
+    "group": "g0052",
+    "family": "routes",
+    "label": "p15_0_bg6_1_pb8",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ],
+      [
+        20,
+        2
+      ]
+    ]
+  },
+  {
+    "case_id": "g0012_treatment_00148",
+    "group": "g0012",
+    "family": "routes",
+    "label": "p0_15_bg9_4_pb8",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ],
+      [
+        34,
+        16
+      ]
+    ]
+  },
+  {
+    "case_id": "g0012_control_00149",
+    "group": "g0012",
+    "family": "routes",
+    "label": "p0_15_bg9_4_pb8",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ]
+    ]
+  },
+  {
+    "case_id": "g0012_control_00150",
+    "group": "g0012",
+    "family": "routes",
+    "label": "p0_15_bg9_4_pb8",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ]
+    ]
+  },
+  {
+    "case_id": "g0012_treatment_00151",
+    "group": "g0012",
+    "family": "routes",
+    "label": "p0_15_bg9_4_pb8",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ],
+      [
+        34,
+        16
+      ]
+    ]
+  },
+  {
+    "case_id": "g0048_treatment_00152",
+    "group": "g0048",
+    "family": "routes",
+    "label": "p15_0_bg7_2_pb8",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ],
+      [
+        22,
+        4
+      ]
+    ]
+  },
+  {
+    "case_id": "g0048_control_00153",
+    "group": "g0048",
+    "family": "routes",
+    "label": "p15_0_bg7_2_pb8",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ]
+    ]
+  },
+  {
+    "case_id": "g0048_control_00154",
+    "group": "g0048",
+    "family": "routes",
+    "label": "p15_0_bg7_2_pb8",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ]
+    ]
+  },
+  {
+    "case_id": "g0048_treatment_00155",
+    "group": "g0048",
+    "family": "routes",
+    "label": "p15_0_bg7_2_pb8",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ],
+      [
+        22,
+        4
+      ]
+    ]
+  },
+  {
+    "case_id": "g0038_control_00156",
+    "group": "g0038",
+    "family": "routes",
+    "label": "p15_0_bg3_2_pb8",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ]
+    ]
+  },
+  {
+    "case_id": "g0038_treatment_00157",
+    "group": "g0038",
+    "family": "routes",
+    "label": "p15_0_bg3_2_pb8",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ],
+      [
+        6,
+        4
+      ]
+    ]
+  },
+  {
+    "case_id": "g0038_treatment_00158",
+    "group": "g0038",
+    "family": "routes",
+    "label": "p15_0_bg3_2_pb8",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ],
+      [
+        6,
+        4
+      ]
+    ]
+  },
+  {
+    "case_id": "g0038_control_00159",
+    "group": "g0038",
+    "family": "routes",
+    "label": "p15_0_bg3_2_pb8",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ]
+    ]
+  },
+  {
+    "case_id": "g0028_treatment_00160",
+    "group": "g0028",
+    "family": "routes",
+    "label": "p0_15_bg4_9_pb8",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ],
+      [
+        16,
+        34
+      ]
+    ]
+  },
+  {
+    "case_id": "g0028_control_00161",
+    "group": "g0028",
+    "family": "routes",
+    "label": "p0_15_bg4_9_pb8",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ]
+    ]
+  },
+  {
+    "case_id": "g0028_control_00162",
+    "group": "g0028",
+    "family": "routes",
+    "label": "p0_15_bg4_9_pb8",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ]
+    ]
+  },
+  {
+    "case_id": "g0028_treatment_00163",
+    "group": "g0028",
+    "family": "routes",
+    "label": "p0_15_bg4_9_pb8",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ],
+      [
+        16,
+        34
+      ]
+    ]
+  },
+  {
+    "case_id": "g0057_treatment_00164",
+    "group": "g0057",
+    "family": "routes",
+    "label": "p15_0_bg5_8_pb1024",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ],
+      [
+        18,
+        32
+      ]
+    ]
+  },
+  {
+    "case_id": "g0057_control_00165",
+    "group": "g0057",
+    "family": "routes",
+    "label": "p15_0_bg5_8_pb1024",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ]
+    ]
+  },
+  {
+    "case_id": "g0057_control_00166",
+    "group": "g0057",
+    "family": "routes",
+    "label": "p15_0_bg5_8_pb1024",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ]
+    ]
+  },
+  {
+    "case_id": "g0057_treatment_00167",
+    "group": "g0057",
+    "family": "routes",
+    "label": "p15_0_bg5_8_pb1024",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ],
+      [
+        18,
+        32
+      ]
+    ]
+  },
+  {
+    "case_id": "g0018_treatment_00168",
+    "group": "g0018",
+    "family": "routes",
+    "label": "p0_15_bg1_4_pb8",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ],
+      [
+        2,
+        16
+      ]
+    ]
+  },
+  {
+    "case_id": "g0018_control_00169",
+    "group": "g0018",
+    "family": "routes",
+    "label": "p0_15_bg1_4_pb8",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ]
+    ]
+  },
+  {
+    "case_id": "g0018_control_00170",
+    "group": "g0018",
+    "family": "routes",
+    "label": "p0_15_bg1_4_pb8",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ]
+    ]
+  },
+  {
+    "case_id": "g0018_treatment_00171",
+    "group": "g0018",
+    "family": "routes",
+    "label": "p0_15_bg1_4_pb8",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ],
+      [
+        2,
+        16
+      ]
+    ]
+  },
+  {
+    "case_id": "g0032_treatment_00172",
+    "group": "g0032",
+    "family": "routes",
+    "label": "p15_0_bg8_4_pb8",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ],
+      [
+        32,
+        16
+      ]
+    ]
+  },
+  {
+    "case_id": "g0032_control_00173",
+    "group": "g0032",
+    "family": "routes",
+    "label": "p15_0_bg8_4_pb8",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ]
+    ]
+  },
+  {
+    "case_id": "g0032_control_00174",
+    "group": "g0032",
+    "family": "routes",
+    "label": "p15_0_bg8_4_pb8",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ]
+    ]
+  },
+  {
+    "case_id": "g0032_treatment_00175",
+    "group": "g0032",
+    "family": "routes",
+    "label": "p15_0_bg8_4_pb8",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ],
+      [
+        32,
+        16
+      ]
+    ]
+  },
+  {
+    "case_id": "g0036_treatment_00176",
+    "group": "g0036",
+    "family": "routes",
+    "label": "p15_0_bg2_1_pb8",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ],
+      [
+        4,
+        2
+      ]
+    ]
+  },
+  {
+    "case_id": "g0036_control_00177",
+    "group": "g0036",
+    "family": "routes",
+    "label": "p15_0_bg2_1_pb8",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ]
+    ]
+  },
+  {
+    "case_id": "g0036_control_00178",
+    "group": "g0036",
+    "family": "routes",
+    "label": "p15_0_bg2_1_pb8",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ]
+    ]
+  },
+  {
+    "case_id": "g0036_treatment_00179",
+    "group": "g0036",
+    "family": "routes",
+    "label": "p15_0_bg2_1_pb8",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ],
+      [
+        4,
+        2
+      ]
+    ]
+  },
+  {
+    "case_id": "g0000_treatment_00180",
+    "group": "g0000",
+    "family": "routes",
+    "label": "p0_15_bg1_2_pb8",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ],
+      [
+        2,
+        4
+      ]
+    ]
+  },
+  {
+    "case_id": "g0000_control_00181",
+    "group": "g0000",
+    "family": "routes",
+    "label": "p0_15_bg1_2_pb8",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ]
+    ]
+  },
+  {
+    "case_id": "g0000_control_00182",
+    "group": "g0000",
+    "family": "routes",
+    "label": "p0_15_bg1_2_pb8",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ]
+    ]
+  },
+  {
+    "case_id": "g0000_treatment_00183",
+    "group": "g0000",
+    "family": "routes",
+    "label": "p0_15_bg1_2_pb8",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ],
+      [
+        2,
+        4
+      ]
+    ]
+  },
+  {
+    "case_id": "g0029_control_00184",
+    "group": "g0029",
+    "family": "routes",
+    "label": "p0_15_bg4_9_pb1024",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ]
+    ]
+  },
+  {
+    "case_id": "g0029_treatment_00185",
+    "group": "g0029",
+    "family": "routes",
+    "label": "p0_15_bg4_9_pb1024",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ],
+      [
+        16,
+        34
+      ]
+    ]
+  },
+  {
+    "case_id": "g0029_treatment_00186",
+    "group": "g0029",
+    "family": "routes",
+    "label": "p0_15_bg4_9_pb1024",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ],
+      [
+        16,
+        34
+      ]
+    ]
+  },
+  {
+    "case_id": "g0029_control_00187",
+    "group": "g0029",
+    "family": "routes",
+    "label": "p0_15_bg4_9_pb1024",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ]
+    ]
+  },
+  {
+    "case_id": "g0054_control_00188",
+    "group": "g0054",
+    "family": "routes",
+    "label": "p15_0_bg13_8_pb8",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ]
+    ]
+  },
+  {
+    "case_id": "g0054_treatment_00189",
+    "group": "g0054",
+    "family": "routes",
+    "label": "p15_0_bg13_8_pb8",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ],
+      [
+        50,
+        32
+      ]
+    ]
+  },
+  {
+    "case_id": "g0054_treatment_00190",
+    "group": "g0054",
+    "family": "routes",
+    "label": "p15_0_bg13_8_pb8",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ],
+      [
+        50,
+        32
+      ]
+    ]
+  },
+  {
+    "case_id": "g0054_control_00191",
+    "group": "g0054",
+    "family": "routes",
+    "label": "p15_0_bg13_8_pb8",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ]
+    ]
+  },
+  {
+    "case_id": "g0010_treatment_00192",
+    "group": "g0010",
+    "family": "routes",
+    "label": "p0_15_bg2_1_pb8",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ],
+      [
+        4,
+        2
+      ]
+    ]
+  },
+  {
+    "case_id": "g0010_control_00193",
+    "group": "g0010",
+    "family": "routes",
+    "label": "p0_15_bg2_1_pb8",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ]
+    ]
+  },
+  {
+    "case_id": "g0010_control_00194",
+    "group": "g0010",
+    "family": "routes",
+    "label": "p0_15_bg2_1_pb8",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ]
+    ]
+  },
+  {
+    "case_id": "g0010_treatment_00195",
+    "group": "g0010",
+    "family": "routes",
+    "label": "p0_15_bg2_1_pb8",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ],
+      [
+        4,
+        2
+      ]
+    ]
+  },
+  {
+    "case_id": "g0011_treatment_00196",
+    "group": "g0011",
+    "family": "routes",
+    "label": "p0_15_bg2_1_pb1024",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ],
+      [
+        4,
+        2
+      ]
+    ]
+  },
+  {
+    "case_id": "g0011_control_00197",
+    "group": "g0011",
+    "family": "routes",
+    "label": "p0_15_bg2_1_pb1024",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ]
+    ]
+  },
+  {
+    "case_id": "g0011_control_00198",
+    "group": "g0011",
+    "family": "routes",
+    "label": "p0_15_bg2_1_pb1024",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ]
+    ]
+  },
+  {
+    "case_id": "g0011_treatment_00199",
+    "group": "g0011",
+    "family": "routes",
+    "label": "p0_15_bg2_1_pb1024",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ],
+      [
+        4,
+        2
+      ]
+    ]
+  },
+  {
+    "case_id": "g0040_treatment_00200",
+    "group": "g0040",
+    "family": "routes",
+    "label": "p15_0_bg1_2_pb8",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ],
+      [
+        2,
+        4
+      ]
+    ]
+  },
+  {
+    "case_id": "g0040_control_00201",
+    "group": "g0040",
+    "family": "routes",
+    "label": "p15_0_bg1_2_pb8",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ]
+    ]
+  },
+  {
+    "case_id": "g0040_control_00202",
+    "group": "g0040",
+    "family": "routes",
+    "label": "p15_0_bg1_2_pb8",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ]
+    ]
+  },
+  {
+    "case_id": "g0040_treatment_00203",
+    "group": "g0040",
+    "family": "routes",
+    "label": "p15_0_bg1_2_pb8",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ],
+      [
+        2,
+        4
+      ]
+    ]
+  },
+  {
+    "case_id": "g0056_treatment_00204",
+    "group": "g0056",
+    "family": "routes",
+    "label": "p15_0_bg5_8_pb8",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ],
+      [
+        18,
+        32
+      ]
+    ]
+  },
+  {
+    "case_id": "g0056_control_00205",
+    "group": "g0056",
+    "family": "routes",
+    "label": "p15_0_bg5_8_pb8",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ]
+    ]
+  },
+  {
+    "case_id": "g0056_control_00206",
+    "group": "g0056",
+    "family": "routes",
+    "label": "p15_0_bg5_8_pb8",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ]
+    ]
+  },
+  {
+    "case_id": "g0056_treatment_00207",
+    "group": "g0056",
+    "family": "routes",
+    "label": "p15_0_bg5_8_pb8",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ],
+      [
+        18,
+        32
+      ]
+    ]
+  },
+  {
+    "case_id": "g0022_control_00208",
+    "group": "g0022",
+    "family": "routes",
+    "label": "p0_15_bg8_13_pb8",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ]
+    ]
+  },
+  {
+    "case_id": "g0022_treatment_00209",
+    "group": "g0022",
+    "family": "routes",
+    "label": "p0_15_bg8_13_pb8",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ],
+      [
+        32,
+        50
+      ]
+    ]
+  },
+  {
+    "case_id": "g0022_treatment_00210",
+    "group": "g0022",
+    "family": "routes",
+    "label": "p0_15_bg8_13_pb8",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ],
+      [
+        32,
+        50
+      ]
+    ]
+  },
+  {
+    "case_id": "g0022_control_00211",
+    "group": "g0022",
+    "family": "routes",
+    "label": "p0_15_bg8_13_pb8",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ]
+    ]
+  },
+  {
+    "case_id": "g0020_treatment_00212",
+    "group": "g0020",
+    "family": "routes",
+    "label": "p0_15_bg1_6_pb8",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ],
+      [
+        2,
+        20
+      ]
+    ]
+  },
+  {
+    "case_id": "g0020_control_00213",
+    "group": "g0020",
+    "family": "routes",
+    "label": "p0_15_bg1_6_pb8",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ]
+    ]
+  },
+  {
+    "case_id": "g0020_control_00214",
+    "group": "g0020",
+    "family": "routes",
+    "label": "p0_15_bg1_6_pb8",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ]
+    ]
+  },
+  {
+    "case_id": "g0020_treatment_00215",
+    "group": "g0020",
+    "family": "routes",
+    "label": "p0_15_bg1_6_pb8",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ],
+      [
+        2,
+        20
+      ]
+    ]
+  },
+  {
+    "case_id": "g0025_treatment_00216",
+    "group": "g0025",
+    "family": "routes",
+    "label": "p0_15_bg6_13_pb1024",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ],
+      [
+        20,
+        50
+      ]
+    ]
+  },
+  {
+    "case_id": "g0025_control_00217",
+    "group": "g0025",
+    "family": "routes",
+    "label": "p0_15_bg6_13_pb1024",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ]
+    ]
+  },
+  {
+    "case_id": "g0025_control_00218",
+    "group": "g0025",
+    "family": "routes",
+    "label": "p0_15_bg6_13_pb1024",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ]
+    ]
+  },
+  {
+    "case_id": "g0025_treatment_00219",
+    "group": "g0025",
+    "family": "routes",
+    "label": "p0_15_bg6_13_pb1024",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ],
+      [
+        20,
+        50
+      ]
+    ]
+  },
+  {
+    "case_id": "g0021_control_00220",
+    "group": "g0021",
+    "family": "routes",
+    "label": "p0_15_bg1_6_pb1024",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ]
+    ]
+  },
+  {
+    "case_id": "g0021_treatment_00221",
+    "group": "g0021",
+    "family": "routes",
+    "label": "p0_15_bg1_6_pb1024",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ],
+      [
+        2,
+        20
+      ]
+    ]
+  },
+  {
+    "case_id": "g0021_treatment_00222",
+    "group": "g0021",
+    "family": "routes",
+    "label": "p0_15_bg1_6_pb1024",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ],
+      [
+        2,
+        20
+      ]
+    ]
+  },
+  {
+    "case_id": "g0021_control_00223",
+    "group": "g0021",
+    "family": "routes",
+    "label": "p0_15_bg1_6_pb1024",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ]
+    ]
+  },
+  {
+    "case_id": "g0016_treatment_00224",
+    "group": "g0016",
+    "family": "routes",
+    "label": "p0_15_bg2_7_pb8",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ],
+      [
+        4,
+        22
+      ]
+    ]
+  },
+  {
+    "case_id": "g0016_control_00225",
+    "group": "g0016",
+    "family": "routes",
+    "label": "p0_15_bg2_7_pb8",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ]
+    ]
+  },
+  {
+    "case_id": "g0016_control_00226",
+    "group": "g0016",
+    "family": "routes",
+    "label": "p0_15_bg2_7_pb8",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ]
+    ]
+  },
+  {
+    "case_id": "g0016_treatment_00227",
+    "group": "g0016",
+    "family": "routes",
+    "label": "p0_15_bg2_7_pb8",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ],
+      [
+        4,
+        22
+      ]
+    ]
+  },
+  {
+    "case_id": "g0053_control_00228",
+    "group": "g0053",
+    "family": "routes",
+    "label": "p15_0_bg6_1_pb1024",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ]
+    ]
+  },
+  {
+    "case_id": "g0053_treatment_00229",
+    "group": "g0053",
+    "family": "routes",
+    "label": "p15_0_bg6_1_pb1024",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ],
+      [
+        20,
+        2
+      ]
+    ]
+  },
+  {
+    "case_id": "g0053_treatment_00230",
+    "group": "g0053",
+    "family": "routes",
+    "label": "p15_0_bg6_1_pb1024",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ],
+      [
+        20,
+        2
+      ]
+    ]
+  },
+  {
+    "case_id": "g0053_control_00231",
+    "group": "g0053",
+    "family": "routes",
+    "label": "p15_0_bg6_1_pb1024",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ]
+    ]
+  },
+  {
+    "case_id": "g0046_treatment_00232",
+    "group": "g0046",
+    "family": "routes",
+    "label": "p15_0_bg11_4_pb8",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ],
+      [
+        38,
+        16
+      ]
+    ]
+  },
+  {
+    "case_id": "g0046_control_00233",
+    "group": "g0046",
+    "family": "routes",
+    "label": "p15_0_bg11_4_pb8",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ]
+    ]
+  },
+  {
+    "case_id": "g0046_control_00234",
+    "group": "g0046",
+    "family": "routes",
+    "label": "p15_0_bg11_4_pb8",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ]
+    ]
+  },
+  {
+    "case_id": "g0046_treatment_00235",
+    "group": "g0046",
+    "family": "routes",
+    "label": "p15_0_bg11_4_pb8",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ],
+      [
+        38,
+        16
+      ]
+    ]
+  },
+  {
+    "case_id": "g0002_control_00236",
+    "group": "g0002",
+    "family": "routes",
+    "label": "p0_15_bg2_3_pb8",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ]
+    ]
+  },
+  {
+    "case_id": "g0002_treatment_00237",
+    "group": "g0002",
+    "family": "routes",
+    "label": "p0_15_bg2_3_pb8",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ],
+      [
+        4,
+        6
+      ]
+    ]
+  },
+  {
+    "case_id": "g0002_treatment_00238",
+    "group": "g0002",
+    "family": "routes",
+    "label": "p0_15_bg2_3_pb8",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ],
+      [
+        4,
+        6
+      ]
+    ]
+  },
+  {
+    "case_id": "g0002_control_00239",
+    "group": "g0002",
+    "family": "routes",
+    "label": "p0_15_bg2_3_pb8",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ]
+    ]
+  },
+  {
+    "case_id": "g0051_control_00240",
+    "group": "g0051",
+    "family": "routes",
+    "label": "p15_0_bg4_1_pb1024",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ]
+    ]
+  },
+  {
+    "case_id": "g0051_treatment_00241",
+    "group": "g0051",
+    "family": "routes",
+    "label": "p15_0_bg4_1_pb1024",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ],
+      [
+        16,
+        2
+      ]
+    ]
+  },
+  {
+    "case_id": "g0051_treatment_00242",
+    "group": "g0051",
+    "family": "routes",
+    "label": "p15_0_bg4_1_pb1024",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ],
+      [
+        16,
+        2
+      ]
+    ]
+  },
+  {
+    "case_id": "g0051_control_00243",
+    "group": "g0051",
+    "family": "routes",
+    "label": "p15_0_bg4_1_pb1024",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ]
+    ]
+  },
+  {
+    "case_id": "g0042_control_00244",
+    "group": "g0042",
+    "family": "routes",
+    "label": "p15_0_bg1_5_pb8",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ]
+    ]
+  },
+  {
+    "case_id": "g0042_treatment_00245",
+    "group": "g0042",
+    "family": "routes",
+    "label": "p15_0_bg1_5_pb8",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ],
+      [
+        2,
+        18
+      ]
+    ]
+  },
+  {
+    "case_id": "g0042_treatment_00246",
+    "group": "g0042",
+    "family": "routes",
+    "label": "p15_0_bg1_5_pb8",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ],
+      [
+        2,
+        18
+      ]
+    ]
+  },
+  {
+    "case_id": "g0042_control_00247",
+    "group": "g0042",
+    "family": "routes",
+    "label": "p15_0_bg1_5_pb8",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ]
+    ]
+  },
+  {
+    "case_id": "g0014_control_00248",
+    "group": "g0014",
+    "family": "routes",
+    "label": "p0_15_bg1_14_pb8",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ]
+    ]
+  },
+  {
+    "case_id": "g0014_treatment_00249",
+    "group": "g0014",
+    "family": "routes",
+    "label": "p0_15_bg1_14_pb8",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ],
+      [
+        2,
+        52
+      ]
+    ]
+  },
+  {
+    "case_id": "g0014_treatment_00250",
+    "group": "g0014",
+    "family": "routes",
+    "label": "p0_15_bg1_14_pb8",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ],
+      [
+        2,
+        52
+      ]
+    ]
+  },
+  {
+    "case_id": "g0014_control_00251",
+    "group": "g0014",
+    "family": "routes",
+    "label": "p0_15_bg1_14_pb8",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        54
+      ]
+    ]
+  },
+  {
+    "case_id": "g0044_treatment_00252",
+    "group": "g0044",
+    "family": "routes",
+    "label": "p15_0_bg4_9_pb8",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ],
+      [
+        16,
+        34
+      ]
+    ]
+  },
+  {
+    "case_id": "g0044_control_00253",
+    "group": "g0044",
+    "family": "routes",
+    "label": "p15_0_bg4_9_pb8",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ]
+    ]
+  },
+  {
+    "case_id": "g0044_control_00254",
+    "group": "g0044",
+    "family": "routes",
+    "label": "p15_0_bg4_9_pb8",
+    "role": "control",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ]
+    ]
+  },
+  {
+    "case_id": "g0044_treatment_00255",
+    "group": "g0044",
+    "family": "routes",
+    "label": "p15_0_bg4_9_pb8",
+    "role": "treatment",
+    "mode": 1,
+    "bytes": 4096,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 2048,
+    "window": 4,
+    "flows": [
+      [
+        54,
+        0
+      ],
+      [
+        16,
+        34
+      ]
+    ]
+  }
+]

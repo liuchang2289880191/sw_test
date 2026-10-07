@@ -1,0 +1,5 @@
+model,columns,rank,unit_column_norm_condition,fit_RMSE_pct_points,background_layout_rejected_folds,background_layout_RMSE_pct_points,background_layout_rejection_reason,probe_direction_rejected_folds,probe_direction_RMSE_pct_points,probe_direction_rejection_reason
+constant_size,2,2,2.414213562373095,13.286001750644989,0,13.890884198028848,,0,14.14303857458786,
+XY,8,8,15.783686746422957,12.930133000806704,0,17.231752068043274,,0,17.360167543915157,
+YX,8,8,15.783686746422957,12.435329992694381,0,15.60461998962545,,0,15.880793018896046,
+combined_descriptive,14,14,27.178432731084097,12.028931951378333,0,21.372073259658332,,0,22.047506972078388,

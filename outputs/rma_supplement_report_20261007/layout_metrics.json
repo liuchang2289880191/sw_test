@@ -1,7 +1,7 @@
 [
   {
     "page": 1,
-    "bottom_content_y": 209.1
+    "bottom_content_y": 192.6
   },
   {
     "page": 2,
@@ -78,5 +78,61 @@
   {
     "page": 20,
     "bottom_content_y": 197.9
+  },
+  {
+    "page": 21,
+    "bottom_content_y": 135.9
+  },
+  {
+    "page": 22,
+    "bottom_content_y": 77.3
+  },
+  {
+    "page": 23,
+    "bottom_content_y": 77.3
+  },
+  {
+    "page": 24,
+    "bottom_content_y": 75.3
+  },
+  {
+    "page": 25,
+    "bottom_content_y": 79.5
+  },
+  {
+    "page": 26,
+    "bottom_content_y": 116.8
+  },
+  {
+    "page": 27,
+    "bottom_content_y": 63.6
+  },
+  {
+    "page": 28,
+    "bottom_content_y": 78.3
+  },
+  {
+    "page": 29,
+    "bottom_content_y": 61.1
+  },
+  {
+    "page": 30,
+    "bottom_content_y": 178.3
+  },
+  {
+    "page": 31,
+    "bottom_content_y": 95.9
+  },
+  {
+    "page": 32,
+    "bottom_content_y": 95.9
+  },
+  {
+    "page": 33,
+    "bottom_content_y": 95.9
+  },
+  {
+    "page": 34,
+    "bottom_content_y": 95.9
   }
 ]

@@ -1,0 +1,408 @@
+{
+  "layouts": [
+    {
+      "probe_blocks": [
+        0,
+        15
+      ],
+      "background_blocks": [
+        1,
+        2
+      ],
+      "anchor": true,
+      "selection": "previous_anchor"
+    },
+    {
+      "probe_blocks": [
+        0,
+        15
+      ],
+      "background_blocks": [
+        2,
+        3
+      ],
+      "anchor": true,
+      "selection": "previous_anchor"
+    },
+    {
+      "probe_blocks": [
+        0,
+        15
+      ],
+      "background_blocks": [
+        4,
+        8
+      ],
+      "anchor": true,
+      "selection": "previous_anchor"
+    },
+    {
+      "probe_blocks": [
+        0,
+        15
+      ],
+      "background_blocks": [
+        8,
+        12
+      ],
+      "anchor": true,
+      "selection": "previous_anchor"
+    },
+    {
+      "probe_blocks": [
+        0,
+        15
+      ],
+      "background_blocks": [
+        1,
+        5
+      ],
+      "anchor": true,
+      "selection": "previous_anchor"
+    },
+    {
+      "probe_blocks": [
+        0,
+        15
+      ],
+      "background_blocks": [
+        2,
+        1
+      ],
+      "anchor": true,
+      "selection": "previous_anchor"
+    },
+    {
+      "probe_blocks": [
+        0,
+        15
+      ],
+      "background_blocks": [
+        9,
+        4
+      ],
+      "anchor": false,
+      "selection": "geometry_information"
+    },
+    {
+      "probe_blocks": [
+        0,
+        15
+      ],
+      "background_blocks": [
+        1,
+        14
+      ],
+      "anchor": false,
+      "selection": "geometry_information"
+    },
+    {
+      "probe_blocks": [
+        0,
+        15
+      ],
+      "background_blocks": [
+        2,
+        7
+      ],
+      "anchor": false,
+      "selection": "geometry_information"
+    },
+    {
+      "probe_blocks": [
+        0,
+        15
+      ],
+      "background_blocks": [
+        1,
+        4
+      ],
+      "anchor": false,
+      "selection": "geometry_information"
+    },
+    {
+      "probe_blocks": [
+        0,
+        15
+      ],
+      "background_blocks": [
+        1,
+        6
+      ],
+      "anchor": false,
+      "selection": "geometry_information"
+    },
+    {
+      "probe_blocks": [
+        0,
+        15
+      ],
+      "background_blocks": [
+        8,
+        13
+      ],
+      "anchor": false,
+      "selection": "geometry_information"
+    },
+    {
+      "probe_blocks": [
+        0,
+        15
+      ],
+      "background_blocks": [
+        6,
+        13
+      ],
+      "anchor": false,
+      "selection": "geometry_information"
+    },
+    {
+      "probe_blocks": [
+        0,
+        15
+      ],
+      "background_blocks": [
+        6,
+        1
+      ],
+      "anchor": false,
+      "selection": "geometry_information"
+    },
+    {
+      "probe_blocks": [
+        0,
+        15
+      ],
+      "background_blocks": [
+        4,
+        9
+      ],
+      "anchor": false,
+      "selection": "geometry_information"
+    },
+    {
+      "probe_blocks": [
+        0,
+        15
+      ],
+      "background_blocks": [
+        5,
+        8
+      ],
+      "anchor": false,
+      "selection": "geometry_information"
+    },
+    {
+      "probe_blocks": [
+        15,
+        0
+      ],
+      "background_blocks": [
+        8,
+        4
+      ],
+      "anchor": true,
+      "selection": "previous_anchor"
+    },
+    {
+      "probe_blocks": [
+        15,
+        0
+      ],
+      "background_blocks": [
+        12,
+        8
+      ],
+      "anchor": true,
+      "selection": "previous_anchor"
+    },
+    {
+      "probe_blocks": [
+        15,
+        0
+      ],
+      "background_blocks": [
+        2,
+        1
+      ],
+      "anchor": true,
+      "selection": "previous_anchor"
+    },
+    {
+      "probe_blocks": [
+        15,
+        0
+      ],
+      "background_blocks": [
+        3,
+        2
+      ],
+      "anchor": true,
+      "selection": "previous_anchor"
+    },
+    {
+      "probe_blocks": [
+        15,
+        0
+      ],
+      "background_blocks": [
+        1,
+        2
+      ],
+      "anchor": true,
+      "selection": "previous_anchor"
+    },
+    {
+      "probe_blocks": [
+        15,
+        0
+      ],
+      "background_blocks": [
+        1,
+        5
+      ],
+      "anchor": true,
+      "selection": "previous_anchor"
+    },
+    {
+      "probe_blocks": [
+        15,
+        0
+      ],
+      "background_blocks": [
+        4,
+        9
+      ],
+      "anchor": false,
+      "selection": "geometry_information"
+    },
+    {
+      "probe_blocks": [
+        15,
+        0
+      ],
+      "background_blocks": [
+        11,
+        4
+      ],
+      "anchor": false,
+      "selection": "geometry_information"
+    },
+    {
+      "probe_blocks": [
+        15,
+        0
+      ],
+      "background_blocks": [
+        7,
+        2
+      ],
+      "anchor": false,
+      "selection": "geometry_information"
+    },
+    {
+      "probe_blocks": [
+        15,
+        0
+      ],
+      "background_blocks": [
+        4,
+        1
+      ],
+      "anchor": false,
+      "selection": "geometry_information"
+    },
+    {
+      "probe_blocks": [
+        15,
+        0
+      ],
+      "background_blocks": [
+        6,
+        1
+      ],
+      "anchor": false,
+      "selection": "geometry_information"
+    },
+    {
+      "probe_blocks": [
+        15,
+        0
+      ],
+      "background_blocks": [
+        13,
+        8
+      ],
+      "anchor": false,
+      "selection": "geometry_information"
+    },
+    {
+      "probe_blocks": [
+        15,
+        0
+      ],
+      "background_blocks": [
+        5,
+        8
+      ],
+      "anchor": false,
+      "selection": "geometry_information"
+    },
+    {
+      "probe_blocks": [
+        15,
+        0
+      ],
+      "background_blocks": [
+        1,
+        6
+      ],
+      "anchor": false,
+      "selection": "geometry_information"
+    },
+    {
+      "probe_blocks": [
+        15,
+        0
+      ],
+      "background_blocks": [
+        9,
+        4
+      ],
+      "anchor": false,
+      "selection": "geometry_information"
+    },
+    {
+      "probe_blocks": [
+        15,
+        0
+      ],
+      "background_blocks": [
+        6,
+        13
+      ],
+      "anchor": false,
+      "selection": "geometry_information"
+    }
+  ],
+  "checks": [
+    {
+      "probe_blocks": [
+        0,
+        15
+      ],
+      "geometry_rank": 13,
+      "background_layouts": 16
+    },
+    {
+      "probe_blocks": [
+        15,
+        0
+      ],
+      "geometry_rank": 13,
+      "background_layouts": 16
+    }
+  ],
+  "selection_uses_measured_effects": false,
+  "explanation": "Six legacy anchors plus ten selected diagonal backgrounds per probe direction; candidate paths only."
+}
