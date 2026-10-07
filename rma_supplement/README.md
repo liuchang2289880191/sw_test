@@ -4,6 +4,8 @@
 
 不改旧实验。四组：完成口径 E0、CPE/簇级端点共享 E1、方向共享 E2、持续背景下的路由探针 E3。
 
+2026-10-07 修订：目标二进制仅由 bsub 在计算节点启动；登录节点不执行 `--validate-plan`。回答字按目标 SDK 的 volatile 类型逐项清零，消除初始化警告。旧版在登录节点的「无法执行二进制文件」发生于提交前，不是 CPE 诊断运行失败。
+
 ```bash
 cd rma_supplement
 TOPO_DIAG_ONLY=1 bash run_supplement.sh q_share

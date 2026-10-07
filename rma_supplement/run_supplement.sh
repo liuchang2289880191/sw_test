@@ -62,7 +62,9 @@ for ((repeat=1; repeat<=repeats; repeat++)); do
   else
     "$py" "$out/source/generate_plan.py" --out "$rep" --profile "$profile" --reps "$reps" --seed "$((seed+repeat))"
   fi
-  "$out/rma_topology_bench" --validate-plan "$rep/plan.txt" > "$rep/plan_validation.txt"
+  # The login host may use another CPU architecture. Even --validate-plan
+  # cannot run this target binary there; the native parser checks every case
+  # on the allocated compute node, before launching its CPE kernel.
   printf 'Submitting supplemental job %s/%s; %s\n' "$repeat" "$repeats" "$rep"
   bsub -I -q "$queue" -n 1 -cgsp 64 -mpecg 1 -cache_size 0 \
     "$out/rma_topology_bench" --suite "$rep/plan.txt" "$rep" 2>&1 | tee "$rep/job.log"

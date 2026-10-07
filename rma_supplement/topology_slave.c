@@ -225,7 +225,12 @@ void topology_kernel(topo_args_t *host_arg)
     unsigned long begin;
     athread_dma_get(&cfg, host_arg, sizeof(cfg));
     memset(&result, 0, sizeof(result)); memset(sample_buffer, 0, sizeof(sample_buffer));
-    memset(remote_reply, 0, sizeof(remote_reply)); memset(meta_reply, 0, sizeof(meta_reply));
+    /* The installed SDK typedefs reply words as volatile. Use scalar stores
+     * rather than passing volatile arrays to memset. All traffic is quiescent. */
+    for (f = 0; f < TOPO_MAX_FLOWS; ++f) {
+        remote_reply[f] = 0;
+        meta_reply[f] = 0;
+    }
     memset(totals, 0, sizeof(totals)); memset(target, 0, sizeof(target));
     local_reply = control_local = ready_reply = stop_reply = 0;
     memset(ready_marks, 0, sizeof(ready_marks));
@@ -242,7 +247,8 @@ void topology_kernel(topo_args_t *host_arg)
             athread_rma_wait_value(&remote_reply[f], count);
     }
     athread_ssync_array();
-    local_reply = 0; memset(remote_reply, 0, sizeof(remote_reply));
+    local_reply = 0;
+    for (f = 0; f < TOPO_MAX_FLOWS; ++f) remote_reply[f] = 0;
     athread_ssync_array();
     begin = athread_stime_cycle();
     if (active) {

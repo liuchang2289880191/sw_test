@@ -35,7 +35,7 @@ SLAVE = r'''
 #define LOCAL_SLAVE_H
 #include <stddef.h>
 #define __thread_local __thread
-typedef long athread_rply_t;
+typedef volatile long athread_rply_t;
 extern __thread int _PEN;
 void athread_dma_get(void *, const void *, size_t);
 void athread_dma_put(void *, const void *, size_t);
@@ -138,7 +138,7 @@ def main():
         exe = tmp / "local_topology.exe"
         run([a.gcc, "-std=c99", "-D_WIN32_WINNT=0x0600", "-O2", "-Wall", "-Wextra", "-Werror", "-I", str(tmp), "-I", str(HERE),
              str(HERE / "topology_host.c"), str(HERE / "topology_slave.c"), str(tmp / "runtime.c"), "-o", str(exe)])
-        checks.append("host and actual slave C compile with -Wall -Wextra -Werror (local runtime)")
+        checks.append("host and actual slave C compile with volatile reply typedef and -Wall -Wextra -Werror (local runtime)")
         generated = {}
         for profile in ("quick", "full"):
             plan, features = gen.write_plan(tmp / profile, profile, 64)
@@ -217,7 +217,22 @@ while (($#)); do
   case $1 in -o) output=$2; shift 2;; -c) compile=1; shift;; *) shift;; esac
 done
 [[ -n "$output" ]]
-if ((compile)); then : > "$output"; else cp "$TOPO_LOCAL_EXE" "$output"; chmod +x "$output"; fi
+if ((compile)); then
+  : > "$output"
+else
+  # Model a target binary that is unusable on the login host, even for validation.
+  cat > "$output" <<'TARGET'
+#!/usr/bin/env bash
+set -eu
+if [[ ${TOPO_LOCAL_COMPUTE:-0} != 1 ]]; then
+  echo 'Cannot execute target binary on login host' >&2
+  printf 'blocked\n' >> "$TOPO_LOCAL_FORBIDDEN_LOG"
+  exit 126
+fi
+exec "$TOPO_LOCAL_EXE" "$@"
+TARGET
+  chmod +x "$output"
+fi
 '''
         scheduler = r'''#!/usr/bin/env bash
 set -eu
@@ -227,7 +242,7 @@ while (($#)); do
 done
 [[ $1 != bash && $1 != sh && $1 != /bin/bash ]]
 echo 'LOCAL PROTOCOL EMULATION ONLY: no actual scheduler submission.'
-"$@"
+TOPO_LOCAL_COMPUTE=1 "$@"
 '''
         for name, text in (("swgcc", compiler), ("bsub", scheduler)):
             f = shim / name; f.write_text(text, newline="\n"); f.chmod(0o755)
@@ -237,14 +252,20 @@ echo 'LOCAL PROTOCOL EMULATION ONLY: no actual scheduler submission.'
         bash_path = run([a.bash, "-c", 'printf "%s" "$PATH"']).stdout
         env = {k:v for k,v in os.environ.items() if not k.startswith(("TOPO_", "SWCC", "PYTHON", "SW_MODULE"))}
         env.update(PATH=posix(shim)+":"+posix(Path(a.bash).parent)+":"+bash_path, SWCC="swgcc", PYTHON=posix(sys.executable),
-                   TOPO_LOCAL_EXE=posix(exe), TOPO_LOCAL_SUBMISSIONS=posix(tmp / "submissions.log"))
+                   TOPO_LOCAL_EXE=posix(exe), TOPO_LOCAL_SUBMISSIONS=posix(tmp / "submissions.log"),
+                   TOPO_LOCAL_FORBIDDEN_LOG=posix(tmp / "forbidden.log"))
         launch = tmp / "launch"
         run([a.bash, str(HERE / "run_supplement.sh"), "q_share", posix(launch)],
             env=dict(env, TOPO_REPS="64", TOPO_REPEATS="2"))
         assert (launch / "COMPLETE").exists()
         assert len((tmp / "submissions.log").read_text().splitlines()) == 2
         assert (launch / "analysis" / "summary.csv").exists()
-        checks.append("standalone launcher: fresh build snapshot, two native mock jobs, shuffled plans, analysis, COMPLETE")
+        assert not (tmp / "forbidden.log").exists()
+        # Confirm the wrapper really rejects direct login-host execution.
+        blocked = run([a.bash, posix(launch / "rma_topology_bench"), "--validate-plan", posix(launch / "repeat_01" / "plan.txt")],
+                      env=env, ok=False)
+        assert blocked.returncode == 126 and (tmp / "forbidden.log").read_text().splitlines() == ["blocked"]
+        checks.append("standalone launcher: target execution forbidden on login; two compute-only mock jobs, shuffled plans, analysis, COMPLETE")
         launch_fail = tmp / "launch_failure"
         r = run([a.bash, str(HERE / "run_supplement.sh"), "q_share", posix(launch_fail)], ok=False,
                 env=dict(env, TOPO_MOCK_ERROR_AT="2"))
@@ -253,6 +274,7 @@ echo 'LOCAL PROTOCOL EMULATION ONLY: no actual scheduler submission.'
         run([a.bash, str(HERE / "run_supplement.sh"), "q_share", posix(launch_diag)],
             env=dict(env, TOPO_DIAG_ONLY="1"))
         assert (launch_diag / "COMPLETE").exists() and not (launch_diag / "repeat_02").exists()
+        assert (tmp / "forbidden.log").read_text().splitlines() == ["blocked"]
         checks.append("launcher: error stops later jobs; 6-case diagnostic succeeds as one job")
     report = dict(status="PASS", checks=checks, generated_cases=generated,
                   actual_sunway_compilation=False, actual_sunway_jobs=False,

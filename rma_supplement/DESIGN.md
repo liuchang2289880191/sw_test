@@ -110,6 +110,8 @@ TOPO_PROFILE=full TOPO_REPS=4096 TOPO_REPEATS=5 bash run_supplement.sh q_share
 
 登录节点需要 Python 3（标准库）、Bash、bsub、swgcc/1473；计算节点只启动原生二进制，不运行 Python、Shell 或子进程。资源请求沿用已跑通的 `-n 1 -cgsp 64 -mpecg 1 -cache_size 0`，但该请求不证明独占。
 
+登录节点只生成计划和编译，不直接执行申威目标二进制，包括 `--validate-plan`。每项参数由计算节点的原生程序在发起 CPE 内核前检查。2026-10-07 已修正旧启动脚本在登录节点调用该选项的问题；回答字初始化也按实际 SDK 的 volatile 类型改成逐项赋值。
+
 如果登录节点的 Python 名为 `python`，加 `PYTHON=python`。每次必须使用新输出目录，脚本不能覆盖现有目录。可在本地预览计划，不会提交任务：
 
 ```bash
