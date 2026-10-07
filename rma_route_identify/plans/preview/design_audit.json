@@ -1,0 +1,44 @@
+{
+  "model_columns": [
+    "constant",
+    "size1024",
+    "XY_forward_same_direction",
+    "XY_forward_opposite_direction",
+    "XY_forward_shared_internal_nodes",
+    "XY_reply_same_direction",
+    "XY_reply_opposite_direction",
+    "XY_reply_shared_internal_nodes",
+    "YX_forward_same_direction",
+    "YX_forward_opposite_direction",
+    "YX_forward_shared_internal_nodes",
+    "YX_reply_same_direction",
+    "YX_reply_opposite_direction",
+    "YX_reply_shared_internal_nodes"
+  ],
+  "checks": [
+    {
+      "scope": "all",
+      "rows": 64,
+      "columns": 14,
+      "exact_rank": 14,
+      "unit_column_norm_condition": 27.17843273108421
+    },
+    {
+      "scope": "probe_0",
+      "rows": 32,
+      "columns": 14,
+      "exact_rank": 14,
+      "unit_column_norm_condition": 27.275262918372214
+    },
+    {
+      "scope": "probe_54",
+      "rows": 32,
+      "columns": 14,
+      "exact_rank": 14,
+      "unit_column_norm_condition": 27.275262918372267
+    }
+  ],
+  "routes_are_hypotheses": true,
+  "full_rank_does_not_prove_routing": true,
+  "selection_uses_measured_effects": false
+}

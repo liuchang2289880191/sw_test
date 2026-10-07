@@ -1,0 +1,40 @@
+{
+  "passed": true,
+  "checks": [
+    "Three kernel files exactly match the successful hardware-run snapshot",
+    "Bash syntax",
+    "Actual host/slave sources compile with volatile reply words and warning-as-error in local runtime",
+    "3 seeds: 256 cases / 64 groups; native parsing; rank 14 in both directions; stdlib condition/QR agree with NumPy and known signal",
+    "Rank-deficient design is rejected",
+    "4 new diagonal diagnostics execute the actual kernel on 64 local threads; ready/stop/count/payload checks pass",
+    "Two shuffled 64-round local jobs: 512 cases; raw audit, within-job matching, background/sample export and all model reports",
+    "Launcher: compute-only target execution, one performance job + diagnostics + stop-before-second-job on injected error",
+    "Injected payload error and capped background reject completion"
+  ],
+  "actual_sunway_compilation": false,
+  "actual_sunway_jobs": false,
+  "note": "Local protocol emulation only; mock timing is not hardware performance",
+  "design_checks": [
+    {
+      "scope": "all",
+      "rows": 64,
+      "columns": 14,
+      "exact_rank": 14,
+      "unit_column_norm_condition": 27.17843273108421
+    },
+    {
+      "scope": "probe_0",
+      "rows": 32,
+      "columns": 14,
+      "exact_rank": 14,
+      "unit_column_norm_condition": 27.275262918372214
+    },
+    {
+      "scope": "probe_54",
+      "rows": 32,
+      "columns": 14,
+      "exact_rank": 14,
+      "unit_column_norm_condition": 27.275262918372267
+    }
+  ]
+}

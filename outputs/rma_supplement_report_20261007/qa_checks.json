@@ -1,0 +1,10 @@
+{
+  "pages": 20,
+  "figures": 13,
+  "all_41_groups_present": true,
+  "text_bounds_valid": true,
+  "source_files_unchanged": 1223,
+  "pdf_sha256": "c79b966b96ae6f997d72d0cc232d67a4a74c6562bd0aa5729f7e59f600212e4c",
+  "visual_review": "passed: all 20 pages inspected",
+  "qa_directory": "E:\\work\\sunway-qd\\tmp\\pdfs\\rma_supplement_report_qa"
+}
