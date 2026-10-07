@@ -11,10 +11,14 @@ typedef struct {
     unsigned long cycles, send_cycles, recv_cycles;
     unsigned long sent, received;
     int errors, background_limit_hit;
+    int wait_stage;
+    unsigned long wait_expected, wait_observed;
 } topo_result_t;
 typedef struct {
     int mode; /* 0: finite bulk; 1: sequential data + reply, optional background */
     int bytes, probe_bytes, reply_bytes, reps, window, nflows, background_limit;
+    int trace;
+    unsigned long wait_timeout_cycles;
     topo_flow_t flows[TOPO_MAX_FLOWS]; /* probe is flow 0 in mode 1 */
     topo_result_t *results;
     unsigned long *samples; /* probe initiator's 64-RTT batch durations */

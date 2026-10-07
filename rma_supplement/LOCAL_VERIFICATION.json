@@ -9,6 +9,7 @@
     "64-thread actual CPE kernel: all 6 diagnostic cases, independent incast lanes, sequence/full final payload checks, ready-stop-drain",
     "2 shuffled quick jobs: 468 actual-kernel cases; paired analysis, solo normalization, metric formula/data-count audit",
     "data-error and capped-background failures stop subsequent cases",
+    "missing ready and stop completion notifications: bounded exit with exact stage/counter diagnostic, no completion marker",
     "self-pair, excessive capacity, and trailing input rejected",
     "corrupt raw CSV rejected",
     "standalone launcher: target execution forbidden on login; two compute-only mock jobs, shuffled plans, analysis, COMPLETE",

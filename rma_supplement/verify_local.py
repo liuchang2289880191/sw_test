@@ -43,6 +43,7 @@ void athread_ssync_array(void);
 unsigned long athread_stime_cycle(void);
 int athread_rma_iput(void *, athread_rply_t *, int, int, void *, athread_rply_t *);
 void athread_rma_wait_value(athread_rply_t *, unsigned long);
+void athread_memory_barrier(void);
 #endif
 '''
 RUNTIME = r'''
@@ -60,6 +61,7 @@ static HANDLE threads[64];
 static CRITICAL_SECTION barrier_lock;
 static CONDITION_VARIABLE barrier_cond;
 static int arrived, generation, initialized, cases;
+static int dropped_ready, dropped_stop;
 static void (*kernel_function)();
 static topo_args_t *argument;
 int mock_posix_memalign(void **p, size_t a, size_t n) { *p=_aligned_malloc(n,a); return !*p; }
@@ -73,7 +75,7 @@ void athread_halt(void) { if(initialized!=1) abort(); DeleteCriticalSection(&bar
 static DWORD WINAPI worker(LPVOID i) { _PEN=(int)(intptr_t)i; kernel_function(argument); return 0; }
 int athread_spawn(void (*f)(),void *p) {
     int i; if(initialized!=1 || (uintptr_t)p%128) abort();
-    argument=p; kernel_function=f; arrived=generation=0; ++cases;
+    argument=p; kernel_function=f; arrived=generation=0; dropped_ready=dropped_stop=0; ++cases;
     for(i=0;i<64;i++) { threads[i]=CreateThread(NULL,0,worker,(LPVOID)(intptr_t)i,0,NULL); if(!threads[i]) abort(); }
     return 0;
 }
@@ -95,13 +97,21 @@ void athread_ssync_array(void) {
 }
 unsigned long athread_stime_cycle(void) { LARGE_INTEGER n; QueryPerformanceCounter(&n); return (unsigned long)n.QuadPart; }
 int athread_rma_iput(void *s,athread_rply_t *lr,int n,int pe,void *d,athread_rply_t *rr) {
-    uintptr_t remote_d,remote_r; if(pe<0 || pe>63 || n<4 || n%4 || !anchors[pe]) abort();
+    uintptr_t remote_d,remote_r; int drop=0;
+    char *ready=getenv("TOPO_MOCK_DROP_READY_PE"), *stop=getenv("TOPO_MOCK_DROP_STOP_PE");
+    if(pe<0 || pe>63 || n<4 || n%4 || !anchors[pe]) abort();
     remote_d=anchors[pe]+(uintptr_t)d-anchors[_PEN];
     remote_r=anchors[pe]+(uintptr_t)rr-anchors[_PEN];
     memcpy((void *)remote_d,s,(size_t)n);
-    InterlockedIncrement((LONG *)remote_r); InterlockedIncrement((LONG *)lr);
+    if(argument->mode && argument->nflows>1 && n==8) {
+        if(ready && _PEN==atoi(ready) && pe==argument->flows[0].src && !dropped_ready++) drop=1;
+        if(stop && _PEN==argument->flows[0].src && pe==atoi(stop) && !dropped_stop++) drop=1;
+    }
+    if(!drop) InterlockedIncrement((LONG *)remote_r);
+    InterlockedIncrement((LONG *)lr);
     return 0;
 }
+void athread_memory_barrier(void) { MemoryBarrier(); }
 void athread_rma_wait_value(athread_rply_t *p,unsigned long value) {
     while((unsigned long)InterlockedCompareExchange((LONG *)p,0,0)<value) SwitchToThread();
 }
@@ -136,7 +146,7 @@ def main():
         (tmp / "slave.h").write_text(SLAVE)
         (tmp / "runtime.c").write_text(RUNTIME)
         exe = tmp / "local_topology.exe"
-        run([a.gcc, "-std=c99", "-D_WIN32_WINNT=0x0600", "-O2", "-Wall", "-Wextra", "-Werror", "-I", str(tmp), "-I", str(HERE),
+        run([a.gcc, "-std=c99", "-D_WIN32_WINNT=0x0600", "-DTOPO_LOCAL_EMULATION=1", "-O2", "-Wall", "-Wextra", "-Werror", "-I", str(tmp), "-I", str(HERE),
              str(HERE / "topology_host.c"), str(HERE / "topology_slave.c"), str(tmp / "runtime.c"), "-o", str(exe)])
         checks.append("host and actual slave C compile with volatile reply typedef and -Wall -Wextra -Werror (local runtime)")
         generated = {}
@@ -185,6 +195,15 @@ def main():
             assert r.returncode != 0 and not (fail / "RUN_COMPLETE").exists()
             assert len(list((fail / "raw").glob("*.csv"))) == 2
         checks.append("data-error and capped-background failures stop subsequent cases")
+        for env_key, stage in (("TOPO_MOCK_DROP_READY_PE", 3), ("TOPO_MOCK_DROP_STOP_PE", 10)):
+            fail = tmp / env_key; fail.mkdir(); (fail / "raw").mkdir()
+            gen.write_plan(fail, diagnostic=True)
+            r = run([str(exe), "--suite", str(fail / "plan.txt"), str(fail)], ok=False,
+                    env=dict(os.environ, TOPO_WAIT_TIMEOUT_CYCLES="1000000", **{env_key:"2"}))
+            assert r.returncode != 0 and not (fail / "RUN_COMPLETE").exists(), r.stdout
+            assert f"stage={stage}" in r.stdout, r.stdout
+            assert (fail / "raw" / "diag_05.csv").exists(), r.stdout
+        checks.append("missing ready and stop completion notifications: bounded exit with exact stage/counter diagnostic, no completion marker")
         # Reject bad plans before any launch.
         valid = (diag / "plan.txt").read_text().splitlines()[1]
         fields = valid.split()

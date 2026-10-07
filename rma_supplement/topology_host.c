@@ -5,11 +5,25 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
+#include <limits.h>
 #ifndef _WIN32
 #include <unistd.h>
+#include <signal.h>
 #endif
 #include "topology_common.h"
 extern void SLAVE_FUN(topology_kernel)();
+static int trace_mode;
+static unsigned long wait_timeout_cycles = 1000000000UL;
+#ifndef _WIN32
+static unsigned int case_timeout_seconds = 60;
+static void case_timeout(int sig)
+{
+    static const char message[] = "TOPO_CASE_TIMEOUT: target kernel did not return; inspect last TOPO_STAGE line.\n";
+    (void)sig;
+    write(STDERR_FILENO, message, sizeof(message) - 1);
+    _exit(124);
+}
+#endif
 
 static int safe(const char *s)
 {
@@ -40,6 +54,8 @@ static int valid(topo_args_t *a)
     for (i = 0; i < 64; ++i)
         if ((long long)incoming[i] * a->bytes * a->window > TOPO_BUFFER_BYTES) return 0;
     a->background_limit = 2000000;
+    a->trace = trace_mode;
+    a->wait_timeout_cycles = wait_timeout_cycles;
     return 1;
 }
 
@@ -84,7 +100,7 @@ static int write_result(FILE *csv, const topo_args_t *a)
 {
     int i, f, failed = 0, first = a->mode ? 1 : 0;
     unsigned long max_cycles = 0, sent = 0, received = 0;
-    fprintf(csv, "record,pe,cycles,send_cycles,recv_cycles,sent,received,errors,background_limit_hit,value\n");
+    fprintf(csv, "record,pe,cycles,send_cycles,recv_cycles,sent,received,errors,background_limit_hit,value,wait_stage,wait_expected,wait_observed\n");
     for (i = 0; i < TOPO_PES; ++i) {
         int active = 0, outgoing = 0, incoming = 0;
         const topo_result_t *r = a->results + i;
@@ -96,6 +112,10 @@ static int write_result(FILE *csv, const topo_args_t *a)
             if (a->flows[f].dst == i) ++incoming;
         }
         if (!r->cycles || r->errors || r->background_limit_hit) failed = 1;
+        if (r->errors || r->background_limit_hit)
+            fprintf(stderr, "TOPO_PE_FAILED pe=%d errors=%d capped=%d stage=%d expected=%lu observed=%lu sent=%lu received=%lu\n",
+                    i, r->errors, r->background_limit_hit, r->wait_stage, r->wait_expected,
+                    r->wait_observed, r->sent, r->received);
         if (outgoing && (!r->send_cycles || !r->sent)) failed = 1;
         if (incoming && (!r->recv_cycles || !r->received)) failed = 1;
         if (!a->mode && (r->sent != (unsigned long)(a->reps * outgoing) ||
@@ -104,22 +124,23 @@ static int write_result(FILE *csv, const topo_args_t *a)
         if (!(a->mode && (i == a->flows[0].src || i == a->flows[0].dst))) {
             sent += r->sent; received += r->received;
         }
-        fprintf(csv, "pe,%d,%lu,%lu,%lu,%lu,%lu,%d,%d,\n", i, r->cycles,
-                r->send_cycles, r->recv_cycles, r->sent, r->received, r->errors, r->background_limit_hit);
+        fprintf(csv, "pe,%d,%lu,%lu,%lu,%lu,%lu,%d,%d,,%d,%lu,%lu\n", i, r->cycles,
+                r->send_cycles, r->recv_cycles, r->sent, r->received, r->errors, r->background_limit_hit,
+                r->wait_stage, r->wait_expected, r->wait_observed);
     }
     if (sent != received) failed = 1;
     if (a->mode) {
         const topo_result_t *r = a->results + a->flows[0].src;
         max_cycles = r->cycles;
         if (r->sent != (unsigned long)a->reps || r->received != (unsigned long)a->reps) failed = 1;
-        fprintf(csv, "aggregate,probe,%lu,0,0,%d,%d,%d,0,%.9f\n", max_cycles,
+        fprintf(csv, "aggregate,probe,%lu,0,0,%d,%d,%d,0,%.9f,0,0,0\n", max_cycles,
                 a->reps, a->reps, failed, (double)max_cycles / a->reps);
         for (i = 0; i < a->reps / TOPO_SAMPLE_BATCH; ++i) {
             if (!a->samples[i]) failed = 1;
-            fprintf(csv, "sample,%d,%lu,0,0,0,0,0,0,%.9f\n", i, a->samples[i],
+            fprintf(csv, "sample,%d,%lu,0,0,0,0,0,0,%.9f,0,0,0\n", i, a->samples[i],
                     (double)a->samples[i] / TOPO_SAMPLE_BATCH);
         }
-    } else fprintf(csv, "aggregate,bulk,%lu,0,0,%lu,%lu,%d,0,%.9f\n", max_cycles,
+    } else fprintf(csv, "aggregate,bulk,%lu,0,0,%lu,%lu,%d,0,%.9f,0,0,0\n", max_cycles,
                    sent, received, failed, max_cycles ? (double)a->bytes * a->reps * a->nflows / max_cycles : 0.0);
     if (fflush(csv) || ferror(csv)) failed = 1;
     return failed;
@@ -133,6 +154,22 @@ int main(int argc, char **argv)
     int status = 0, count = 0, validate = 0, initialized = 0;
     topo_result_t *results = NULL;
     unsigned long *samples = NULL;
+    { const char *s = getenv("TOPO_TRACE"), *d = getenv("TOPO_DIAG_ONLY"), *w = getenv("TOPO_WAIT_TIMEOUT_CYCLES");
+      trace_mode = (s && !strcmp(s, "1")) || (!s && d && !strcmp(d, "1"));
+      if (w) { char *end; unsigned long n = strtoul(w, &end, 10);
+          if (!*w || *end || *w == '-' || n < 10000UL || n == ULONG_MAX) { fprintf(stderr, "invalid wait timeout\n"); return 2; }
+          wait_timeout_cycles = n;
+      }
+    }
+#ifndef _WIN32
+    { const char *s = getenv("TOPO_CASE_TIMEOUT_SECONDS");
+      if (s) { char *end; unsigned long n = strtoul(s, &end, 10);
+          if (!*s || *end || n < 1 || n > 3600) { fprintf(stderr, "invalid case timeout\n"); return 2; }
+          case_timeout_seconds = (unsigned int)n;
+      }
+      signal(SIGALRM, case_timeout);
+    }
+#endif
     if (argc == 3 && !strcmp(argv[1], "--validate-plan")) validate = 1;
     else if (argc != 4 || strcmp(argv[1], "--suite")) {
         fprintf(stderr, "usage: %s --suite plan.txt NEW_OUTPUT_DIR | --validate-plan plan.txt\n", argv[0]); return 2;
@@ -156,7 +193,18 @@ int main(int argc, char **argv)
         args.results = results; args.samples = samples;
         fprintf(stderr, "TOPO_CASE %d %s mode=%d bytes=%d probe=%d reply=%d window=%d flows=%d\n",
                 count, id, args.mode, args.bytes, args.probe_bytes, args.reply_bytes, args.window, args.nflows);
-        if (athread_spawn(topology_kernel, &args) || athread_join()) { status = 1; break; }
+        fflush(stderr);
+#ifndef _WIN32
+        alarm(case_timeout_seconds);
+#endif
+        { int launch_status = athread_spawn(topology_kernel, &args);
+          if (!launch_status) launch_status = athread_join();
+#ifndef _WIN32
+          alarm(0);
+#endif
+          if (launch_status) { status = 1; break; }
+        }
+        fprintf(stderr, "TOPO_RETURN %s\n", id); fflush(stderr);
         if (snprintf(path, sizeof(path), "%s/raw/%s.csv", argv[3], id) >= (int)sizeof(path)) { status = 2; break; }
         csv = fopen(path, "w"); if (!csv) { perror(path); status = 1; break; }
         status = write_result(csv, &args);

@@ -10,6 +10,9 @@ Default: quick profile, 5 independent jobs, 2048 measured rounds per case.
 TOPO_PROFILE=quick|full; TOPO_REPEATS=1..20; TOPO_REPS=64..16384, multiple of 64.
 TOPO_SEED=20261007; TOPO_RESOURCE_NOTE='actual allocation/sharing details'.
 TOPO_DIAG_ONLY=1 runs 6 small correctness cases in one job.
+TOPO_TRACE=0|1 (default: diagnostic=1, performance=0).
+TOPO_WAIT_TIMEOUT_CYCLES=1000000000 bounds reply waits/background stop waits.
+TOPO_CASE_TIMEOUT_SECONDS=60 bounds each target kernel (1..3600).
 SWCC=swgcc; SW_MODULE=swgcc/1473; PYTHON=python3 (login node only).
 No old benchmark, old script, or old results are modified.
 HELP
@@ -26,6 +29,12 @@ repeats=${TOPO_REPEATS:-5}; reps=${TOPO_REPS:-2048}; seed=${TOPO_SEED:-20261007}
 [[ "$seed" =~ ^[1-9][0-9]{0,8}$ ]] || die 'Invalid seed'
 diag=${TOPO_DIAG_ONLY:-0}; [[ "$diag" == 0 || "$diag" == 1 ]] || die 'Invalid diagnostic flag'
 if [[ "$diag" == 1 ]]; then repeats=1; reps=64; fi
+trace=${TOPO_TRACE:-$diag}; [[ "$trace" == 0 || "$trace" == 1 ]] || die 'Invalid trace flag'
+wait_cycles=${TOPO_WAIT_TIMEOUT_CYCLES:-1000000000}
+[[ "$wait_cycles" =~ ^[1-9][0-9]{4,19}$ ]] || die 'Invalid wait timeout cycles (minimum 10000)'
+case_seconds=${TOPO_CASE_TIMEOUT_SECONDS:-60}
+[[ "$case_seconds" =~ ^[1-9][0-9]{0,3}$ ]] && ((case_seconds <= 3600)) || die 'Invalid case timeout seconds'
+export TOPO_TRACE="$trace" TOPO_WAIT_TIMEOUT_CYCLES="$wait_cycles" TOPO_CASE_TIMEOUT_SECONDS="$case_seconds"
 py=${PYTHON:-python3}; swcc=${SWCC:-swgcc}
 for tool in bsub tee "$py"; do command -v "$tool" >/dev/null || die "$tool not found"; done
 if ! command -v "$swcc" >/dev/null 2>&1; then
@@ -46,6 +55,7 @@ done
   printf 'queue=%s\ncompiler=%s\ntarget=%s\nprofile=%s\nrepeats=%s\nreps=%s\nseed=%s\n' "$queue" "$swcc" "$target" "$profile" "$repeats" "$reps" "$seed"
   printf 'resource_request=MPE:1,CG:1,CPE:64\ncache_size_kib_requested=0\nresource_exclusivity=unknown\n'
   printf 'buffer_bytes_each=32768\ncounter_frequency=not_calibrated\nresource_note=%s\n' "${TOPO_RESOURCE_NOTE:-not_provided}"
+  printf 'trace=%s\nwait_timeout_cycles=%s\ncase_timeout_seconds=%s\n' "$trace" "$wait_cycles" "$case_seconds"
   date -u '+submit_time_utc=%Y-%m-%dT%H:%M:%SZ'
   "$swcc" -v 2>&1
 } > "$out/build_info.txt"
