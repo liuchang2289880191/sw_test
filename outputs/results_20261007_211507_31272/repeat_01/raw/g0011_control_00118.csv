@@ -1,0 +1,6 @@
+record,pe,cycles,send_cycles,recv_cycles,sent,received,errors,background_limit_hit,value,wait_stage,wait_expected,wait_observed
+pe,0,5105420,0,5105420,0,2048,0,0,,0,0,0
+pe,6,5107629,0,5107629,0,2048,0,0,,0,0,0
+pe,20,5105517,5105517,0,2048,0,0,0,,0,0,0
+pe,22,5107684,5107684,0,2048,0,0,0,,0,0,0
+aggregate,bulk,5107684,0,0,4096,4096,0,0,3.284701246,0,0,0

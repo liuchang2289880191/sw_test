@@ -1,0 +1,17 @@
+start_epoch=1791378934
+resource_exclusivity=unknown
+counter_frequency=not_calibrated
+hostname=vn043968
+cpu arch		: sw_64
+cpu revision		: sw39000
+mpe frequency [MHz]	: 2100
+spe frequency [MHz]	: 2250
+imc frequency [MHz]	: 825
+gclk frequency [MHz]	: 1650
+cpu frequency [MHz]	: 2100
+timer frequency [Hz]	: 100
+page size [bytes]	: 8192
+virt. address bits	: 53
+phys. address bits	: 48
+cpus active		: 6
+cpus core online	: 0x3f

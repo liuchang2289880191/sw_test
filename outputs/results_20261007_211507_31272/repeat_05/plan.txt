@@ -1,0 +1,235 @@
+# case group family label role mode background_or_bulk_bytes probe_bytes reply_bytes reps window nflows src dst ...
+g0018_control_00000 g0018 routes p0_15_bg1_2_XY_forward_pb1024 control 1 4096 1024 8 2048 4 1 0 54
+g0018_treatment_00001 g0018 routes p0_15_bg1_2_XY_forward_pb1024 treatment 1 4096 1024 8 2048 4 2 0 54 2 4
+g0018_treatment_00002 g0018 routes p0_15_bg1_2_XY_forward_pb1024 treatment 1 4096 1024 8 2048 4 2 0 54 2 4
+g0018_control_00003 g0018 routes p0_15_bg1_2_XY_forward_pb1024 control 1 4096 1024 8 2048 4 1 0 54
+g0015_solo_s18_d34_before_00004 g0015 directions opposed_b5_b9 solo_s18_d34_before 0 4096 4096 0 2048 4 1 18 34
+g0015_solo_s19_d35_before_00005 g0015 directions opposed_b5_b9 solo_s19_d35_before 0 4096 4096 0 2048 4 1 19 35
+g0015_solo_s35_d19_before_00006 g0015 directions opposed_b5_b9 solo_s35_d19_before 0 4096 4096 0 2048 4 1 35 19
+g0015_treatment_00007 g0015 directions opposed_b5_b9 treatment 0 4096 4096 0 2048 4 2 18 34 35 19
+g0015_control_00008 g0015 directions opposed_b5_b9 control 0 4096 4096 0 2048 4 2 18 34 19 35
+g0015_control_00009 g0015 directions opposed_b5_b9 control 0 4096 4096 0 2048 4 2 18 34 19 35
+g0015_treatment_00010 g0015 directions opposed_b5_b9 treatment 0 4096 4096 0 2048 4 2 18 34 35 19
+g0015_solo_s35_d19_after_00011 g0015 directions opposed_b5_b9 solo_s35_d19_after 0 4096 4096 0 2048 4 1 35 19
+g0015_solo_s19_d35_after_00012 g0015 directions opposed_b5_b9 solo_s19_d35_after 0 4096 4096 0 2048 4 1 19 35
+g0015_solo_s18_d34_after_00013 g0015 directions opposed_b5_b9 solo_s18_d34_after 0 4096 4096 0 2048 4 1 18 34
+g0008_solo_s0_d63_before_00014 g0008 completion s0_d63_reply1024 solo_s0_d63_before 0 1024 1024 0 2048 1 1 0 63
+g0008_control_00015 g0008 completion s0_d63_reply1024 control 0 1024 1024 0 2048 1 1 0 63
+g0008_treatment_00016 g0008 completion s0_d63_reply1024 treatment 1 1024 1024 1024 2048 1 1 0 63
+g0008_treatment_00017 g0008 completion s0_d63_reply1024 treatment 1 1024 1024 1024 2048 1 1 0 63
+g0008_control_00018 g0008 completion s0_d63_reply1024 control 0 1024 1024 0 2048 1 1 0 63
+g0008_solo_s0_d63_after_00019 g0008 completion s0_d63_reply1024 solo_s0_d63_after 0 1024 1024 0 2048 1 1 0 63
+g0021_treatment_00020 g0021 routes p0_15_bg4_8_YX_forward_pb8 treatment 1 4096 8 8 2048 4 2 0 54 16 32
+g0021_control_00021 g0021 routes p0_15_bg4_8_YX_forward_pb8 control 1 4096 8 8 2048 4 1 0 54
+g0021_control_00022 g0021 routes p0_15_bg4_8_YX_forward_pb8 control 1 4096 8 8 2048 4 1 0 54
+g0021_treatment_00023 g0021 routes p0_15_bg4_8_YX_forward_pb8 treatment 1 4096 8 8 2048 4 2 0 54 16 32
+g0037_treatment_00024 g0037 routes p15_0_bg1_2_neither_forward_pb8 treatment 1 4096 8 8 2048 4 2 54 0 2 4
+g0037_control_00025 g0037 routes p15_0_bg1_2_neither_forward_pb8 control 1 4096 8 8 2048 4 1 54 0
+g0037_control_00026 g0037 routes p15_0_bg1_2_neither_forward_pb8 control 1 4096 8 8 2048 4 1 54 0
+g0037_treatment_00027 g0037 routes p15_0_bg1_2_neither_forward_pb8 treatment 1 4096 8 8 2048 4 2 54 0 2 4
+g0006_solo_s0_d63_before_00028 g0006 completion s0_d63_reply8 solo_s0_d63_before 0 8 8 0 2048 1 1 0 63
+g0006_control_00029 g0006 completion s0_d63_reply8 control 0 8 8 0 2048 1 1 0 63
+g0006_treatment_00030 g0006 completion s0_d63_reply8 treatment 1 8 8 8 2048 1 1 0 63
+g0006_treatment_00031 g0006 completion s0_d63_reply8 treatment 1 8 8 8 2048 1 1 0 63
+g0006_control_00032 g0006 completion s0_d63_reply8 control 0 8 8 0 2048 1 1 0 63
+g0006_solo_s0_d63_after_00033 g0006 completion s0_d63_reply8 solo_s0_d63_after 0 8 8 0 2048 1 1 0 63
+g0023_treatment_00034 g0023 routes p0_15_bg8_12_YX_forward_pb8 treatment 1 4096 8 8 2048 4 2 0 54 32 48
+g0023_control_00035 g0023 routes p0_15_bg8_12_YX_forward_pb8 control 1 4096 8 8 2048 4 1 0 54
+g0023_control_00036 g0023 routes p0_15_bg8_12_YX_forward_pb8 control 1 4096 8 8 2048 4 1 0 54
+g0023_treatment_00037 g0023 routes p0_15_bg8_12_YX_forward_pb8 treatment 1 4096 8 8 2048 4 2 0 54 32 48
+g0012_solo_s0_d18_before_00038 g0012 ports destination_cluster_b5_n2 solo_s0_d18_before 0 4096 4096 0 2048 4 1 0 18
+g0012_solo_s0_d20_before_00039 g0012 ports destination_cluster_b5_n2 solo_s0_d20_before 0 4096 4096 0 2048 4 1 0 20
+g0012_solo_s6_d19_before_00040 g0012 ports destination_cluster_b5_n2 solo_s6_d19_before 0 4096 4096 0 2048 4 1 6 19
+g0012_solo_s6_d22_before_00041 g0012 ports destination_cluster_b5_n2 solo_s6_d22_before 0 4096 4096 0 2048 4 1 6 22
+g0012_control_00042 g0012 ports destination_cluster_b5_n2 control 0 4096 4096 0 2048 4 2 0 20 6 22
+g0012_treatment_00043 g0012 ports destination_cluster_b5_n2 treatment 0 4096 4096 0 2048 4 2 0 18 6 19
+g0012_treatment_00044 g0012 ports destination_cluster_b5_n2 treatment 0 4096 4096 0 2048 4 2 0 18 6 19
+g0012_control_00045 g0012 ports destination_cluster_b5_n2 control 0 4096 4096 0 2048 4 2 0 20 6 22
+g0012_solo_s6_d22_after_00046 g0012 ports destination_cluster_b5_n2 solo_s6_d22_after 0 4096 4096 0 2048 4 1 6 22
+g0012_solo_s6_d19_after_00047 g0012 ports destination_cluster_b5_n2 solo_s6_d19_after 0 4096 4096 0 2048 4 1 6 19
+g0012_solo_s0_d20_after_00048 g0012 ports destination_cluster_b5_n2 solo_s0_d20_after 0 4096 4096 0 2048 4 1 0 20
+g0012_solo_s0_d18_after_00049 g0012 ports destination_cluster_b5_n2 solo_s0_d18_after 0 4096 4096 0 2048 4 1 0 18
+g0030_control_00050 g0030 routes p15_0_bg8_4_XY_forward_pb1024 control 1 4096 1024 8 2048 4 1 54 0
+g0030_treatment_00051 g0030 routes p15_0_bg8_4_XY_forward_pb1024 treatment 1 4096 1024 8 2048 4 2 54 0 32 16
+g0030_treatment_00052 g0030 routes p15_0_bg8_4_XY_forward_pb1024 treatment 1 4096 1024 8 2048 4 2 54 0 32 16
+g0030_control_00053 g0030 routes p15_0_bg8_4_XY_forward_pb1024 control 1 4096 1024 8 2048 4 1 54 0
+g0031_treatment_00054 g0031 routes p15_0_bg12_8_XY_forward_pb8 treatment 1 4096 8 8 2048 4 2 54 0 48 32
+g0031_control_00055 g0031 routes p15_0_bg12_8_XY_forward_pb8 control 1 4096 8 8 2048 4 1 54 0
+g0031_control_00056 g0031 routes p15_0_bg12_8_XY_forward_pb8 control 1 4096 8 8 2048 4 1 54 0
+g0031_treatment_00057 g0031 routes p15_0_bg12_8_XY_forward_pb8 treatment 1 4096 8 8 2048 4 2 54 0 48 32
+g0011_solo_s18_d0_before_00058 g0011 ports source_cluster_b5_n2 solo_s18_d0_before 0 4096 4096 0 2048 4 1 18 0
+g0011_solo_s19_d6_before_00059 g0011 ports source_cluster_b5_n2 solo_s19_d6_before 0 4096 4096 0 2048 4 1 19 6
+g0011_solo_s20_d0_before_00060 g0011 ports source_cluster_b5_n2 solo_s20_d0_before 0 4096 4096 0 2048 4 1 20 0
+g0011_solo_s22_d6_before_00061 g0011 ports source_cluster_b5_n2 solo_s22_d6_before 0 4096 4096 0 2048 4 1 22 6
+g0011_control_00062 g0011 ports source_cluster_b5_n2 control 0 4096 4096 0 2048 4 2 20 0 22 6
+g0011_treatment_00063 g0011 ports source_cluster_b5_n2 treatment 0 4096 4096 0 2048 4 2 18 0 19 6
+g0011_treatment_00064 g0011 ports source_cluster_b5_n2 treatment 0 4096 4096 0 2048 4 2 18 0 19 6
+g0011_control_00065 g0011 ports source_cluster_b5_n2 control 0 4096 4096 0 2048 4 2 20 0 22 6
+g0011_solo_s22_d6_after_00066 g0011 ports source_cluster_b5_n2 solo_s22_d6_after 0 4096 4096 0 2048 4 1 22 6
+g0011_solo_s20_d0_after_00067 g0011 ports source_cluster_b5_n2 solo_s20_d0_after 0 4096 4096 0 2048 4 1 20 0
+g0011_solo_s19_d6_after_00068 g0011 ports source_cluster_b5_n2 solo_s19_d6_after 0 4096 4096 0 2048 4 1 19 6
+g0011_solo_s18_d0_after_00069 g0011 ports source_cluster_b5_n2 solo_s18_d0_after 0 4096 4096 0 2048 4 1 18 0
+g0009_solo_s18_d0_before_00070 g0009 ports source_cpe_b5_n2 solo_s18_d0_before 0 4096 4096 0 2048 4 1 18 0
+g0009_solo_s18_d6_before_00071 g0009 ports source_cpe_b5_n2 solo_s18_d6_before 0 4096 4096 0 2048 4 1 18 6
+g0009_solo_s19_d6_before_00072 g0009 ports source_cpe_b5_n2 solo_s19_d6_before 0 4096 4096 0 2048 4 1 19 6
+g0009_control_00073 g0009 ports source_cpe_b5_n2 control 0 4096 4096 0 2048 4 2 18 0 19 6
+g0009_treatment_00074 g0009 ports source_cpe_b5_n2 treatment 0 4096 4096 0 2048 4 2 18 0 18 6
+g0009_treatment_00075 g0009 ports source_cpe_b5_n2 treatment 0 4096 4096 0 2048 4 2 18 0 18 6
+g0009_control_00076 g0009 ports source_cpe_b5_n2 control 0 4096 4096 0 2048 4 2 18 0 19 6
+g0009_solo_s19_d6_after_00077 g0009 ports source_cpe_b5_n2 solo_s19_d6_after 0 4096 4096 0 2048 4 1 19 6
+g0009_solo_s18_d6_after_00078 g0009 ports source_cpe_b5_n2 solo_s18_d6_after 0 4096 4096 0 2048 4 1 18 6
+g0009_solo_s18_d0_after_00079 g0009 ports source_cpe_b5_n2 solo_s18_d0_after 0 4096 4096 0 2048 4 1 18 0
+g0016_solo_s18_d34_before_00080 g0016 directions shared_edge_b5_b9 solo_s18_d34_before 0 4096 4096 0 2048 4 1 18 34
+g0016_solo_s19_d35_before_00081 g0016 directions shared_edge_b5_b9 solo_s19_d35_before 0 4096 4096 0 2048 4 1 19 35
+g0016_solo_s20_d36_before_00082 g0016 directions shared_edge_b5_b9 solo_s20_d36_before 0 4096 4096 0 2048 4 1 20 36
+g0016_treatment_00083 g0016 directions shared_edge_b5_b9 treatment 0 4096 4096 0 2048 4 2 18 34 19 35
+g0016_control_00084 g0016 directions shared_edge_b5_b9 control 0 4096 4096 0 2048 4 2 18 34 20 36
+g0016_control_00085 g0016 directions shared_edge_b5_b9 control 0 4096 4096 0 2048 4 2 18 34 20 36
+g0016_treatment_00086 g0016 directions shared_edge_b5_b9 treatment 0 4096 4096 0 2048 4 2 18 34 19 35
+g0016_solo_s20_d36_after_00087 g0016 directions shared_edge_b5_b9 solo_s20_d36_after 0 4096 4096 0 2048 4 1 20 36
+g0016_solo_s19_d35_after_00088 g0016 directions shared_edge_b5_b9 solo_s19_d35_after 0 4096 4096 0 2048 4 1 19 35
+g0016_solo_s18_d34_after_00089 g0016 directions shared_edge_b5_b9 solo_s18_d34_after 0 4096 4096 0 2048 4 1 18 34
+g0029_control_00090 g0029 routes p15_0_bg8_4_XY_forward_pb8 control 1 4096 8 8 2048 4 1 54 0
+g0029_treatment_00091 g0029 routes p15_0_bg8_4_XY_forward_pb8 treatment 1 4096 8 8 2048 4 2 54 0 32 16
+g0029_treatment_00092 g0029 routes p15_0_bg8_4_XY_forward_pb8 treatment 1 4096 8 8 2048 4 2 54 0 32 16
+g0029_control_00093 g0029 routes p15_0_bg8_4_XY_forward_pb8 control 1 4096 8 8 2048 4 1 54 0
+g0032_treatment_00094 g0032 routes p15_0_bg12_8_XY_forward_pb1024 treatment 1 4096 1024 8 2048 4 2 54 0 48 32
+g0032_control_00095 g0032 routes p15_0_bg12_8_XY_forward_pb1024 control 1 4096 1024 8 2048 4 1 54 0
+g0032_control_00096 g0032 routes p15_0_bg12_8_XY_forward_pb1024 control 1 4096 1024 8 2048 4 1 54 0
+g0032_treatment_00097 g0032 routes p15_0_bg12_8_XY_forward_pb1024 treatment 1 4096 1024 8 2048 4 2 54 0 48 32
+g0024_control_00098 g0024 routes p0_15_bg8_12_YX_forward_pb1024 control 1 4096 1024 8 2048 4 1 0 54
+g0024_treatment_00099 g0024 routes p0_15_bg8_12_YX_forward_pb1024 treatment 1 4096 1024 8 2048 4 2 0 54 32 48
+g0024_treatment_00100 g0024 routes p0_15_bg8_12_YX_forward_pb1024 treatment 1 4096 1024 8 2048 4 2 0 54 32 48
+g0024_control_00101 g0024 routes p0_15_bg8_12_YX_forward_pb1024 control 1 4096 1024 8 2048 4 1 0 54
+g0034_control_00102 g0034 routes p15_0_bg2_1_YX_forward_pb1024 control 1 4096 1024 8 2048 4 1 54 0
+g0034_treatment_00103 g0034 routes p15_0_bg2_1_YX_forward_pb1024 treatment 1 4096 1024 8 2048 4 2 54 0 4 2
+g0034_treatment_00104 g0034 routes p15_0_bg2_1_YX_forward_pb1024 treatment 1 4096 1024 8 2048 4 2 54 0 4 2
+g0034_control_00105 g0034 routes p15_0_bg2_1_YX_forward_pb1024 control 1 4096 1024 8 2048 4 1 54 0
+g0022_treatment_00106 g0022 routes p0_15_bg4_8_YX_forward_pb1024 treatment 1 4096 1024 8 2048 4 2 0 54 16 32
+g0022_control_00107 g0022 routes p0_15_bg4_8_YX_forward_pb1024 control 1 4096 1024 8 2048 4 1 0 54
+g0022_control_00108 g0022 routes p0_15_bg4_8_YX_forward_pb1024 control 1 4096 1024 8 2048 4 1 0 54
+g0022_treatment_00109 g0022 routes p0_15_bg4_8_YX_forward_pb1024 treatment 1 4096 1024 8 2048 4 2 0 54 16 32
+g0038_treatment_00110 g0038 routes p15_0_bg1_2_neither_forward_pb1024 treatment 1 4096 1024 8 2048 4 2 54 0 2 4
+g0038_control_00111 g0038 routes p15_0_bg1_2_neither_forward_pb1024 control 1 4096 1024 8 2048 4 1 54 0
+g0038_control_00112 g0038 routes p15_0_bg1_2_neither_forward_pb1024 control 1 4096 1024 8 2048 4 1 54 0
+g0038_treatment_00113 g0038 routes p15_0_bg1_2_neither_forward_pb1024 treatment 1 4096 1024 8 2048 4 2 54 0 2 4
+g0013_solo_s18_d20_before_00114 g0013 directions opposed_b5_b6 solo_s18_d20_before 0 4096 4096 0 2048 4 1 18 20
+g0013_solo_s19_d21_before_00115 g0013 directions opposed_b5_b6 solo_s19_d21_before 0 4096 4096 0 2048 4 1 19 21
+g0013_solo_s21_d19_before_00116 g0013 directions opposed_b5_b6 solo_s21_d19_before 0 4096 4096 0 2048 4 1 21 19
+g0013_control_00117 g0013 directions opposed_b5_b6 control 0 4096 4096 0 2048 4 2 18 20 19 21
+g0013_treatment_00118 g0013 directions opposed_b5_b6 treatment 0 4096 4096 0 2048 4 2 18 20 21 19
+g0013_treatment_00119 g0013 directions opposed_b5_b6 treatment 0 4096 4096 0 2048 4 2 18 20 21 19
+g0013_control_00120 g0013 directions opposed_b5_b6 control 0 4096 4096 0 2048 4 2 18 20 19 21
+g0013_solo_s21_d19_after_00121 g0013 directions opposed_b5_b6 solo_s21_d19_after 0 4096 4096 0 2048 4 1 21 19
+g0013_solo_s19_d21_after_00122 g0013 directions opposed_b5_b6 solo_s19_d21_after 0 4096 4096 0 2048 4 1 19 21
+g0013_solo_s18_d20_after_00123 g0013 directions opposed_b5_b6 solo_s18_d20_after 0 4096 4096 0 2048 4 1 18 20
+g0010_solo_s0_d18_before_00124 g0010 ports destination_cpe_b5_n2 solo_s0_d18_before 0 4096 4096 0 2048 4 1 0 18
+g0010_solo_s6_d18_before_00125 g0010 ports destination_cpe_b5_n2 solo_s6_d18_before 0 4096 4096 0 2048 4 1 6 18
+g0010_solo_s6_d19_before_00126 g0010 ports destination_cpe_b5_n2 solo_s6_d19_before 0 4096 4096 0 2048 4 1 6 19
+g0010_treatment_00127 g0010 ports destination_cpe_b5_n2 treatment 0 4096 4096 0 2048 4 2 0 18 6 18
+g0010_control_00128 g0010 ports destination_cpe_b5_n2 control 0 4096 4096 0 2048 4 2 0 18 6 19
+g0010_control_00129 g0010 ports destination_cpe_b5_n2 control 0 4096 4096 0 2048 4 2 0 18 6 19
+g0010_treatment_00130 g0010 ports destination_cpe_b5_n2 treatment 0 4096 4096 0 2048 4 2 0 18 6 18
+g0010_solo_s6_d19_after_00131 g0010 ports destination_cpe_b5_n2 solo_s6_d19_after 0 4096 4096 0 2048 4 1 6 19
+g0010_solo_s6_d18_after_00132 g0010 ports destination_cpe_b5_n2 solo_s6_d18_after 0 4096 4096 0 2048 4 1 6 18
+g0010_solo_s0_d18_after_00133 g0010 ports destination_cpe_b5_n2 solo_s0_d18_after 0 4096 4096 0 2048 4 1 0 18
+g0020_treatment_00134 g0020 routes p0_15_bg2_3_XY_forward_pb1024 treatment 1 4096 1024 8 2048 4 2 0 54 4 6
+g0020_control_00135 g0020 routes p0_15_bg2_3_XY_forward_pb1024 control 1 4096 1024 8 2048 4 1 0 54
+g0020_control_00136 g0020 routes p0_15_bg2_3_XY_forward_pb1024 control 1 4096 1024 8 2048 4 1 0 54
+g0020_treatment_00137 g0020 routes p0_15_bg2_3_XY_forward_pb1024 treatment 1 4096 1024 8 2048 4 2 0 54 4 6
+g0040_treatment_00138 g0040 routes p15_0_bg1_5_neither_forward_pb1024 treatment 1 4096 1024 8 2048 4 2 54 0 2 18
+g0040_control_00139 g0040 routes p15_0_bg1_5_neither_forward_pb1024 control 1 4096 1024 8 2048 4 1 54 0
+g0040_control_00140 g0040 routes p15_0_bg1_5_neither_forward_pb1024 control 1 4096 1024 8 2048 4 1 54 0
+g0040_treatment_00141 g0040 routes p15_0_bg1_5_neither_forward_pb1024 treatment 1 4096 1024 8 2048 4 2 54 0 2 18
+g0019_control_00142 g0019 routes p0_15_bg2_3_XY_forward_pb8 control 1 4096 8 8 2048 4 1 0 54
+g0019_treatment_00143 g0019 routes p0_15_bg2_3_XY_forward_pb8 treatment 1 4096 8 8 2048 4 2 0 54 4 6
+g0019_treatment_00144 g0019 routes p0_15_bg2_3_XY_forward_pb8 treatment 1 4096 8 8 2048 4 2 0 54 4 6
+g0019_control_00145 g0019 routes p0_15_bg2_3_XY_forward_pb8 control 1 4096 8 8 2048 4 1 0 54
+g0036_control_00146 g0036 routes p15_0_bg3_2_YX_forward_pb1024 control 1 4096 1024 8 2048 4 1 54 0
+g0036_treatment_00147 g0036 routes p15_0_bg3_2_YX_forward_pb1024 treatment 1 4096 1024 8 2048 4 2 54 0 6 4
+g0036_treatment_00148 g0036 routes p15_0_bg3_2_YX_forward_pb1024 treatment 1 4096 1024 8 2048 4 2 54 0 6 4
+g0036_control_00149 g0036 routes p15_0_bg3_2_YX_forward_pb1024 control 1 4096 1024 8 2048 4 1 54 0
+g0028_treatment_00150 g0028 routes p0_15_bg2_1_neither_forward_pb1024 treatment 1 4096 1024 8 2048 4 2 0 54 4 2
+g0028_control_00151 g0028 routes p0_15_bg2_1_neither_forward_pb1024 control 1 4096 1024 8 2048 4 1 0 54
+g0028_control_00152 g0028 routes p0_15_bg2_1_neither_forward_pb1024 control 1 4096 1024 8 2048 4 1 0 54
+g0028_treatment_00153 g0028 routes p0_15_bg2_1_neither_forward_pb1024 treatment 1 4096 1024 8 2048 4 2 0 54 4 2
+g0027_control_00154 g0027 routes p0_15_bg2_1_neither_forward_pb8 control 1 4096 8 8 2048 4 1 0 54
+g0027_treatment_00155 g0027 routes p0_15_bg2_1_neither_forward_pb8 treatment 1 4096 8 8 2048 4 2 0 54 4 2
+g0027_treatment_00156 g0027 routes p0_15_bg2_1_neither_forward_pb8 treatment 1 4096 8 8 2048 4 2 0 54 4 2
+g0027_control_00157 g0027 routes p0_15_bg2_1_neither_forward_pb8 control 1 4096 8 8 2048 4 1 0 54
+g0017_treatment_00158 g0017 routes p0_15_bg1_2_XY_forward_pb8 treatment 1 4096 8 8 2048 4 2 0 54 2 4
+g0017_control_00159 g0017 routes p0_15_bg1_2_XY_forward_pb8 control 1 4096 8 8 2048 4 1 0 54
+g0017_control_00160 g0017 routes p0_15_bg1_2_XY_forward_pb8 control 1 4096 8 8 2048 4 1 0 54
+g0017_treatment_00161 g0017 routes p0_15_bg1_2_XY_forward_pb8 treatment 1 4096 8 8 2048 4 2 0 54 2 4
+g0007_solo_s0_d63_before_00162 g0007 completion s0_d63_reply8 solo_s0_d63_before 0 1024 1024 0 2048 1 1 0 63
+g0007_control_00163 g0007 completion s0_d63_reply8 control 0 1024 1024 0 2048 1 1 0 63
+g0007_treatment_00164 g0007 completion s0_d63_reply8 treatment 1 1024 1024 8 2048 1 1 0 63
+g0007_treatment_00165 g0007 completion s0_d63_reply8 treatment 1 1024 1024 8 2048 1 1 0 63
+g0007_control_00166 g0007 completion s0_d63_reply8 control 0 1024 1024 0 2048 1 1 0 63
+g0007_solo_s0_d63_after_00167 g0007 completion s0_d63_reply8 solo_s0_d63_after 0 1024 1024 0 2048 1 1 0 63
+g0005_solo_s1_d2_before_00168 g0005 completion s1_d2_reply1024 solo_s1_d2_before 0 1024 1024 0 2048 1 1 1 2
+g0005_control_00169 g0005 completion s1_d2_reply1024 control 0 1024 1024 0 2048 1 1 1 2
+g0005_treatment_00170 g0005 completion s1_d2_reply1024 treatment 1 1024 1024 1024 2048 1 1 1 2
+g0005_treatment_00171 g0005 completion s1_d2_reply1024 treatment 1 1024 1024 1024 2048 1 1 1 2
+g0005_control_00172 g0005 completion s1_d2_reply1024 control 0 1024 1024 0 2048 1 1 1 2
+g0005_solo_s1_d2_after_00173 g0005 completion s1_d2_reply1024 solo_s1_d2_after 0 1024 1024 0 2048 1 1 1 2
+g0001_solo_s0_d1_before_00174 g0001 completion s0_d1_reply8 solo_s0_d1_before 0 1024 1024 0 2048 1 1 0 1
+g0001_treatment_00175 g0001 completion s0_d1_reply8 treatment 1 1024 1024 8 2048 1 1 0 1
+g0001_control_00176 g0001 completion s0_d1_reply8 control 0 1024 1024 0 2048 1 1 0 1
+g0001_control_00177 g0001 completion s0_d1_reply8 control 0 1024 1024 0 2048 1 1 0 1
+g0001_treatment_00178 g0001 completion s0_d1_reply8 treatment 1 1024 1024 8 2048 1 1 0 1
+g0001_solo_s0_d1_after_00179 g0001 completion s0_d1_reply8 solo_s0_d1_after 0 1024 1024 0 2048 1 1 0 1
+g0025_control_00180 g0025 routes p0_15_bg1_5_neither_forward_pb8 control 1 4096 8 8 2048 4 1 0 54
+g0025_treatment_00181 g0025 routes p0_15_bg1_5_neither_forward_pb8 treatment 1 4096 8 8 2048 4 2 0 54 2 18
+g0025_treatment_00182 g0025 routes p0_15_bg1_5_neither_forward_pb8 treatment 1 4096 8 8 2048 4 2 0 54 2 18
+g0025_control_00183 g0025 routes p0_15_bg1_5_neither_forward_pb8 control 1 4096 8 8 2048 4 1 0 54
+g0014_solo_s18_d20_before_00184 g0014 directions shared_edge_b5_b6 solo_s18_d20_before 0 4096 4096 0 2048 4 1 18 20
+g0014_solo_s19_d21_before_00185 g0014 directions shared_edge_b5_b6 solo_s19_d21_before 0 4096 4096 0 2048 4 1 19 21
+g0014_solo_s34_d36_before_00186 g0014 directions shared_edge_b5_b6 solo_s34_d36_before 0 4096 4096 0 2048 4 1 34 36
+g0014_control_00187 g0014 directions shared_edge_b5_b6 control 0 4096 4096 0 2048 4 2 18 20 34 36
+g0014_treatment_00188 g0014 directions shared_edge_b5_b6 treatment 0 4096 4096 0 2048 4 2 18 20 19 21
+g0014_treatment_00189 g0014 directions shared_edge_b5_b6 treatment 0 4096 4096 0 2048 4 2 18 20 19 21
+g0014_control_00190 g0014 directions shared_edge_b5_b6 control 0 4096 4096 0 2048 4 2 18 20 34 36
+g0014_solo_s34_d36_after_00191 g0014 directions shared_edge_b5_b6 solo_s34_d36_after 0 4096 4096 0 2048 4 1 34 36
+g0014_solo_s19_d21_after_00192 g0014 directions shared_edge_b5_b6 solo_s19_d21_after 0 4096 4096 0 2048 4 1 19 21
+g0014_solo_s18_d20_after_00193 g0014 directions shared_edge_b5_b6 solo_s18_d20_after 0 4096 4096 0 2048 4 1 18 20
+g0004_solo_s1_d2_before_00194 g0004 completion s1_d2_reply8 solo_s1_d2_before 0 1024 1024 0 2048 1 1 1 2
+g0004_treatment_00195 g0004 completion s1_d2_reply8 treatment 1 1024 1024 8 2048 1 1 1 2
+g0004_control_00196 g0004 completion s1_d2_reply8 control 0 1024 1024 0 2048 1 1 1 2
+g0004_control_00197 g0004 completion s1_d2_reply8 control 0 1024 1024 0 2048 1 1 1 2
+g0004_treatment_00198 g0004 completion s1_d2_reply8 treatment 1 1024 1024 8 2048 1 1 1 2
+g0004_solo_s1_d2_after_00199 g0004 completion s1_d2_reply8 solo_s1_d2_after 0 1024 1024 0 2048 1 1 1 2
+g0033_treatment_00200 g0033 routes p15_0_bg2_1_YX_forward_pb8 treatment 1 4096 8 8 2048 4 2 54 0 4 2
+g0033_control_00201 g0033 routes p15_0_bg2_1_YX_forward_pb8 control 1 4096 8 8 2048 4 1 54 0
+g0033_control_00202 g0033 routes p15_0_bg2_1_YX_forward_pb8 control 1 4096 8 8 2048 4 1 54 0
+g0033_treatment_00203 g0033 routes p15_0_bg2_1_YX_forward_pb8 treatment 1 4096 8 8 2048 4 2 54 0 4 2
+g0035_control_00204 g0035 routes p15_0_bg3_2_YX_forward_pb8 control 1 4096 8 8 2048 4 1 54 0
+g0035_treatment_00205 g0035 routes p15_0_bg3_2_YX_forward_pb8 treatment 1 4096 8 8 2048 4 2 54 0 6 4
+g0035_treatment_00206 g0035 routes p15_0_bg3_2_YX_forward_pb8 treatment 1 4096 8 8 2048 4 2 54 0 6 4
+g0035_control_00207 g0035 routes p15_0_bg3_2_YX_forward_pb8 control 1 4096 8 8 2048 4 1 54 0
+g0002_solo_s0_d1_before_00208 g0002 completion s0_d1_reply1024 solo_s0_d1_before 0 1024 1024 0 2048 1 1 0 1
+g0002_treatment_00209 g0002 completion s0_d1_reply1024 treatment 1 1024 1024 1024 2048 1 1 0 1
+g0002_control_00210 g0002 completion s0_d1_reply1024 control 0 1024 1024 0 2048 1 1 0 1
+g0002_control_00211 g0002 completion s0_d1_reply1024 control 0 1024 1024 0 2048 1 1 0 1
+g0002_treatment_00212 g0002 completion s0_d1_reply1024 treatment 1 1024 1024 1024 2048 1 1 0 1
+g0002_solo_s0_d1_after_00213 g0002 completion s0_d1_reply1024 solo_s0_d1_after 0 1024 1024 0 2048 1 1 0 1
+g0039_treatment_00214 g0039 routes p15_0_bg1_5_neither_forward_pb8 treatment 1 4096 8 8 2048 4 2 54 0 2 18
+g0039_control_00215 g0039 routes p15_0_bg1_5_neither_forward_pb8 control 1 4096 8 8 2048 4 1 54 0
+g0039_control_00216 g0039 routes p15_0_bg1_5_neither_forward_pb8 control 1 4096 8 8 2048 4 1 54 0
+g0039_treatment_00217 g0039 routes p15_0_bg1_5_neither_forward_pb8 treatment 1 4096 8 8 2048 4 2 54 0 2 18
+g0003_solo_s1_d2_before_00218 g0003 completion s1_d2_reply8 solo_s1_d2_before 0 8 8 0 2048 1 1 1 2
+g0003_treatment_00219 g0003 completion s1_d2_reply8 treatment 1 8 8 8 2048 1 1 1 2
+g0003_control_00220 g0003 completion s1_d2_reply8 control 0 8 8 0 2048 1 1 1 2
+g0003_control_00221 g0003 completion s1_d2_reply8 control 0 8 8 0 2048 1 1 1 2
+g0003_treatment_00222 g0003 completion s1_d2_reply8 treatment 1 8 8 8 2048 1 1 1 2
+g0003_solo_s1_d2_after_00223 g0003 completion s1_d2_reply8 solo_s1_d2_after 0 8 8 0 2048 1 1 1 2
+g0000_solo_s0_d1_before_00224 g0000 completion s0_d1_reply8 solo_s0_d1_before 0 8 8 0 2048 1 1 0 1
+g0000_control_00225 g0000 completion s0_d1_reply8 control 0 8 8 0 2048 1 1 0 1
+g0000_treatment_00226 g0000 completion s0_d1_reply8 treatment 1 8 8 8 2048 1 1 0 1
+g0000_treatment_00227 g0000 completion s0_d1_reply8 treatment 1 8 8 8 2048 1 1 0 1
+g0000_control_00228 g0000 completion s0_d1_reply8 control 0 8 8 0 2048 1 1 0 1
+g0000_solo_s0_d1_after_00229 g0000 completion s0_d1_reply8 solo_s0_d1_after 0 8 8 0 2048 1 1 0 1
+g0026_treatment_00230 g0026 routes p0_15_bg1_5_neither_forward_pb1024 treatment 1 4096 1024 8 2048 4 2 0 54 2 18
+g0026_control_00231 g0026 routes p0_15_bg1_5_neither_forward_pb1024 control 1 4096 1024 8 2048 4 1 0 54
+g0026_control_00232 g0026 routes p0_15_bg1_5_neither_forward_pb1024 control 1 4096 1024 8 2048 4 1 0 54
+g0026_treatment_00233 g0026 routes p0_15_bg1_5_neither_forward_pb1024 treatment 1 4096 1024 8 2048 4 2 0 54 2 18

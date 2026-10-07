@@ -1,0 +1,472 @@
+Job <8452887> has been submitted to queue <q_share>
+waiting for dispatch ...
+TOPO_CASE 1 g0028_treatment_00000 mode=1 bytes=4096 probe=1024 reply=8 window=4 flows=2
+TOPO_RETURN g0028_treatment_00000
+TOPO_CASE 2 g0028_control_00001 mode=1 bytes=4096 probe=1024 reply=8 window=4 flows=1
+TOPO_RETURN g0028_control_00001
+TOPO_CASE 3 g0028_control_00002 mode=1 bytes=4096 probe=1024 reply=8 window=4 flows=1
+TOPO_RETURN g0028_control_00002
+TOPO_CASE 4 g0028_treatment_00003 mode=1 bytes=4096 probe=1024 reply=8 window=4 flows=2
+TOPO_RETURN g0028_treatment_00003
+TOPO_CASE 5 g0007_solo_s0_d63_before_00004 mode=0 bytes=1024 probe=1024 reply=0 window=1 flows=1
+TOPO_RETURN g0007_solo_s0_d63_before_00004
+TOPO_CASE 6 g0007_control_00005 mode=0 bytes=1024 probe=1024 reply=0 window=1 flows=1
+TOPO_RETURN g0007_control_00005
+TOPO_CASE 7 g0007_treatment_00006 mode=1 bytes=1024 probe=1024 reply=8 window=1 flows=1
+TOPO_RETURN g0007_treatment_00006
+TOPO_CASE 8 g0007_treatment_00007 mode=1 bytes=1024 probe=1024 reply=8 window=1 flows=1
+TOPO_RETURN g0007_treatment_00007
+TOPO_CASE 9 g0007_control_00008 mode=0 bytes=1024 probe=1024 reply=0 window=1 flows=1
+TOPO_RETURN g0007_control_00008
+TOPO_CASE 10 g0007_solo_s0_d63_after_00009 mode=0 bytes=1024 probe=1024 reply=0 window=1 flows=1
+TOPO_RETURN g0007_solo_s0_d63_after_00009
+TOPO_CASE 11 g0008_solo_s0_d63_before_00010 mode=0 bytes=1024 probe=1024 reply=0 window=1 flows=1
+TOPO_RETURN g0008_solo_s0_d63_before_00010
+TOPO_CASE 12 g0008_treatment_00011 mode=1 bytes=1024 probe=1024 reply=1024 window=1 flows=1
+TOPO_RETURN g0008_treatment_00011
+TOPO_CASE 13 g0008_control_00012 mode=0 bytes=1024 probe=1024 reply=0 window=1 flows=1
+TOPO_RETURN g0008_control_00012
+TOPO_CASE 14 g0008_control_00013 mode=0 bytes=1024 probe=1024 reply=0 window=1 flows=1
+TOPO_RETURN g0008_control_00013
+TOPO_CASE 15 g0008_treatment_00014 mode=1 bytes=1024 probe=1024 reply=1024 window=1 flows=1
+TOPO_RETURN g0008_treatment_00014
+TOPO_CASE 16 g0008_solo_s0_d63_after_00015 mode=0 bytes=1024 probe=1024 reply=0 window=1 flows=1
+TOPO_RETURN g0008_solo_s0_d63_after_00015
+TOPO_CASE 17 g0015_solo_s18_d34_before_00016 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=1
+TOPO_RETURN g0015_solo_s18_d34_before_00016
+TOPO_CASE 18 g0015_solo_s19_d35_before_00017 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=1
+TOPO_RETURN g0015_solo_s19_d35_before_00017
+TOPO_CASE 19 g0015_solo_s35_d19_before_00018 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=1
+TOPO_RETURN g0015_solo_s35_d19_before_00018
+TOPO_CASE 20 g0015_control_00019 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=2
+TOPO_RETURN g0015_control_00019
+TOPO_CASE 21 g0015_treatment_00020 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=2
+TOPO_RETURN g0015_treatment_00020
+TOPO_CASE 22 g0015_treatment_00021 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=2
+TOPO_RETURN g0015_treatment_00021
+TOPO_CASE 23 g0015_control_00022 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=2
+TOPO_RETURN g0015_control_00022
+TOPO_CASE 24 g0015_solo_s35_d19_after_00023 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=1
+TOPO_RETURN g0015_solo_s35_d19_after_00023
+TOPO_CASE 25 g0015_solo_s19_d35_after_00024 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=1
+TOPO_RETURN g0015_solo_s19_d35_after_00024
+TOPO_CASE 26 g0015_solo_s18_d34_after_00025 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=1
+TOPO_RETURN g0015_solo_s18_d34_after_00025
+TOPO_CASE 27 g0017_treatment_00026 mode=1 bytes=4096 probe=8 reply=8 window=4 flows=2
+TOPO_RETURN g0017_treatment_00026
+TOPO_CASE 28 g0017_control_00027 mode=1 bytes=4096 probe=8 reply=8 window=4 flows=1
+TOPO_RETURN g0017_control_00027
+TOPO_CASE 29 g0017_control_00028 mode=1 bytes=4096 probe=8 reply=8 window=4 flows=1
+TOPO_RETURN g0017_control_00028
+TOPO_CASE 30 g0017_treatment_00029 mode=1 bytes=4096 probe=8 reply=8 window=4 flows=2
+TOPO_RETURN g0017_treatment_00029
+TOPO_CASE 31 g0003_solo_s1_d2_before_00030 mode=0 bytes=8 probe=8 reply=0 window=1 flows=1
+TOPO_RETURN g0003_solo_s1_d2_before_00030
+TOPO_CASE 32 g0003_treatment_00031 mode=1 bytes=8 probe=8 reply=8 window=1 flows=1
+TOPO_RETURN g0003_treatment_00031
+TOPO_CASE 33 g0003_control_00032 mode=0 bytes=8 probe=8 reply=0 window=1 flows=1
+TOPO_RETURN g0003_control_00032
+TOPO_CASE 34 g0003_control_00033 mode=0 bytes=8 probe=8 reply=0 window=1 flows=1
+TOPO_RETURN g0003_control_00033
+TOPO_CASE 35 g0003_treatment_00034 mode=1 bytes=8 probe=8 reply=8 window=1 flows=1
+TOPO_RETURN g0003_treatment_00034
+TOPO_CASE 36 g0003_solo_s1_d2_after_00035 mode=0 bytes=8 probe=8 reply=0 window=1 flows=1
+TOPO_RETURN g0003_solo_s1_d2_after_00035
+TOPO_CASE 37 g0038_treatment_00036 mode=1 bytes=4096 probe=1024 reply=8 window=4 flows=2
+TOPO_RETURN g0038_treatment_00036
+TOPO_CASE 38 g0038_control_00037 mode=1 bytes=4096 probe=1024 reply=8 window=4 flows=1
+TOPO_RETURN g0038_control_00037
+TOPO_CASE 39 g0038_control_00038 mode=1 bytes=4096 probe=1024 reply=8 window=4 flows=1
+TOPO_RETURN g0038_control_00038
+TOPO_CASE 40 g0038_treatment_00039 mode=1 bytes=4096 probe=1024 reply=8 window=4 flows=2
+TOPO_RETURN g0038_treatment_00039
+TOPO_CASE 41 g0034_control_00040 mode=1 bytes=4096 probe=1024 reply=8 window=4 flows=1
+TOPO_RETURN g0034_control_00040
+TOPO_CASE 42 g0034_treatment_00041 mode=1 bytes=4096 probe=1024 reply=8 window=4 flows=2
+TOPO_RETURN g0034_treatment_00041
+TOPO_CASE 43 g0034_treatment_00042 mode=1 bytes=4096 probe=1024 reply=8 window=4 flows=2
+TOPO_RETURN g0034_treatment_00042
+TOPO_CASE 44 g0034_control_00043 mode=1 bytes=4096 probe=1024 reply=8 window=4 flows=1
+TOPO_RETURN g0034_control_00043
+TOPO_CASE 45 g0023_control_00044 mode=1 bytes=4096 probe=8 reply=8 window=4 flows=1
+TOPO_RETURN g0023_control_00044
+TOPO_CASE 46 g0023_treatment_00045 mode=1 bytes=4096 probe=8 reply=8 window=4 flows=2
+TOPO_RETURN g0023_treatment_00045
+TOPO_CASE 47 g0023_treatment_00046 mode=1 bytes=4096 probe=8 reply=8 window=4 flows=2
+TOPO_RETURN g0023_treatment_00046
+TOPO_CASE 48 g0023_control_00047 mode=1 bytes=4096 probe=8 reply=8 window=4 flows=1
+TOPO_RETURN g0023_control_00047
+TOPO_CASE 49 g0026_control_00048 mode=1 bytes=4096 probe=1024 reply=8 window=4 flows=1
+TOPO_RETURN g0026_control_00048
+TOPO_CASE 50 g0026_treatment_00049 mode=1 bytes=4096 probe=1024 reply=8 window=4 flows=2
+TOPO_RETURN g0026_treatment_00049
+TOPO_CASE 51 g0026_treatment_00050 mode=1 bytes=4096 probe=1024 reply=8 window=4 flows=2
+TOPO_RETURN g0026_treatment_00050
+TOPO_CASE 52 g0026_control_00051 mode=1 bytes=4096 probe=1024 reply=8 window=4 flows=1
+TOPO_RETURN g0026_control_00051
+TOPO_CASE 53 g0036_treatment_00052 mode=1 bytes=4096 probe=1024 reply=8 window=4 flows=2
+TOPO_RETURN g0036_treatment_00052
+TOPO_CASE 54 g0036_control_00053 mode=1 bytes=4096 probe=1024 reply=8 window=4 flows=1
+TOPO_RETURN g0036_control_00053
+TOPO_CASE 55 g0036_control_00054 mode=1 bytes=4096 probe=1024 reply=8 window=4 flows=1
+TOPO_RETURN g0036_control_00054
+TOPO_CASE 56 g0036_treatment_00055 mode=1 bytes=4096 probe=1024 reply=8 window=4 flows=2
+TOPO_RETURN g0036_treatment_00055
+TOPO_CASE 57 g0013_solo_s18_d20_before_00056 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=1
+TOPO_RETURN g0013_solo_s18_d20_before_00056
+TOPO_CASE 58 g0013_solo_s19_d21_before_00057 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=1
+TOPO_RETURN g0013_solo_s19_d21_before_00057
+TOPO_CASE 59 g0013_solo_s21_d19_before_00058 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=1
+TOPO_RETURN g0013_solo_s21_d19_before_00058
+TOPO_CASE 60 g0013_control_00059 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=2
+TOPO_RETURN g0013_control_00059
+TOPO_CASE 61 g0013_treatment_00060 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=2
+TOPO_RETURN g0013_treatment_00060
+TOPO_CASE 62 g0013_treatment_00061 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=2
+TOPO_RETURN g0013_treatment_00061
+TOPO_CASE 63 g0013_control_00062 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=2
+TOPO_RETURN g0013_control_00062
+TOPO_CASE 64 g0013_solo_s21_d19_after_00063 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=1
+TOPO_RETURN g0013_solo_s21_d19_after_00063
+TOPO_CASE 65 g0013_solo_s19_d21_after_00064 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=1
+TOPO_RETURN g0013_solo_s19_d21_after_00064
+TOPO_CASE 66 g0013_solo_s18_d20_after_00065 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=1
+TOPO_RETURN g0013_solo_s18_d20_after_00065
+TOPO_CASE 67 g0029_control_00066 mode=1 bytes=4096 probe=8 reply=8 window=4 flows=1
+TOPO_RETURN g0029_control_00066
+TOPO_CASE 68 g0029_treatment_00067 mode=1 bytes=4096 probe=8 reply=8 window=4 flows=2
+TOPO_RETURN g0029_treatment_00067
+TOPO_CASE 69 g0029_treatment_00068 mode=1 bytes=4096 probe=8 reply=8 window=4 flows=2
+TOPO_RETURN g0029_treatment_00068
+TOPO_CASE 70 g0029_control_00069 mode=1 bytes=4096 probe=8 reply=8 window=4 flows=1
+TOPO_RETURN g0029_control_00069
+TOPO_CASE 71 g0001_solo_s0_d1_before_00070 mode=0 bytes=1024 probe=1024 reply=0 window=1 flows=1
+TOPO_RETURN g0001_solo_s0_d1_before_00070
+TOPO_CASE 72 g0001_treatment_00071 mode=1 bytes=1024 probe=1024 reply=8 window=1 flows=1
+TOPO_RETURN g0001_treatment_00071
+TOPO_CASE 73 g0001_control_00072 mode=0 bytes=1024 probe=1024 reply=0 window=1 flows=1
+TOPO_RETURN g0001_control_00072
+TOPO_CASE 74 g0001_control_00073 mode=0 bytes=1024 probe=1024 reply=0 window=1 flows=1
+TOPO_RETURN g0001_control_00073
+TOPO_CASE 75 g0001_treatment_00074 mode=1 bytes=1024 probe=1024 reply=8 window=1 flows=1
+TOPO_RETURN g0001_treatment_00074
+TOPO_CASE 76 g0001_solo_s0_d1_after_00075 mode=0 bytes=1024 probe=1024 reply=0 window=1 flows=1
+TOPO_RETURN g0001_solo_s0_d1_after_00075
+TOPO_CASE 77 g0004_solo_s1_d2_before_00076 mode=0 bytes=1024 probe=1024 reply=0 window=1 flows=1
+TOPO_RETURN g0004_solo_s1_d2_before_00076
+TOPO_CASE 78 g0004_control_00077 mode=0 bytes=1024 probe=1024 reply=0 window=1 flows=1
+TOPO_RETURN g0004_control_00077
+TOPO_CASE 79 g0004_treatment_00078 mode=1 bytes=1024 probe=1024 reply=8 window=1 flows=1
+TOPO_RETURN g0004_treatment_00078
+TOPO_CASE 80 g0004_treatment_00079 mode=1 bytes=1024 probe=1024 reply=8 window=1 flows=1
+TOPO_RETURN g0004_treatment_00079
+TOPO_CASE 81 g0004_control_00080 mode=0 bytes=1024 probe=1024 reply=0 window=1 flows=1
+TOPO_RETURN g0004_control_00080
+TOPO_CASE 82 g0004_solo_s1_d2_after_00081 mode=0 bytes=1024 probe=1024 reply=0 window=1 flows=1
+TOPO_RETURN g0004_solo_s1_d2_after_00081
+TOPO_CASE 83 g0033_treatment_00082 mode=1 bytes=4096 probe=8 reply=8 window=4 flows=2
+TOPO_RETURN g0033_treatment_00082
+TOPO_CASE 84 g0033_control_00083 mode=1 bytes=4096 probe=8 reply=8 window=4 flows=1
+TOPO_RETURN g0033_control_00083
+TOPO_CASE 85 g0033_control_00084 mode=1 bytes=4096 probe=8 reply=8 window=4 flows=1
+TOPO_RETURN g0033_control_00084
+TOPO_CASE 86 g0033_treatment_00085 mode=1 bytes=4096 probe=8 reply=8 window=4 flows=2
+TOPO_RETURN g0033_treatment_00085
+TOPO_CASE 87 g0031_control_00086 mode=1 bytes=4096 probe=8 reply=8 window=4 flows=1
+TOPO_RETURN g0031_control_00086
+TOPO_CASE 88 g0031_treatment_00087 mode=1 bytes=4096 probe=8 reply=8 window=4 flows=2
+TOPO_RETURN g0031_treatment_00087
+TOPO_CASE 89 g0031_treatment_00088 mode=1 bytes=4096 probe=8 reply=8 window=4 flows=2
+TOPO_RETURN g0031_treatment_00088
+TOPO_CASE 90 g0031_control_00089 mode=1 bytes=4096 probe=8 reply=8 window=4 flows=1
+TOPO_RETURN g0031_control_00089
+TOPO_CASE 91 g0006_solo_s0_d63_before_00090 mode=0 bytes=8 probe=8 reply=0 window=1 flows=1
+TOPO_RETURN g0006_solo_s0_d63_before_00090
+TOPO_CASE 92 g0006_control_00091 mode=0 bytes=8 probe=8 reply=0 window=1 flows=1
+TOPO_RETURN g0006_control_00091
+TOPO_CASE 93 g0006_treatment_00092 mode=1 bytes=8 probe=8 reply=8 window=1 flows=1
+TOPO_RETURN g0006_treatment_00092
+TOPO_CASE 94 g0006_treatment_00093 mode=1 bytes=8 probe=8 reply=8 window=1 flows=1
+TOPO_RETURN g0006_treatment_00093
+TOPO_CASE 95 g0006_control_00094 mode=0 bytes=8 probe=8 reply=0 window=1 flows=1
+TOPO_RETURN g0006_control_00094
+TOPO_CASE 96 g0006_solo_s0_d63_after_00095 mode=0 bytes=8 probe=8 reply=0 window=1 flows=1
+TOPO_RETURN g0006_solo_s0_d63_after_00095
+TOPO_CASE 97 g0030_control_00096 mode=1 bytes=4096 probe=1024 reply=8 window=4 flows=1
+TOPO_RETURN g0030_control_00096
+TOPO_CASE 98 g0030_treatment_00097 mode=1 bytes=4096 probe=1024 reply=8 window=4 flows=2
+TOPO_RETURN g0030_treatment_00097
+TOPO_CASE 99 g0030_treatment_00098 mode=1 bytes=4096 probe=1024 reply=8 window=4 flows=2
+TOPO_RETURN g0030_treatment_00098
+TOPO_CASE 100 g0030_control_00099 mode=1 bytes=4096 probe=1024 reply=8 window=4 flows=1
+TOPO_RETURN g0030_control_00099
+TOPO_CASE 101 g0019_treatment_00100 mode=1 bytes=4096 probe=8 reply=8 window=4 flows=2
+TOPO_RETURN g0019_treatment_00100
+TOPO_CASE 102 g0019_control_00101 mode=1 bytes=4096 probe=8 reply=8 window=4 flows=1
+TOPO_RETURN g0019_control_00101
+TOPO_CASE 103 g0019_control_00102 mode=1 bytes=4096 probe=8 reply=8 window=4 flows=1
+TOPO_RETURN g0019_control_00102
+TOPO_CASE 104 g0019_treatment_00103 mode=1 bytes=4096 probe=8 reply=8 window=4 flows=2
+TOPO_RETURN g0019_treatment_00103
+TOPO_CASE 105 g0027_treatment_00104 mode=1 bytes=4096 probe=8 reply=8 window=4 flows=2
+TOPO_RETURN g0027_treatment_00104
+TOPO_CASE 106 g0027_control_00105 mode=1 bytes=4096 probe=8 reply=8 window=4 flows=1
+TOPO_RETURN g0027_control_00105
+TOPO_CASE 107 g0027_control_00106 mode=1 bytes=4096 probe=8 reply=8 window=4 flows=1
+TOPO_RETURN g0027_control_00106
+TOPO_CASE 108 g0027_treatment_00107 mode=1 bytes=4096 probe=8 reply=8 window=4 flows=2
+TOPO_RETURN g0027_treatment_00107
+TOPO_CASE 109 g0010_solo_s0_d18_before_00108 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=1
+TOPO_RETURN g0010_solo_s0_d18_before_00108
+TOPO_CASE 110 g0010_solo_s6_d18_before_00109 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=1
+TOPO_RETURN g0010_solo_s6_d18_before_00109
+TOPO_CASE 111 g0010_solo_s6_d19_before_00110 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=1
+TOPO_RETURN g0010_solo_s6_d19_before_00110
+TOPO_CASE 112 g0010_treatment_00111 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=2
+TOPO_RETURN g0010_treatment_00111
+TOPO_CASE 113 g0010_control_00112 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=2
+TOPO_RETURN g0010_control_00112
+TOPO_CASE 114 g0010_control_00113 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=2
+TOPO_RETURN g0010_control_00113
+TOPO_CASE 115 g0010_treatment_00114 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=2
+TOPO_RETURN g0010_treatment_00114
+TOPO_CASE 116 g0010_solo_s6_d19_after_00115 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=1
+TOPO_RETURN g0010_solo_s6_d19_after_00115
+TOPO_CASE 117 g0010_solo_s6_d18_after_00116 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=1
+TOPO_RETURN g0010_solo_s6_d18_after_00116
+TOPO_CASE 118 g0010_solo_s0_d18_after_00117 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=1
+TOPO_RETURN g0010_solo_s0_d18_after_00117
+TOPO_CASE 119 g0009_solo_s18_d0_before_00118 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=1
+TOPO_RETURN g0009_solo_s18_d0_before_00118
+TOPO_CASE 120 g0009_solo_s18_d6_before_00119 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=1
+TOPO_RETURN g0009_solo_s18_d6_before_00119
+TOPO_CASE 121 g0009_solo_s19_d6_before_00120 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=1
+TOPO_RETURN g0009_solo_s19_d6_before_00120
+TOPO_CASE 122 g0009_control_00121 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=2
+TOPO_RETURN g0009_control_00121
+TOPO_CASE 123 g0009_treatment_00122 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=2
+TOPO_RETURN g0009_treatment_00122
+TOPO_CASE 124 g0009_treatment_00123 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=2
+TOPO_RETURN g0009_treatment_00123
+TOPO_CASE 125 g0009_control_00124 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=2
+TOPO_RETURN g0009_control_00124
+TOPO_CASE 126 g0009_solo_s19_d6_after_00125 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=1
+TOPO_RETURN g0009_solo_s19_d6_after_00125
+TOPO_CASE 127 g0009_solo_s18_d6_after_00126 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=1
+TOPO_RETURN g0009_solo_s18_d6_after_00126
+TOPO_CASE 128 g0009_solo_s18_d0_after_00127 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=1
+TOPO_RETURN g0009_solo_s18_d0_after_00127
+TOPO_CASE 129 g0032_treatment_00128 mode=1 bytes=4096 probe=1024 reply=8 window=4 flows=2
+TOPO_RETURN g0032_treatment_00128
+TOPO_CASE 130 g0032_control_00129 mode=1 bytes=4096 probe=1024 reply=8 window=4 flows=1
+TOPO_RETURN g0032_control_00129
+TOPO_CASE 131 g0032_control_00130 mode=1 bytes=4096 probe=1024 reply=8 window=4 flows=1
+TOPO_RETURN g0032_control_00130
+TOPO_CASE 132 g0032_treatment_00131 mode=1 bytes=4096 probe=1024 reply=8 window=4 flows=2
+TOPO_RETURN g0032_treatment_00131
+TOPO_CASE 133 g0018_control_00132 mode=1 bytes=4096 probe=1024 reply=8 window=4 flows=1
+TOPO_RETURN g0018_control_00132
+TOPO_CASE 134 g0018_treatment_00133 mode=1 bytes=4096 probe=1024 reply=8 window=4 flows=2
+TOPO_RETURN g0018_treatment_00133
+TOPO_CASE 135 g0018_treatment_00134 mode=1 bytes=4096 probe=1024 reply=8 window=4 flows=2
+TOPO_RETURN g0018_treatment_00134
+TOPO_CASE 136 g0018_control_00135 mode=1 bytes=4096 probe=1024 reply=8 window=4 flows=1
+TOPO_RETURN g0018_control_00135
+TOPO_CASE 137 g0035_control_00136 mode=1 bytes=4096 probe=8 reply=8 window=4 flows=1
+TOPO_RETURN g0035_control_00136
+TOPO_CASE 138 g0035_treatment_00137 mode=1 bytes=4096 probe=8 reply=8 window=4 flows=2
+TOPO_RETURN g0035_treatment_00137
+TOPO_CASE 139 g0035_treatment_00138 mode=1 bytes=4096 probe=8 reply=8 window=4 flows=2
+TOPO_RETURN g0035_treatment_00138
+TOPO_CASE 140 g0035_control_00139 mode=1 bytes=4096 probe=8 reply=8 window=4 flows=1
+TOPO_RETURN g0035_control_00139
+TOPO_CASE 141 g0000_solo_s0_d1_before_00140 mode=0 bytes=8 probe=8 reply=0 window=1 flows=1
+TOPO_RETURN g0000_solo_s0_d1_before_00140
+TOPO_CASE 142 g0000_control_00141 mode=0 bytes=8 probe=8 reply=0 window=1 flows=1
+TOPO_RETURN g0000_control_00141
+TOPO_CASE 143 g0000_treatment_00142 mode=1 bytes=8 probe=8 reply=8 window=1 flows=1
+TOPO_RETURN g0000_treatment_00142
+TOPO_CASE 144 g0000_treatment_00143 mode=1 bytes=8 probe=8 reply=8 window=1 flows=1
+TOPO_RETURN g0000_treatment_00143
+TOPO_CASE 145 g0000_control_00144 mode=0 bytes=8 probe=8 reply=0 window=1 flows=1
+TOPO_RETURN g0000_control_00144
+TOPO_CASE 146 g0000_solo_s0_d1_after_00145 mode=0 bytes=8 probe=8 reply=0 window=1 flows=1
+TOPO_RETURN g0000_solo_s0_d1_after_00145
+TOPO_CASE 147 g0039_treatment_00146 mode=1 bytes=4096 probe=8 reply=8 window=4 flows=2
+TOPO_RETURN g0039_treatment_00146
+TOPO_CASE 148 g0039_control_00147 mode=1 bytes=4096 probe=8 reply=8 window=4 flows=1
+TOPO_RETURN g0039_control_00147
+TOPO_CASE 149 g0039_control_00148 mode=1 bytes=4096 probe=8 reply=8 window=4 flows=1
+TOPO_RETURN g0039_control_00148
+TOPO_CASE 150 g0039_treatment_00149 mode=1 bytes=4096 probe=8 reply=8 window=4 flows=2
+TOPO_RETURN g0039_treatment_00149
+TOPO_CASE 151 g0024_treatment_00150 mode=1 bytes=4096 probe=1024 reply=8 window=4 flows=2
+TOPO_RETURN g0024_treatment_00150
+TOPO_CASE 152 g0024_control_00151 mode=1 bytes=4096 probe=1024 reply=8 window=4 flows=1
+TOPO_RETURN g0024_control_00151
+TOPO_CASE 153 g0024_control_00152 mode=1 bytes=4096 probe=1024 reply=8 window=4 flows=1
+TOPO_RETURN g0024_control_00152
+TOPO_CASE 154 g0024_treatment_00153 mode=1 bytes=4096 probe=1024 reply=8 window=4 flows=2
+TOPO_RETURN g0024_treatment_00153
+TOPO_CASE 155 g0012_solo_s0_d18_before_00154 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=1
+TOPO_RETURN g0012_solo_s0_d18_before_00154
+TOPO_CASE 156 g0012_solo_s0_d20_before_00155 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=1
+TOPO_RETURN g0012_solo_s0_d20_before_00155
+TOPO_CASE 157 g0012_solo_s6_d19_before_00156 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=1
+TOPO_RETURN g0012_solo_s6_d19_before_00156
+TOPO_CASE 158 g0012_solo_s6_d22_before_00157 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=1
+TOPO_RETURN g0012_solo_s6_d22_before_00157
+TOPO_CASE 159 g0012_control_00158 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=2
+TOPO_RETURN g0012_control_00158
+TOPO_CASE 160 g0012_treatment_00159 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=2
+TOPO_RETURN g0012_treatment_00159
+TOPO_CASE 161 g0012_treatment_00160 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=2
+TOPO_RETURN g0012_treatment_00160
+TOPO_CASE 162 g0012_control_00161 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=2
+TOPO_RETURN g0012_control_00161
+TOPO_CASE 163 g0012_solo_s6_d22_after_00162 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=1
+TOPO_RETURN g0012_solo_s6_d22_after_00162
+TOPO_CASE 164 g0012_solo_s6_d19_after_00163 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=1
+TOPO_RETURN g0012_solo_s6_d19_after_00163
+TOPO_CASE 165 g0012_solo_s0_d20_after_00164 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=1
+TOPO_RETURN g0012_solo_s0_d20_after_00164
+TOPO_CASE 166 g0012_solo_s0_d18_after_00165 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=1
+TOPO_RETURN g0012_solo_s0_d18_after_00165
+TOPO_CASE 167 g0005_solo_s1_d2_before_00166 mode=0 bytes=1024 probe=1024 reply=0 window=1 flows=1
+TOPO_RETURN g0005_solo_s1_d2_before_00166
+TOPO_CASE 168 g0005_control_00167 mode=0 bytes=1024 probe=1024 reply=0 window=1 flows=1
+TOPO_RETURN g0005_control_00167
+TOPO_CASE 169 g0005_treatment_00168 mode=1 bytes=1024 probe=1024 reply=1024 window=1 flows=1
+TOPO_RETURN g0005_treatment_00168
+TOPO_CASE 170 g0005_treatment_00169 mode=1 bytes=1024 probe=1024 reply=1024 window=1 flows=1
+TOPO_RETURN g0005_treatment_00169
+TOPO_CASE 171 g0005_control_00170 mode=0 bytes=1024 probe=1024 reply=0 window=1 flows=1
+TOPO_RETURN g0005_control_00170
+TOPO_CASE 172 g0005_solo_s1_d2_after_00171 mode=0 bytes=1024 probe=1024 reply=0 window=1 flows=1
+TOPO_RETURN g0005_solo_s1_d2_after_00171
+TOPO_CASE 173 g0011_solo_s18_d0_before_00172 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=1
+TOPO_RETURN g0011_solo_s18_d0_before_00172
+TOPO_CASE 174 g0011_solo_s19_d6_before_00173 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=1
+TOPO_RETURN g0011_solo_s19_d6_before_00173
+TOPO_CASE 175 g0011_solo_s20_d0_before_00174 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=1
+TOPO_RETURN g0011_solo_s20_d0_before_00174
+TOPO_CASE 176 g0011_solo_s22_d6_before_00175 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=1
+TOPO_RETURN g0011_solo_s22_d6_before_00175
+TOPO_CASE 177 g0011_control_00176 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=2
+TOPO_RETURN g0011_control_00176
+TOPO_CASE 178 g0011_treatment_00177 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=2
+TOPO_RETURN g0011_treatment_00177
+TOPO_CASE 179 g0011_treatment_00178 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=2
+TOPO_RETURN g0011_treatment_00178
+TOPO_CASE 180 g0011_control_00179 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=2
+TOPO_RETURN g0011_control_00179
+TOPO_CASE 181 g0011_solo_s22_d6_after_00180 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=1
+TOPO_RETURN g0011_solo_s22_d6_after_00180
+TOPO_CASE 182 g0011_solo_s20_d0_after_00181 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=1
+TOPO_RETURN g0011_solo_s20_d0_after_00181
+TOPO_CASE 183 g0011_solo_s19_d6_after_00182 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=1
+TOPO_RETURN g0011_solo_s19_d6_after_00182
+TOPO_CASE 184 g0011_solo_s18_d0_after_00183 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=1
+TOPO_RETURN g0011_solo_s18_d0_after_00183
+TOPO_CASE 185 g0037_treatment_00184 mode=1 bytes=4096 probe=8 reply=8 window=4 flows=2
+TOPO_RETURN g0037_treatment_00184
+TOPO_CASE 186 g0037_control_00185 mode=1 bytes=4096 probe=8 reply=8 window=4 flows=1
+TOPO_RETURN g0037_control_00185
+TOPO_CASE 187 g0037_control_00186 mode=1 bytes=4096 probe=8 reply=8 window=4 flows=1
+TOPO_RETURN g0037_control_00186
+TOPO_CASE 188 g0037_treatment_00187 mode=1 bytes=4096 probe=8 reply=8 window=4 flows=2
+TOPO_RETURN g0037_treatment_00187
+TOPO_CASE 189 g0040_treatment_00188 mode=1 bytes=4096 probe=1024 reply=8 window=4 flows=2
+TOPO_RETURN g0040_treatment_00188
+TOPO_CASE 190 g0040_control_00189 mode=1 bytes=4096 probe=1024 reply=8 window=4 flows=1
+TOPO_RETURN g0040_control_00189
+TOPO_CASE 191 g0040_control_00190 mode=1 bytes=4096 probe=1024 reply=8 window=4 flows=1
+TOPO_RETURN g0040_control_00190
+TOPO_CASE 192 g0040_treatment_00191 mode=1 bytes=4096 probe=1024 reply=8 window=4 flows=2
+TOPO_RETURN g0040_treatment_00191
+TOPO_CASE 193 g0020_control_00192 mode=1 bytes=4096 probe=1024 reply=8 window=4 flows=1
+TOPO_RETURN g0020_control_00192
+TOPO_CASE 194 g0020_treatment_00193 mode=1 bytes=4096 probe=1024 reply=8 window=4 flows=2
+TOPO_RETURN g0020_treatment_00193
+TOPO_CASE 195 g0020_treatment_00194 mode=1 bytes=4096 probe=1024 reply=8 window=4 flows=2
+TOPO_RETURN g0020_treatment_00194
+TOPO_CASE 196 g0020_control_00195 mode=1 bytes=4096 probe=1024 reply=8 window=4 flows=1
+TOPO_RETURN g0020_control_00195
+TOPO_CASE 197 g0025_control_00196 mode=1 bytes=4096 probe=8 reply=8 window=4 flows=1
+TOPO_RETURN g0025_control_00196
+TOPO_CASE 198 g0025_treatment_00197 mode=1 bytes=4096 probe=8 reply=8 window=4 flows=2
+TOPO_RETURN g0025_treatment_00197
+TOPO_CASE 199 g0025_treatment_00198 mode=1 bytes=4096 probe=8 reply=8 window=4 flows=2
+TOPO_RETURN g0025_treatment_00198
+TOPO_CASE 200 g0025_control_00199 mode=1 bytes=4096 probe=8 reply=8 window=4 flows=1
+TOPO_RETURN g0025_control_00199
+TOPO_CASE 201 g0021_control_00200 mode=1 bytes=4096 probe=8 reply=8 window=4 flows=1
+TOPO_RETURN g0021_control_00200
+TOPO_CASE 202 g0021_treatment_00201 mode=1 bytes=4096 probe=8 reply=8 window=4 flows=2
+TOPO_RETURN g0021_treatment_00201
+TOPO_CASE 203 g0021_treatment_00202 mode=1 bytes=4096 probe=8 reply=8 window=4 flows=2
+TOPO_RETURN g0021_treatment_00202
+TOPO_CASE 204 g0021_control_00203 mode=1 bytes=4096 probe=8 reply=8 window=4 flows=1
+TOPO_RETURN g0021_control_00203
+TOPO_CASE 205 g0016_solo_s18_d34_before_00204 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=1
+TOPO_RETURN g0016_solo_s18_d34_before_00204
+TOPO_CASE 206 g0016_solo_s19_d35_before_00205 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=1
+TOPO_RETURN g0016_solo_s19_d35_before_00205
+TOPO_CASE 207 g0016_solo_s20_d36_before_00206 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=1
+TOPO_RETURN g0016_solo_s20_d36_before_00206
+TOPO_CASE 208 g0016_treatment_00207 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=2
+TOPO_RETURN g0016_treatment_00207
+TOPO_CASE 209 g0016_control_00208 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=2
+TOPO_RETURN g0016_control_00208
+TOPO_CASE 210 g0016_control_00209 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=2
+TOPO_RETURN g0016_control_00209
+TOPO_CASE 211 g0016_treatment_00210 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=2
+TOPO_RETURN g0016_treatment_00210
+TOPO_CASE 212 g0016_solo_s20_d36_after_00211 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=1
+TOPO_RETURN g0016_solo_s20_d36_after_00211
+TOPO_CASE 213 g0016_solo_s19_d35_after_00212 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=1
+TOPO_RETURN g0016_solo_s19_d35_after_00212
+TOPO_CASE 214 g0016_solo_s18_d34_after_00213 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=1
+TOPO_RETURN g0016_solo_s18_d34_after_00213
+TOPO_CASE 215 g0002_solo_s0_d1_before_00214 mode=0 bytes=1024 probe=1024 reply=0 window=1 flows=1
+TOPO_RETURN g0002_solo_s0_d1_before_00214
+TOPO_CASE 216 g0002_treatment_00215 mode=1 bytes=1024 probe=1024 reply=1024 window=1 flows=1
+TOPO_RETURN g0002_treatment_00215
+TOPO_CASE 217 g0002_control_00216 mode=0 bytes=1024 probe=1024 reply=0 window=1 flows=1
+TOPO_RETURN g0002_control_00216
+TOPO_CASE 218 g0002_control_00217 mode=0 bytes=1024 probe=1024 reply=0 window=1 flows=1
+TOPO_RETURN g0002_control_00217
+TOPO_CASE 219 g0002_treatment_00218 mode=1 bytes=1024 probe=1024 reply=1024 window=1 flows=1
+TOPO_RETURN g0002_treatment_00218
+TOPO_CASE 220 g0002_solo_s0_d1_after_00219 mode=0 bytes=1024 probe=1024 reply=0 window=1 flows=1
+TOPO_RETURN g0002_solo_s0_d1_after_00219
+TOPO_CASE 221 g0014_solo_s18_d20_before_00220 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=1
+TOPO_RETURN g0014_solo_s18_d20_before_00220
+TOPO_CASE 222 g0014_solo_s19_d21_before_00221 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=1
+TOPO_RETURN g0014_solo_s19_d21_before_00221
+TOPO_CASE 223 g0014_solo_s34_d36_before_00222 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=1
+TOPO_RETURN g0014_solo_s34_d36_before_00222
+TOPO_CASE 224 g0014_treatment_00223 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=2
+TOPO_RETURN g0014_treatment_00223
+TOPO_CASE 225 g0014_control_00224 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=2
+TOPO_RETURN g0014_control_00224
+TOPO_CASE 226 g0014_control_00225 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=2
+TOPO_RETURN g0014_control_00225
+TOPO_CASE 227 g0014_treatment_00226 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=2
+TOPO_RETURN g0014_treatment_00226
+TOPO_CASE 228 g0014_solo_s34_d36_after_00227 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=1
+TOPO_RETURN g0014_solo_s34_d36_after_00227
+TOPO_CASE 229 g0014_solo_s19_d21_after_00228 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=1
+TOPO_RETURN g0014_solo_s19_d21_after_00228
+TOPO_CASE 230 g0014_solo_s18_d20_after_00229 mode=0 bytes=4096 probe=4096 reply=0 window=4 flows=1
+TOPO_RETURN g0014_solo_s18_d20_after_00229
+TOPO_CASE 231 g0022_treatment_00230 mode=1 bytes=4096 probe=1024 reply=8 window=4 flows=2
+TOPO_RETURN g0022_treatment_00230
+TOPO_CASE 232 g0022_control_00231 mode=1 bytes=4096 probe=1024 reply=8 window=4 flows=1
+TOPO_RETURN g0022_control_00231
+TOPO_CASE 233 g0022_control_00232 mode=1 bytes=4096 probe=1024 reply=8 window=4 flows=1
+TOPO_RETURN g0022_control_00232
+TOPO_CASE 234 g0022_treatment_00233 mode=1 bytes=4096 probe=1024 reply=8 window=4 flows=2
+TOPO_RETURN g0022_treatment_00233
+dispatching ...
+Job 8452887 has been finished.
