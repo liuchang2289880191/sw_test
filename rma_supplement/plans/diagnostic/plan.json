@@ -1,0 +1,132 @@
+[
+  {
+    "case_id": "diag_00",
+    "group": "diag_00",
+    "family": "diagnostic",
+    "label": "correctness",
+    "role": "diagnostic",
+    "mode": 0,
+    "bytes": 8,
+    "probe_bytes": 8,
+    "reply_bytes": 0,
+    "reps": 64,
+    "window": 1,
+    "flows": [
+      [
+        0,
+        1
+      ]
+    ]
+  },
+  {
+    "case_id": "diag_01",
+    "group": "diag_01",
+    "family": "diagnostic",
+    "label": "correctness",
+    "role": "diagnostic",
+    "mode": 0,
+    "bytes": 64,
+    "probe_bytes": 64,
+    "reply_bytes": 0,
+    "reps": 64,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        1
+      ],
+      [
+        8,
+        1
+      ]
+    ]
+  },
+  {
+    "case_id": "diag_02",
+    "group": "diag_02",
+    "family": "diagnostic",
+    "label": "correctness",
+    "role": "diagnostic",
+    "mode": 0,
+    "bytes": 4096,
+    "probe_bytes": 4096,
+    "reply_bytes": 0,
+    "reps": 64,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        1
+      ],
+      [
+        8,
+        9
+      ]
+    ]
+  },
+  {
+    "case_id": "diag_03",
+    "group": "diag_03",
+    "family": "diagnostic",
+    "label": "correctness",
+    "role": "diagnostic",
+    "mode": 1,
+    "bytes": 8,
+    "probe_bytes": 8,
+    "reply_bytes": 8,
+    "reps": 64,
+    "window": 1,
+    "flows": [
+      [
+        0,
+        63
+      ]
+    ]
+  },
+  {
+    "case_id": "diag_04",
+    "group": "diag_04",
+    "family": "diagnostic",
+    "label": "correctness",
+    "role": "diagnostic",
+    "mode": 1,
+    "bytes": 1024,
+    "probe_bytes": 1024,
+    "reply_bytes": 8,
+    "reps": 64,
+    "window": 1,
+    "flows": [
+      [
+        0,
+        1
+      ]
+    ]
+  },
+  {
+    "case_id": "diag_05",
+    "group": "diag_05",
+    "family": "diagnostic",
+    "label": "correctness",
+    "role": "diagnostic",
+    "mode": 1,
+    "bytes": 1024,
+    "probe_bytes": 64,
+    "reply_bytes": 8,
+    "reps": 64,
+    "window": 4,
+    "flows": [
+      [
+        0,
+        63
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        8,
+        16
+      ]
+    ]
+  }
+]

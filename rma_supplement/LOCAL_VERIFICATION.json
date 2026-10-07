@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "checks": [
+    "bash syntax",
+    "host and actual slave C compile with -Wall -Wextra -Werror (local runtime)",
+    "quick plan: 234 cases, capacities/endpoints/unique IDs/native parsing",
+    "full plan: 13234 cases, capacities/endpoints/unique IDs/native parsing",
+    "XY/YX discriminator examples and reverse-path features",
+    "64-thread actual CPE kernel: all 6 diagnostic cases, independent incast lanes, sequence/full final payload checks, ready-stop-drain",
+    "2 shuffled quick jobs: 468 actual-kernel cases; paired analysis, solo normalization, metric formula/data-count audit",
+    "data-error and capped-background failures stop subsequent cases",
+    "self-pair, excessive capacity, and trailing input rejected",
+    "corrupt raw CSV rejected",
+    "standalone launcher: fresh build snapshot, two native mock jobs, shuffled plans, analysis, COMPLETE",
+    "launcher: error stops later jobs; 6-case diagnostic succeeds as one job"
+  ],
+  "generated_cases": {
+    "quick": 234,
+    "full": 13234
+  },
+  "actual_sunway_compilation": false,
+  "actual_sunway_jobs": false,
+  "note": "Local threaded protocol emulation only; timings are NOT Sunway data."
+}

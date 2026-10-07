@@ -1,0 +1,7 @@
+# case group family label role mode background_or_bulk_bytes probe_bytes reply_bytes reps window nflows src dst ...
+diag_00 diag_00 diagnostic correctness diagnostic 0 8 8 0 64 1 1 0 1
+diag_01 diag_01 diagnostic correctness diagnostic 0 64 64 0 64 4 2 0 1 8 1
+diag_02 diag_02 diagnostic correctness diagnostic 0 4096 4096 0 64 4 2 0 1 8 9
+diag_03 diag_03 diagnostic correctness diagnostic 1 8 8 8 64 1 1 0 63
+diag_04 diag_04 diagnostic correctness diagnostic 1 1024 1024 8 64 1 1 0 1
+diag_05 diag_05 diagnostic correctness diagnostic 1 1024 64 8 64 4 3 0 63 2 4 8 16

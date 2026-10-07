@@ -1,0 +1,9 @@
+{
+  "profile": "quick",
+  "reps": 2048,
+  "seed": 20261007,
+  "groups": 41,
+  "cases": 234,
+  "buffer_bytes": 32768,
+  "routes_are_hypotheses": true
+}
