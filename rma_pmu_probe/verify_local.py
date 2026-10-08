@@ -51,7 +51,8 @@ void _exit(int);
     (inc / 'sys' / 'utsname.h').write_text('struct utsname {char nodename[256],machine[256];};\nint uname(struct utsname *);\n')
     names = re.findall(r'EVENT\((penv_\w+)\)', (ROOT / 'pmu_host.c').read_text())
     assert len(names) == len(set(names)) == 22
-    (inc / 'swperf.h').write_text('\n'.join(
+    # Real SDK declaration reported by the first target compilation.
+    (inc / 'swperf.h').write_text('extern unsigned long pmu_result[];\n' + '\n'.join(
         'void {0}_init(void); void {0}_count(unsigned long *);'.format(n) for n in names))
     compiler = shutil.which('gcc')
     if not compiler:

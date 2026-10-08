@@ -67,8 +67,8 @@ int main(int argc, char **argv)
     int sizes[]={64,4096}, ns_smoke[]={0,64,256}, ns_cal[]={0,256,1024,4096};
     int cal,e,p,s,k,r,m,i,rc,case_id=0,status=0;
     int ne,np,ns,nn,nr,*counts;
-    pmu_result results[64] __attribute__((aligned(128)));
-    pmu_args args; guarded before,after; struct utsname host;
+    rma_pmu_probe_result_t results[64] __attribute__((aligned(128)));
+    rma_pmu_probe_args_t args; guarded before,after; struct utsname host;
     FILE *raw,*checks,*info;
     if(argc!=3 || (strcmp(argv[2],"smoke") && strcmp(argv[2],"calibrate"))) {
         fprintf(stderr,"Usage: pmu_probe NEW_OUTPUT_DIRECTORY smoke|calibrate\n"); return 2;
@@ -114,7 +114,7 @@ int main(int argc, char **argv)
             fprintf(raw,",%d\n",dec);
         }
         for(i=0;i<64;i++) {
-            pmu_result *v=results+i;
+            rma_pmu_probe_result_t *v=results+i;
             if(v->pe!=i) ++status;
             status+=v->errors!=0;
             if(!args.local_only && i==args.src && v->local_done!=(unsigned long)args.iterations) ++status;

@@ -5,8 +5,8 @@
 static __thread_local struct {
     unsigned char source[PMU_BYTES] __attribute__((aligned(128)));
     volatile unsigned char target[PMU_BYTES] __attribute__((aligned(128)));
-    pmu_args cfg;
-    pmu_result result;
+    rma_pmu_probe_args_t cfg;
+    rma_pmu_probe_result_t result;
     athread_rply_t local_reply, remote_reply;
 } state __attribute__((aligned(128)));
 
@@ -27,7 +27,7 @@ static unsigned char pattern(int src, int j)
     x ^= x >> 16; x *= 0x7feb352dU; x ^= x >> 15;
     return (unsigned char)(x ^ (x >> 8) ^ (x >> 24));
 }
-void pmu_kernel(pmu_args *host)
+void pmu_kernel(rma_pmu_probe_args_t *host)
 {
     int me = _PEN, i, j;
     unsigned long start;

@@ -8,5 +8,6 @@
     "incorrect remote completion"
   ],
   "target_compilation": "not performed",
-  "hardware_execution": "not performed"
+  "hardware_execution": "not performed",
+  "sdk_name_collision": "passed with extern unsigned long pmu_result[] in header stub"
 }
