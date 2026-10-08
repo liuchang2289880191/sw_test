@@ -1,0 +1,12 @@
+{
+  "shell_syntax": "passed",
+  "c_syntax": "passed with local interface stubs and gcc -Wall -Wextra -Werror",
+  "analyzer_known_slope": "passed",
+  "analyzer_rejection_checks": [
+    "missing counter cell",
+    "decreasing counter",
+    "incorrect remote completion"
+  ],
+  "target_compilation": "not performed",
+  "hardware_execution": "not performed"
+}
