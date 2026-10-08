@@ -1,0 +1,108 @@
+{
+  "cases": 168,
+  "counter_rows": 2688,
+  "pe_checks": 10752,
+  "event_count": 7,
+  "parameter_grid_complete": true,
+  "all_completion_and_final_payload_flags_pass": true,
+  "negative_or_decreased_counts": 0,
+  "positive_counter_rows": 28,
+  "zero_before_all": true,
+  "zero_N0_and_local": true,
+  "repeat_vectors_identical": true,
+  "recomputed_fits": 448,
+  "all_fit_rmse_zero": true,
+  "independent_jobs": 1,
+  "node": "vn043675",
+  "job_id": "8461857",
+  "cell_mapping": "not calibrated",
+  "routing": "not identified",
+  "timing": [
+    {
+      "src": 0,
+      "dst": 1,
+      "n": 64,
+      "mode": "put",
+      "count": 14,
+      "min": 6432,
+      "median": 6433.0,
+      "max": 7317
+    },
+    {
+      "src": 0,
+      "dst": 1,
+      "n": 64,
+      "mode": "local",
+      "count": 14,
+      "min": 43584,
+      "median": 43584.0,
+      "max": 43585
+    },
+    {
+      "src": 0,
+      "dst": 1,
+      "n": 256,
+      "mode": "put",
+      "count": 14,
+      "min": 25632,
+      "median": 25632.5,
+      "max": 25633
+    },
+    {
+      "src": 0,
+      "dst": 1,
+      "n": 256,
+      "mode": "local",
+      "count": 14,
+      "min": 174231,
+      "median": 174232.0,
+      "max": 174232
+    },
+    {
+      "src": 1,
+      "dst": 2,
+      "n": 64,
+      "mode": "put",
+      "count": 14,
+      "min": 6432,
+      "median": 6433.0,
+      "max": 6884
+    },
+    {
+      "src": 1,
+      "dst": 2,
+      "n": 64,
+      "mode": "local",
+      "count": 14,
+      "min": 43584,
+      "median": 43584.0,
+      "max": 43584
+    },
+    {
+      "src": 1,
+      "dst": 2,
+      "n": 256,
+      "mode": "put",
+      "count": 14,
+      "min": 25632,
+      "median": 25632.5,
+      "max": 25633
+    },
+    {
+      "src": 1,
+      "dst": 2,
+      "n": 256,
+      "mode": "local",
+      "count": 14,
+      "min": 174231,
+      "median": 174232.0,
+      "max": 174232
+    }
+  ],
+  "source_addr": [
+    1152
+  ],
+  "stack_addr": [
+    70368744308672
+  ]
+}

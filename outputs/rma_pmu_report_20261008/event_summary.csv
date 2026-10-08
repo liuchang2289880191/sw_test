@@ -1,0 +1,15 @@
+﻿event,src,dst,active_cells,count_per_put,total_N64,total_N256
+penv_cg_tbox1_desc_rma_put,0,1,0,1,64.0,256.0
+penv_cg_tbox1_desc_rma_put,1,2,0,1,64.0,256.0
+penv_cg_tbox6_total_rma_put,0,1,0,16,1024.0,4096.0
+penv_cg_tbox6_total_rma_put,1,2,0,16,1024.0,4096.0
+penv_cg_stn_lpcr1_l1_req_p1up_flit,0,1,0,6,384.0,1536.0
+penv_cg_stn_lpcr1_l1_req_p1up_flit,1,2,0,6,384.0,1536.0
+penv_cg_stn_spcr1_s1_req_p1up_flit,0,1,none,0,0.0,0.0
+penv_cg_stn_spcr1_s1_req_p1up_flit,1,2,none,0,0.0,0.0
+penv_cg_stn_npcr1_n1_req_p1up_flit,0,1,none,0,0.0,0.0
+penv_cg_stn_npcr1_n1_req_p1up_flit,1,2,none,0,0.0,0.0
+penv_cg_stn_wpcr1_w1_req_p1up_flit,0,1,none,0,0.0,0.0
+penv_cg_stn_wpcr1_w1_req_p1up_flit,1,2,none,0,0.0,0.0
+penv_cg_stn_epcr1_e1_req_p1up_flit,0,1,none,0,0.0,0.0
+penv_cg_stn_epcr1_e1_req_p1up_flit,1,2,1,6,384.0,1536.0
