@@ -1,0 +1,10 @@
+{
+  "cases": 168,
+  "counter_rows": 2688,
+  "pe_checks": 10752,
+  "integrity": "passed",
+  "hardware_event_validity": "requires calibration",
+  "cell_mapping": "uncalibrated",
+  "topology": "not inferred",
+  "note": "One job; repeated windows are not independent jobs. Fit RMSE is not a confidence interval."
+}

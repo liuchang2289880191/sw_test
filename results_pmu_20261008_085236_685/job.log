@@ -1,0 +1,509 @@
+Job <8461857> has been submitted to queue <q_share>
+waiting for dispatch ...
+PMU_STAGE athread_init
+PMU_CASE 1 event=penv_cg_tbox1_desc_rma_put mode=put src=0 dst=1 bytes=64 n=0 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 1 errors=0 decreased_cells=0
+PMU_CASE 2 event=penv_cg_tbox1_desc_rma_put mode=local src=0 dst=1 bytes=64 n=0 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 2 errors=0 decreased_cells=0
+PMU_CASE 3 event=penv_cg_tbox1_desc_rma_put mode=put src=0 dst=1 bytes=64 n=64 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 3 errors=0 decreased_cells=0
+PMU_CASE 4 event=penv_cg_tbox1_desc_rma_put mode=local src=0 dst=1 bytes=64 n=64 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 4 errors=0 decreased_cells=0
+PMU_CASE 5 event=penv_cg_tbox1_desc_rma_put mode=put src=0 dst=1 bytes=64 n=256 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 5 errors=0 decreased_cells=0
+PMU_CASE 6 event=penv_cg_tbox1_desc_rma_put mode=local src=0 dst=1 bytes=64 n=256 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 6 errors=0 decreased_cells=0
+PMU_CASE 7 event=penv_cg_tbox1_desc_rma_put mode=local src=0 dst=1 bytes=64 n=256 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 7 errors=0 decreased_cells=0
+PMU_CASE 8 event=penv_cg_tbox1_desc_rma_put mode=put src=0 dst=1 bytes=64 n=256 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 8 errors=0 decreased_cells=0
+PMU_CASE 9 event=penv_cg_tbox1_desc_rma_put mode=local src=0 dst=1 bytes=64 n=64 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 9 errors=0 decreased_cells=0
+PMU_CASE 10 event=penv_cg_tbox1_desc_rma_put mode=put src=0 dst=1 bytes=64 n=64 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 10 errors=0 decreased_cells=0
+PMU_CASE 11 event=penv_cg_tbox1_desc_rma_put mode=local src=0 dst=1 bytes=64 n=0 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 11 errors=0 decreased_cells=0
+PMU_CASE 12 event=penv_cg_tbox1_desc_rma_put mode=put src=0 dst=1 bytes=64 n=0 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 12 errors=0 decreased_cells=0
+PMU_CASE 13 event=penv_cg_tbox1_desc_rma_put mode=put src=1 dst=2 bytes=64 n=0 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 13 errors=0 decreased_cells=0
+PMU_CASE 14 event=penv_cg_tbox1_desc_rma_put mode=local src=1 dst=2 bytes=64 n=0 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 14 errors=0 decreased_cells=0
+PMU_CASE 15 event=penv_cg_tbox1_desc_rma_put mode=put src=1 dst=2 bytes=64 n=64 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 15 errors=0 decreased_cells=0
+PMU_CASE 16 event=penv_cg_tbox1_desc_rma_put mode=local src=1 dst=2 bytes=64 n=64 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 16 errors=0 decreased_cells=0
+PMU_CASE 17 event=penv_cg_tbox1_desc_rma_put mode=put src=1 dst=2 bytes=64 n=256 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 17 errors=0 decreased_cells=0
+PMU_CASE 18 event=penv_cg_tbox1_desc_rma_put mode=local src=1 dst=2 bytes=64 n=256 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 18 errors=0 decreased_cells=0
+PMU_CASE 19 event=penv_cg_tbox1_desc_rma_put mode=local src=1 dst=2 bytes=64 n=256 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 19 errors=0 decreased_cells=0
+PMU_CASE 20 event=penv_cg_tbox1_desc_rma_put mode=put src=1 dst=2 bytes=64 n=256 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 20 errors=0 decreased_cells=0
+PMU_CASE 21 event=penv_cg_tbox1_desc_rma_put mode=local src=1 dst=2 bytes=64 n=64 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 21 errors=0 decreased_cells=0
+PMU_CASE 22 event=penv_cg_tbox1_desc_rma_put mode=put src=1 dst=2 bytes=64 n=64 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 22 errors=0 decreased_cells=0
+PMU_CASE 23 event=penv_cg_tbox1_desc_rma_put mode=local src=1 dst=2 bytes=64 n=0 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 23 errors=0 decreased_cells=0
+PMU_CASE 24 event=penv_cg_tbox1_desc_rma_put mode=put src=1 dst=2 bytes=64 n=0 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 24 errors=0 decreased_cells=0
+PMU_CASE 25 event=penv_cg_tbox6_total_rma_put mode=put src=0 dst=1 bytes=64 n=0 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 25 errors=0 decreased_cells=0
+PMU_CASE 26 event=penv_cg_tbox6_total_rma_put mode=local src=0 dst=1 bytes=64 n=0 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 26 errors=0 decreased_cells=0
+PMU_CASE 27 event=penv_cg_tbox6_total_rma_put mode=put src=0 dst=1 bytes=64 n=64 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 27 errors=0 decreased_cells=0
+PMU_CASE 28 event=penv_cg_tbox6_total_rma_put mode=local src=0 dst=1 bytes=64 n=64 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 28 errors=0 decreased_cells=0
+PMU_CASE 29 event=penv_cg_tbox6_total_rma_put mode=put src=0 dst=1 bytes=64 n=256 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 29 errors=0 decreased_cells=0
+PMU_CASE 30 event=penv_cg_tbox6_total_rma_put mode=local src=0 dst=1 bytes=64 n=256 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 30 errors=0 decreased_cells=0
+PMU_CASE 31 event=penv_cg_tbox6_total_rma_put mode=local src=0 dst=1 bytes=64 n=256 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 31 errors=0 decreased_cells=0
+PMU_CASE 32 event=penv_cg_tbox6_total_rma_put mode=put src=0 dst=1 bytes=64 n=256 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 32 errors=0 decreased_cells=0
+PMU_CASE 33 event=penv_cg_tbox6_total_rma_put mode=local src=0 dst=1 bytes=64 n=64 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 33 errors=0 decreased_cells=0
+PMU_CASE 34 event=penv_cg_tbox6_total_rma_put mode=put src=0 dst=1 bytes=64 n=64 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 34 errors=0 decreased_cells=0
+PMU_CASE 35 event=penv_cg_tbox6_total_rma_put mode=local src=0 dst=1 bytes=64 n=0 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 35 errors=0 decreased_cells=0
+PMU_CASE 36 event=penv_cg_tbox6_total_rma_put mode=put src=0 dst=1 bytes=64 n=0 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 36 errors=0 decreased_cells=0
+PMU_CASE 37 event=penv_cg_tbox6_total_rma_put mode=put src=1 dst=2 bytes=64 n=0 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 37 errors=0 decreased_cells=0
+PMU_CASE 38 event=penv_cg_tbox6_total_rma_put mode=local src=1 dst=2 bytes=64 n=0 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 38 errors=0 decreased_cells=0
+PMU_CASE 39 event=penv_cg_tbox6_total_rma_put mode=put src=1 dst=2 bytes=64 n=64 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 39 errors=0 decreased_cells=0
+PMU_CASE 40 event=penv_cg_tbox6_total_rma_put mode=local src=1 dst=2 bytes=64 n=64 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 40 errors=0 decreased_cells=0
+PMU_CASE 41 event=penv_cg_tbox6_total_rma_put mode=put src=1 dst=2 bytes=64 n=256 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 41 errors=0 decreased_cells=0
+PMU_CASE 42 event=penv_cg_tbox6_total_rma_put mode=local src=1 dst=2 bytes=64 n=256 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 42 errors=0 decreased_cells=0
+PMU_CASE 43 event=penv_cg_tbox6_total_rma_put mode=local src=1 dst=2 bytes=64 n=256 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 43 errors=0 decreased_cells=0
+PMU_CASE 44 event=penv_cg_tbox6_total_rma_put mode=put src=1 dst=2 bytes=64 n=256 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 44 errors=0 decreased_cells=0
+PMU_CASE 45 event=penv_cg_tbox6_total_rma_put mode=local src=1 dst=2 bytes=64 n=64 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 45 errors=0 decreased_cells=0
+PMU_CASE 46 event=penv_cg_tbox6_total_rma_put mode=put src=1 dst=2 bytes=64 n=64 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 46 errors=0 decreased_cells=0
+PMU_CASE 47 event=penv_cg_tbox6_total_rma_put mode=local src=1 dst=2 bytes=64 n=0 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 47 errors=0 decreased_cells=0
+PMU_CASE 48 event=penv_cg_tbox6_total_rma_put mode=put src=1 dst=2 bytes=64 n=0 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 48 errors=0 decreased_cells=0
+PMU_CASE 49 event=penv_cg_stn_lpcr1_l1_req_p1up_flit mode=put src=0 dst=1 bytes=64 n=0 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 49 errors=0 decreased_cells=0
+PMU_CASE 50 event=penv_cg_stn_lpcr1_l1_req_p1up_flit mode=local src=0 dst=1 bytes=64 n=0 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 50 errors=0 decreased_cells=0
+PMU_CASE 51 event=penv_cg_stn_lpcr1_l1_req_p1up_flit mode=put src=0 dst=1 bytes=64 n=64 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 51 errors=0 decreased_cells=0
+PMU_CASE 52 event=penv_cg_stn_lpcr1_l1_req_p1up_flit mode=local src=0 dst=1 bytes=64 n=64 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 52 errors=0 decreased_cells=0
+PMU_CASE 53 event=penv_cg_stn_lpcr1_l1_req_p1up_flit mode=put src=0 dst=1 bytes=64 n=256 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 53 errors=0 decreased_cells=0
+PMU_CASE 54 event=penv_cg_stn_lpcr1_l1_req_p1up_flit mode=local src=0 dst=1 bytes=64 n=256 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 54 errors=0 decreased_cells=0
+PMU_CASE 55 event=penv_cg_stn_lpcr1_l1_req_p1up_flit mode=local src=0 dst=1 bytes=64 n=256 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 55 errors=0 decreased_cells=0
+PMU_CASE 56 event=penv_cg_stn_lpcr1_l1_req_p1up_flit mode=put src=0 dst=1 bytes=64 n=256 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 56 errors=0 decreased_cells=0
+PMU_CASE 57 event=penv_cg_stn_lpcr1_l1_req_p1up_flit mode=local src=0 dst=1 bytes=64 n=64 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 57 errors=0 decreased_cells=0
+PMU_CASE 58 event=penv_cg_stn_lpcr1_l1_req_p1up_flit mode=put src=0 dst=1 bytes=64 n=64 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 58 errors=0 decreased_cells=0
+PMU_CASE 59 event=penv_cg_stn_lpcr1_l1_req_p1up_flit mode=local src=0 dst=1 bytes=64 n=0 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 59 errors=0 decreased_cells=0
+PMU_CASE 60 event=penv_cg_stn_lpcr1_l1_req_p1up_flit mode=put src=0 dst=1 bytes=64 n=0 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 60 errors=0 decreased_cells=0
+PMU_CASE 61 event=penv_cg_stn_lpcr1_l1_req_p1up_flit mode=put src=1 dst=2 bytes=64 n=0 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 61 errors=0 decreased_cells=0
+PMU_CASE 62 event=penv_cg_stn_lpcr1_l1_req_p1up_flit mode=local src=1 dst=2 bytes=64 n=0 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 62 errors=0 decreased_cells=0
+PMU_CASE 63 event=penv_cg_stn_lpcr1_l1_req_p1up_flit mode=put src=1 dst=2 bytes=64 n=64 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 63 errors=0 decreased_cells=0
+PMU_CASE 64 event=penv_cg_stn_lpcr1_l1_req_p1up_flit mode=local src=1 dst=2 bytes=64 n=64 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 64 errors=0 decreased_cells=0
+PMU_CASE 65 event=penv_cg_stn_lpcr1_l1_req_p1up_flit mode=put src=1 dst=2 bytes=64 n=256 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 65 errors=0 decreased_cells=0
+PMU_CASE 66 event=penv_cg_stn_lpcr1_l1_req_p1up_flit mode=local src=1 dst=2 bytes=64 n=256 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 66 errors=0 decreased_cells=0
+PMU_CASE 67 event=penv_cg_stn_lpcr1_l1_req_p1up_flit mode=local src=1 dst=2 bytes=64 n=256 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 67 errors=0 decreased_cells=0
+PMU_CASE 68 event=penv_cg_stn_lpcr1_l1_req_p1up_flit mode=put src=1 dst=2 bytes=64 n=256 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 68 errors=0 decreased_cells=0
+PMU_CASE 69 event=penv_cg_stn_lpcr1_l1_req_p1up_flit mode=local src=1 dst=2 bytes=64 n=64 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 69 errors=0 decreased_cells=0
+PMU_CASE 70 event=penv_cg_stn_lpcr1_l1_req_p1up_flit mode=put src=1 dst=2 bytes=64 n=64 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 70 errors=0 decreased_cells=0
+PMU_CASE 71 event=penv_cg_stn_lpcr1_l1_req_p1up_flit mode=local src=1 dst=2 bytes=64 n=0 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 71 errors=0 decreased_cells=0
+PMU_CASE 72 event=penv_cg_stn_lpcr1_l1_req_p1up_flit mode=put src=1 dst=2 bytes=64 n=0 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 72 errors=0 decreased_cells=0
+PMU_CASE 73 event=penv_cg_stn_spcr1_s1_req_p1up_flit mode=put src=0 dst=1 bytes=64 n=0 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 73 errors=0 decreased_cells=0
+PMU_CASE 74 event=penv_cg_stn_spcr1_s1_req_p1up_flit mode=local src=0 dst=1 bytes=64 n=0 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 74 errors=0 decreased_cells=0
+PMU_CASE 75 event=penv_cg_stn_spcr1_s1_req_p1up_flit mode=put src=0 dst=1 bytes=64 n=64 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 75 errors=0 decreased_cells=0
+PMU_CASE 76 event=penv_cg_stn_spcr1_s1_req_p1up_flit mode=local src=0 dst=1 bytes=64 n=64 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 76 errors=0 decreased_cells=0
+PMU_CASE 77 event=penv_cg_stn_spcr1_s1_req_p1up_flit mode=put src=0 dst=1 bytes=64 n=256 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 77 errors=0 decreased_cells=0
+PMU_CASE 78 event=penv_cg_stn_spcr1_s1_req_p1up_flit mode=local src=0 dst=1 bytes=64 n=256 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 78 errors=0 decreased_cells=0
+PMU_CASE 79 event=penv_cg_stn_spcr1_s1_req_p1up_flit mode=local src=0 dst=1 bytes=64 n=256 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 79 errors=0 decreased_cells=0
+PMU_CASE 80 event=penv_cg_stn_spcr1_s1_req_p1up_flit mode=put src=0 dst=1 bytes=64 n=256 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 80 errors=0 decreased_cells=0
+PMU_CASE 81 event=penv_cg_stn_spcr1_s1_req_p1up_flit mode=local src=0 dst=1 bytes=64 n=64 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 81 errors=0 decreased_cells=0
+PMU_CASE 82 event=penv_cg_stn_spcr1_s1_req_p1up_flit mode=put src=0 dst=1 bytes=64 n=64 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 82 errors=0 decreased_cells=0
+PMU_CASE 83 event=penv_cg_stn_spcr1_s1_req_p1up_flit mode=local src=0 dst=1 bytes=64 n=0 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 83 errors=0 decreased_cells=0
+PMU_CASE 84 event=penv_cg_stn_spcr1_s1_req_p1up_flit mode=put src=0 dst=1 bytes=64 n=0 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 84 errors=0 decreased_cells=0
+PMU_CASE 85 event=penv_cg_stn_spcr1_s1_req_p1up_flit mode=put src=1 dst=2 bytes=64 n=0 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 85 errors=0 decreased_cells=0
+PMU_CASE 86 event=penv_cg_stn_spcr1_s1_req_p1up_flit mode=local src=1 dst=2 bytes=64 n=0 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 86 errors=0 decreased_cells=0
+PMU_CASE 87 event=penv_cg_stn_spcr1_s1_req_p1up_flit mode=put src=1 dst=2 bytes=64 n=64 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 87 errors=0 decreased_cells=0
+PMU_CASE 88 event=penv_cg_stn_spcr1_s1_req_p1up_flit mode=local src=1 dst=2 bytes=64 n=64 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 88 errors=0 decreased_cells=0
+PMU_CASE 89 event=penv_cg_stn_spcr1_s1_req_p1up_flit mode=put src=1 dst=2 bytes=64 n=256 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 89 errors=0 decreased_cells=0
+PMU_CASE 90 event=penv_cg_stn_spcr1_s1_req_p1up_flit mode=local src=1 dst=2 bytes=64 n=256 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 90 errors=0 decreased_cells=0
+PMU_CASE 91 event=penv_cg_stn_spcr1_s1_req_p1up_flit mode=local src=1 dst=2 bytes=64 n=256 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 91 errors=0 decreased_cells=0
+PMU_CASE 92 event=penv_cg_stn_spcr1_s1_req_p1up_flit mode=put src=1 dst=2 bytes=64 n=256 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 92 errors=0 decreased_cells=0
+PMU_CASE 93 event=penv_cg_stn_spcr1_s1_req_p1up_flit mode=local src=1 dst=2 bytes=64 n=64 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 93 errors=0 decreased_cells=0
+PMU_CASE 94 event=penv_cg_stn_spcr1_s1_req_p1up_flit mode=put src=1 dst=2 bytes=64 n=64 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 94 errors=0 decreased_cells=0
+PMU_CASE 95 event=penv_cg_stn_spcr1_s1_req_p1up_flit mode=local src=1 dst=2 bytes=64 n=0 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 95 errors=0 decreased_cells=0
+PMU_CASE 96 event=penv_cg_stn_spcr1_s1_req_p1up_flit mode=put src=1 dst=2 bytes=64 n=0 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 96 errors=0 decreased_cells=0
+PMU_CASE 97 event=penv_cg_stn_npcr1_n1_req_p1up_flit mode=put src=0 dst=1 bytes=64 n=0 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 97 errors=0 decreased_cells=0
+PMU_CASE 98 event=penv_cg_stn_npcr1_n1_req_p1up_flit mode=local src=0 dst=1 bytes=64 n=0 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 98 errors=0 decreased_cells=0
+PMU_CASE 99 event=penv_cg_stn_npcr1_n1_req_p1up_flit mode=put src=0 dst=1 bytes=64 n=64 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 99 errors=0 decreased_cells=0
+PMU_CASE 100 event=penv_cg_stn_npcr1_n1_req_p1up_flit mode=local src=0 dst=1 bytes=64 n=64 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 100 errors=0 decreased_cells=0
+PMU_CASE 101 event=penv_cg_stn_npcr1_n1_req_p1up_flit mode=put src=0 dst=1 bytes=64 n=256 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 101 errors=0 decreased_cells=0
+PMU_CASE 102 event=penv_cg_stn_npcr1_n1_req_p1up_flit mode=local src=0 dst=1 bytes=64 n=256 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 102 errors=0 decreased_cells=0
+PMU_CASE 103 event=penv_cg_stn_npcr1_n1_req_p1up_flit mode=local src=0 dst=1 bytes=64 n=256 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 103 errors=0 decreased_cells=0
+PMU_CASE 104 event=penv_cg_stn_npcr1_n1_req_p1up_flit mode=put src=0 dst=1 bytes=64 n=256 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 104 errors=0 decreased_cells=0
+PMU_CASE 105 event=penv_cg_stn_npcr1_n1_req_p1up_flit mode=local src=0 dst=1 bytes=64 n=64 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 105 errors=0 decreased_cells=0
+PMU_CASE 106 event=penv_cg_stn_npcr1_n1_req_p1up_flit mode=put src=0 dst=1 bytes=64 n=64 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 106 errors=0 decreased_cells=0
+PMU_CASE 107 event=penv_cg_stn_npcr1_n1_req_p1up_flit mode=local src=0 dst=1 bytes=64 n=0 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 107 errors=0 decreased_cells=0
+PMU_CASE 108 event=penv_cg_stn_npcr1_n1_req_p1up_flit mode=put src=0 dst=1 bytes=64 n=0 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 108 errors=0 decreased_cells=0
+PMU_CASE 109 event=penv_cg_stn_npcr1_n1_req_p1up_flit mode=put src=1 dst=2 bytes=64 n=0 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 109 errors=0 decreased_cells=0
+PMU_CASE 110 event=penv_cg_stn_npcr1_n1_req_p1up_flit mode=local src=1 dst=2 bytes=64 n=0 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 110 errors=0 decreased_cells=0
+PMU_CASE 111 event=penv_cg_stn_npcr1_n1_req_p1up_flit mode=put src=1 dst=2 bytes=64 n=64 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 111 errors=0 decreased_cells=0
+PMU_CASE 112 event=penv_cg_stn_npcr1_n1_req_p1up_flit mode=local src=1 dst=2 bytes=64 n=64 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 112 errors=0 decreased_cells=0
+PMU_CASE 113 event=penv_cg_stn_npcr1_n1_req_p1up_flit mode=put src=1 dst=2 bytes=64 n=256 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 113 errors=0 decreased_cells=0
+PMU_CASE 114 event=penv_cg_stn_npcr1_n1_req_p1up_flit mode=local src=1 dst=2 bytes=64 n=256 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 114 errors=0 decreased_cells=0
+PMU_CASE 115 event=penv_cg_stn_npcr1_n1_req_p1up_flit mode=local src=1 dst=2 bytes=64 n=256 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 115 errors=0 decreased_cells=0
+PMU_CASE 116 event=penv_cg_stn_npcr1_n1_req_p1up_flit mode=put src=1 dst=2 bytes=64 n=256 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 116 errors=0 decreased_cells=0
+PMU_CASE 117 event=penv_cg_stn_npcr1_n1_req_p1up_flit mode=local src=1 dst=2 bytes=64 n=64 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 117 errors=0 decreased_cells=0
+PMU_CASE 118 event=penv_cg_stn_npcr1_n1_req_p1up_flit mode=put src=1 dst=2 bytes=64 n=64 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 118 errors=0 decreased_cells=0
+PMU_CASE 119 event=penv_cg_stn_npcr1_n1_req_p1up_flit mode=local src=1 dst=2 bytes=64 n=0 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 119 errors=0 decreased_cells=0
+PMU_CASE 120 event=penv_cg_stn_npcr1_n1_req_p1up_flit mode=put src=1 dst=2 bytes=64 n=0 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 120 errors=0 decreased_cells=0
+PMU_CASE 121 event=penv_cg_stn_wpcr1_w1_req_p1up_flit mode=put src=0 dst=1 bytes=64 n=0 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 121 errors=0 decreased_cells=0
+PMU_CASE 122 event=penv_cg_stn_wpcr1_w1_req_p1up_flit mode=local src=0 dst=1 bytes=64 n=0 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 122 errors=0 decreased_cells=0
+PMU_CASE 123 event=penv_cg_stn_wpcr1_w1_req_p1up_flit mode=put src=0 dst=1 bytes=64 n=64 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 123 errors=0 decreased_cells=0
+PMU_CASE 124 event=penv_cg_stn_wpcr1_w1_req_p1up_flit mode=local src=0 dst=1 bytes=64 n=64 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 124 errors=0 decreased_cells=0
+PMU_CASE 125 event=penv_cg_stn_wpcr1_w1_req_p1up_flit mode=put src=0 dst=1 bytes=64 n=256 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 125 errors=0 decreased_cells=0
+PMU_CASE 126 event=penv_cg_stn_wpcr1_w1_req_p1up_flit mode=local src=0 dst=1 bytes=64 n=256 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 126 errors=0 decreased_cells=0
+PMU_CASE 127 event=penv_cg_stn_wpcr1_w1_req_p1up_flit mode=local src=0 dst=1 bytes=64 n=256 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 127 errors=0 decreased_cells=0
+PMU_CASE 128 event=penv_cg_stn_wpcr1_w1_req_p1up_flit mode=put src=0 dst=1 bytes=64 n=256 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 128 errors=0 decreased_cells=0
+PMU_CASE 129 event=penv_cg_stn_wpcr1_w1_req_p1up_flit mode=local src=0 dst=1 bytes=64 n=64 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 129 errors=0 decreased_cells=0
+PMU_CASE 130 event=penv_cg_stn_wpcr1_w1_req_p1up_flit mode=put src=0 dst=1 bytes=64 n=64 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 130 errors=0 decreased_cells=0
+PMU_CASE 131 event=penv_cg_stn_wpcr1_w1_req_p1up_flit mode=local src=0 dst=1 bytes=64 n=0 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 131 errors=0 decreased_cells=0
+PMU_CASE 132 event=penv_cg_stn_wpcr1_w1_req_p1up_flit mode=put src=0 dst=1 bytes=64 n=0 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 132 errors=0 decreased_cells=0
+PMU_CASE 133 event=penv_cg_stn_wpcr1_w1_req_p1up_flit mode=put src=1 dst=2 bytes=64 n=0 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 133 errors=0 decreased_cells=0
+PMU_CASE 134 event=penv_cg_stn_wpcr1_w1_req_p1up_flit mode=local src=1 dst=2 bytes=64 n=0 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 134 errors=0 decreased_cells=0
+PMU_CASE 135 event=penv_cg_stn_wpcr1_w1_req_p1up_flit mode=put src=1 dst=2 bytes=64 n=64 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 135 errors=0 decreased_cells=0
+PMU_CASE 136 event=penv_cg_stn_wpcr1_w1_req_p1up_flit mode=local src=1 dst=2 bytes=64 n=64 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 136 errors=0 decreased_cells=0
+PMU_CASE 137 event=penv_cg_stn_wpcr1_w1_req_p1up_flit mode=put src=1 dst=2 bytes=64 n=256 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 137 errors=0 decreased_cells=0
+PMU_CASE 138 event=penv_cg_stn_wpcr1_w1_req_p1up_flit mode=local src=1 dst=2 bytes=64 n=256 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 138 errors=0 decreased_cells=0
+PMU_CASE 139 event=penv_cg_stn_wpcr1_w1_req_p1up_flit mode=local src=1 dst=2 bytes=64 n=256 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 139 errors=0 decreased_cells=0
+PMU_CASE 140 event=penv_cg_stn_wpcr1_w1_req_p1up_flit mode=put src=1 dst=2 bytes=64 n=256 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 140 errors=0 decreased_cells=0
+PMU_CASE 141 event=penv_cg_stn_wpcr1_w1_req_p1up_flit mode=local src=1 dst=2 bytes=64 n=64 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 141 errors=0 decreased_cells=0
+PMU_CASE 142 event=penv_cg_stn_wpcr1_w1_req_p1up_flit mode=put src=1 dst=2 bytes=64 n=64 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 142 errors=0 decreased_cells=0
+PMU_CASE 143 event=penv_cg_stn_wpcr1_w1_req_p1up_flit mode=local src=1 dst=2 bytes=64 n=0 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 143 errors=0 decreased_cells=0
+PMU_CASE 144 event=penv_cg_stn_wpcr1_w1_req_p1up_flit mode=put src=1 dst=2 bytes=64 n=0 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 144 errors=0 decreased_cells=0
+PMU_CASE 145 event=penv_cg_stn_epcr1_e1_req_p1up_flit mode=put src=0 dst=1 bytes=64 n=0 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 145 errors=0 decreased_cells=0
+PMU_CASE 146 event=penv_cg_stn_epcr1_e1_req_p1up_flit mode=local src=0 dst=1 bytes=64 n=0 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 146 errors=0 decreased_cells=0
+PMU_CASE 147 event=penv_cg_stn_epcr1_e1_req_p1up_flit mode=put src=0 dst=1 bytes=64 n=64 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 147 errors=0 decreased_cells=0
+PMU_CASE 148 event=penv_cg_stn_epcr1_e1_req_p1up_flit mode=local src=0 dst=1 bytes=64 n=64 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 148 errors=0 decreased_cells=0
+PMU_CASE 149 event=penv_cg_stn_epcr1_e1_req_p1up_flit mode=put src=0 dst=1 bytes=64 n=256 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 149 errors=0 decreased_cells=0
+PMU_CASE 150 event=penv_cg_stn_epcr1_e1_req_p1up_flit mode=local src=0 dst=1 bytes=64 n=256 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 150 errors=0 decreased_cells=0
+PMU_CASE 151 event=penv_cg_stn_epcr1_e1_req_p1up_flit mode=local src=0 dst=1 bytes=64 n=256 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 151 errors=0 decreased_cells=0
+PMU_CASE 152 event=penv_cg_stn_epcr1_e1_req_p1up_flit mode=put src=0 dst=1 bytes=64 n=256 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 152 errors=0 decreased_cells=0
+PMU_CASE 153 event=penv_cg_stn_epcr1_e1_req_p1up_flit mode=local src=0 dst=1 bytes=64 n=64 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 153 errors=0 decreased_cells=0
+PMU_CASE 154 event=penv_cg_stn_epcr1_e1_req_p1up_flit mode=put src=0 dst=1 bytes=64 n=64 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 154 errors=0 decreased_cells=0
+PMU_CASE 155 event=penv_cg_stn_epcr1_e1_req_p1up_flit mode=local src=0 dst=1 bytes=64 n=0 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 155 errors=0 decreased_cells=0
+PMU_CASE 156 event=penv_cg_stn_epcr1_e1_req_p1up_flit mode=put src=0 dst=1 bytes=64 n=0 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 156 errors=0 decreased_cells=0
+PMU_CASE 157 event=penv_cg_stn_epcr1_e1_req_p1up_flit mode=put src=1 dst=2 bytes=64 n=0 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 157 errors=0 decreased_cells=0
+PMU_CASE 158 event=penv_cg_stn_epcr1_e1_req_p1up_flit mode=local src=1 dst=2 bytes=64 n=0 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 158 errors=0 decreased_cells=0
+PMU_CASE 159 event=penv_cg_stn_epcr1_e1_req_p1up_flit mode=put src=1 dst=2 bytes=64 n=64 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 159 errors=0 decreased_cells=0
+PMU_CASE 160 event=penv_cg_stn_epcr1_e1_req_p1up_flit mode=local src=1 dst=2 bytes=64 n=64 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 160 errors=0 decreased_cells=0
+PMU_CASE 161 event=penv_cg_stn_epcr1_e1_req_p1up_flit mode=put src=1 dst=2 bytes=64 n=256 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 161 errors=0 decreased_cells=0
+PMU_CASE 162 event=penv_cg_stn_epcr1_e1_req_p1up_flit mode=local src=1 dst=2 bytes=64 n=256 repeat=1
+PMU_STAGE init_count
+PMU_RETURN 162 errors=0 decreased_cells=0
+PMU_CASE 163 event=penv_cg_stn_epcr1_e1_req_p1up_flit mode=local src=1 dst=2 bytes=64 n=256 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 163 errors=0 decreased_cells=0
+PMU_CASE 164 event=penv_cg_stn_epcr1_e1_req_p1up_flit mode=put src=1 dst=2 bytes=64 n=256 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 164 errors=0 decreased_cells=0
+PMU_CASE 165 event=penv_cg_stn_epcr1_e1_req_p1up_flit mode=local src=1 dst=2 bytes=64 n=64 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 165 errors=0 decreased_cells=0
+PMU_CASE 166 event=penv_cg_stn_epcr1_e1_req_p1up_flit mode=put src=1 dst=2 bytes=64 n=64 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 166 errors=0 decreased_cells=0
+PMU_CASE 167 event=penv_cg_stn_epcr1_e1_req_p1up_flit mode=local src=1 dst=2 bytes=64 n=0 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 167 errors=0 decreased_cells=0
+PMU_CASE 168 event=penv_cg_stn_epcr1_e1_req_p1up_flit mode=put src=1 dst=2 bytes=64 n=0 repeat=2
+PMU_STAGE init_count
+PMU_RETURN 168 errors=0 decreased_cells=0
+dispatching ...
+Job 8461857 has been finished.

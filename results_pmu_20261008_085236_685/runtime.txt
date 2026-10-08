@@ -1,0 +1,6 @@
+compute_host=vn043675
+machine=sw_64
+profile=smoke
+expected_cases=168
+array_order=uncalibrated
+sizeof_unsigned_long=8
